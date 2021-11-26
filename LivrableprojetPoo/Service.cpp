@@ -15,6 +15,13 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerToutLePersonnel(System:
 	sql = this->oMappPersonnel->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnPersonnel(System::String^ IDPersonnel ,System::String^ dataTableName)
+{
+	System::String^ sql;
+	this->oMappPersonnel->setID(int::Parse(IDPersonnel));
+	sql = this->oMappPersonnel->SelectOne();
+	return this->oCad->getRows(sql, dataTableName);
+}
 void NS_Comp_Svc::Service::ajouterUnPersonnel(System::String^ Nom, System::String^ Prenom, System::String^ DateNaissance, System::String^ DateEmbauche)
 {
 	System::String^ sql;
@@ -90,13 +97,6 @@ void NS_Comp_Svc::Service::updateUneAdresse(System::String^ ID, System::String^ 
 	this->oCad->actionRows(sql);
 
 }
-
-
-
-
-
-
-
 
 void NS_Comp_Svc::Service::updateDeletePersonnel(System::String^ ID) {
 

@@ -14,6 +14,7 @@ namespace NS_Comp_Svc
 	public:
 		Service(void);
 		System::Data::DataSet^ selectionnerToutLePersonnel(System::String^);
+		System::Data::DataSet^ selectionnerUnPersonnel(System::String^, System::String^);
 		void ajouterUnPersonnel(System::String^, System::String^, System::String^, System::String^);
 		void ajouterUneAdresse(System::String^, System::String^, System::String^);
 		void supprimerUnPersonnel(System::String^);

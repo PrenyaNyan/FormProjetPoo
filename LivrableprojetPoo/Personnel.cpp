@@ -3,7 +3,11 @@
 
 System::String^ NS_Comp_Mappage::Personnel::Select(void)
 {
-	return "Select IDPersonnel,NomPersonnel,PrenomPersonnel,NumeroRue,NomRue,NomVille,NomPays,IDPatron from Pays inner join (Select IDPersonnel, NomPersonnel, PrenomPersonnel, NumeroRue, NomRue, NomVille, IDPays, IDPatron from Ville inner join (Select IDPersonnel, NomPersonnel, PrenomPersonnel, NumeroRue, NomRue, IDVille, IDPersonnel_AvoirUnPatron as IDPatron from Personnel inner join Adresse on Personnel.IDAdresse = Adresse.IDAdresse)Tab1 on Ville.IDVille = Tab1.IDVille)Tab2 on Tab2.IDPays = Pays.IDPays";
+	return "Select IDPersonnel, NomPersonnel, PrenomPersonnel,DateDeNaissancePersonnel, DateEmbauchePersonnel,NumeroRue,NomRue,NomVille,IDVille,NomPays from Pays inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, NomVille, Ville.IDVille, IDPays from Ville inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, IDVille, IDPersonnel_AvoirUnPatron as IDPatron from Personnel inner join Adresse on Personnel.IDAdresse = Adresse.IDAdresse)Tab1 on Ville.IDVille = Tab1.IDVille)Tab2 on Tab2.IDPays = Pays.IDPays";
+}
+System::String^ NS_Comp_Mappage::Personnel::SelectOne(void)
+{
+	return "Select IDPersonnel, NomPersonnel, PrenomPersonnel,DateDeNaissancePersonnel, DateEmbauchePersonnel,NumeroRue,NomRue,NomVille,IDVille,NomPays from Pays inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, NomVille, Ville.IDVille, IDPays from Ville inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, IDVille, IDPersonnel_AvoirUnPatron as IDPatron from Personnel inner join Adresse on Personnel.IDAdresse = Adresse.IDAdresse)Tab1 on Ville.IDVille = Tab1.IDVille)Tab2 on Tab2.IDPays = Pays.IDPays where IDPersonnel = '" + this->ID + "'; ";
 }
 System::String^ NS_Comp_Mappage::Personnel::Insert(void)
 {

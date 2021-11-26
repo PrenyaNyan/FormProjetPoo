@@ -14,6 +14,7 @@ namespace NS_Comp_Mappage
 		int IDPatron;
 	public:
 		System::String^ Select(void);
+		System::String^ SelectOne(void);
 		System::String^ Insert(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);

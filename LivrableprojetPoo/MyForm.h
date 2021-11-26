@@ -63,6 +63,7 @@ namespace LivrableprojetPoo {
 
 	private: NS_Comp_Svc::Service^ oSvc;
 	private: System::Data::DataSet^ oDs;
+	public: System::Data::DataTableReader^ reader;
 
 
 
@@ -143,6 +144,10 @@ private: System::Windows::Forms::Label^ label8;
 private: System::Windows::Forms::DataGridView^ dataGridView1;
 private: System::Windows::Forms::DataGridView^ dataGridView2;
 private: System::Windows::Forms::Button^ button1;
+private: System::Windows::Forms::Button^ ChercherPersonnel;
+private: System::Windows::Forms::Label^ TestRecup;
+
+
 
 
 
@@ -187,6 +192,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->MainPersonnel = (gcnew System::Windows::Forms::TabPage());
 			this->TabPersonnel = (gcnew System::Windows::Forms::TabControl());
 			this->PersonnelCréer = (gcnew System::Windows::Forms::TabPage());
+			this->TestRecup = (gcnew System::Windows::Forms::Label());
 			this->InputIDVillePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNumeroRuePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNomRuePersonnel = (gcnew System::Windows::Forms::TextBox());
@@ -203,6 +209,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->NomPersonnel = (gcnew System::Windows::Forms::Label());
 			this->ValiderCreerPersonnel = (gcnew System::Windows::Forms::Button());
 			this->PersonnelModifier = (gcnew System::Windows::Forms::TabPage());
+			this->ChercherPersonnel = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->ModifIDPersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -293,6 +300,7 @@ private: System::Windows::Forms::Button^ button1;
 			// 
 			// PersonnelCréer
 			// 
+			this->PersonnelCréer->Controls->Add(this->TestRecup);
 			this->PersonnelCréer->Controls->Add(this->InputIDVillePersonnel);
 			this->PersonnelCréer->Controls->Add(this->InputNumeroRuePersonnel);
 			this->PersonnelCréer->Controls->Add(this->InputNomRuePersonnel);
@@ -315,6 +323,15 @@ private: System::Windows::Forms::Button^ button1;
 			this->PersonnelCréer->TabIndex = 0;
 			this->PersonnelCréer->Text = L"Créer";
 			this->PersonnelCréer->UseVisualStyleBackColor = true;
+			// 
+			// TestRecup
+			// 
+			this->TestRecup->AutoSize = true;
+			this->TestRecup->Location = System::Drawing::Point(636, 55);
+			this->TestRecup->Name = L"TestRecup";
+			this->TestRecup->Size = System::Drawing::Size(46, 17);
+			this->TestRecup->TabIndex = 19;
+			this->TestRecup->Text = L"label9";
 			// 
 			// InputIDVillePersonnel
 			// 
@@ -440,6 +457,7 @@ private: System::Windows::Forms::Button^ button1;
 			// 
 			// PersonnelModifier
 			// 
+			this->PersonnelModifier->Controls->Add(this->ChercherPersonnel);
 			this->PersonnelModifier->Controls->Add(this->button1);
 			this->PersonnelModifier->Controls->Add(this->ModifIDPersonnel);
 			this->PersonnelModifier->Controls->Add(this->label8);
@@ -465,6 +483,16 @@ private: System::Windows::Forms::Button^ button1;
 			this->PersonnelModifier->Text = L"Modifier";
 			this->PersonnelModifier->UseVisualStyleBackColor = true;
 			// 
+			// ChercherPersonnel
+			// 
+			this->ChercherPersonnel->Location = System::Drawing::Point(50, 83);
+			this->ChercherPersonnel->Name = L"ChercherPersonnel";
+			this->ChercherPersonnel->Size = System::Drawing::Size(89, 42);
+			this->ChercherPersonnel->TabIndex = 36;
+			this->ChercherPersonnel->Text = L"Chercher";
+			this->ChercherPersonnel->UseVisualStyleBackColor = true;
+			this->ChercherPersonnel->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			// 
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(1039, 253);
@@ -481,7 +509,6 @@ private: System::Windows::Forms::Button^ button1;
 			this->ModifIDPersonnel->Name = L"ModifIDPersonnel";
 			this->ModifIDPersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifIDPersonnel->TabIndex = 34;
-			this->ModifIDPersonnel->TextChanged += gcnew System::EventHandler(this, &MyForm::ModifIDPersonnel_TextChanged);
 			// 
 			// label8
 			// 
@@ -494,49 +521,49 @@ private: System::Windows::Forms::Button^ button1;
 			// 
 			// ModifIDVillePersonnel
 			// 
-			this->ModifIDVillePersonnel->Location = System::Drawing::Point(350, 203);
+			this->ModifIDVillePersonnel->Location = System::Drawing::Point(650, 153);
 			this->ModifIDVillePersonnel->Name = L"ModifIDVillePersonnel";
 			this->ModifIDVillePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifIDVillePersonnel->TabIndex = 32;
 			// 
 			// ModifNumeroRuePersonnel
 			// 
-			this->ModifNumeroRuePersonnel->Location = System::Drawing::Point(350, 153);
+			this->ModifNumeroRuePersonnel->Location = System::Drawing::Point(650, 103);
 			this->ModifNumeroRuePersonnel->Name = L"ModifNumeroRuePersonnel";
 			this->ModifNumeroRuePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifNumeroRuePersonnel->TabIndex = 31;
 			// 
 			// ModifNomRuePersonnel
 			// 
-			this->ModifNomRuePersonnel->Location = System::Drawing::Point(350, 103);
+			this->ModifNomRuePersonnel->Location = System::Drawing::Point(650, 53);
 			this->ModifNomRuePersonnel->Name = L"ModifNomRuePersonnel";
 			this->ModifNomRuePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifNomRuePersonnel->TabIndex = 30;
 			// 
 			// ModifDateEmbauchePersonnel
 			// 
-			this->ModifDateEmbauchePersonnel->Location = System::Drawing::Point(350, 53);
+			this->ModifDateEmbauchePersonnel->Location = System::Drawing::Point(350, 203);
 			this->ModifDateEmbauchePersonnel->Name = L"ModifDateEmbauchePersonnel";
 			this->ModifDateEmbauchePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifDateEmbauchePersonnel->TabIndex = 29;
 			// 
 			// ModifDateNaissancePersonnel
 			// 
-			this->ModifDateNaissancePersonnel->Location = System::Drawing::Point(50, 203);
+			this->ModifDateNaissancePersonnel->Location = System::Drawing::Point(350, 153);
 			this->ModifDateNaissancePersonnel->Name = L"ModifDateNaissancePersonnel";
 			this->ModifDateNaissancePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifDateNaissancePersonnel->TabIndex = 28;
 			// 
 			// ModifPrenomPersonnel
 			// 
-			this->ModifPrenomPersonnel->Location = System::Drawing::Point(50, 153);
+			this->ModifPrenomPersonnel->Location = System::Drawing::Point(350, 103);
 			this->ModifPrenomPersonnel->Name = L"ModifPrenomPersonnel";
 			this->ModifPrenomPersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifPrenomPersonnel->TabIndex = 27;
 			// 
 			// ModifNomPersonnel
 			// 
-			this->ModifNomPersonnel->Location = System::Drawing::Point(50, 103);
+			this->ModifNomPersonnel->Location = System::Drawing::Point(350, 53);
 			this->ModifNomPersonnel->Name = L"ModifNomPersonnel";
 			this->ModifNomPersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifNomPersonnel->TabIndex = 26;
@@ -544,7 +571,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(350, 183);
+			this->label1->Location = System::Drawing::Point(650, 133);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(84, 17);
 			this->label1->TabIndex = 25;
@@ -553,7 +580,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(350, 83);
+			this->label2->Location = System::Drawing::Point(650, 33);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(97, 17);
 			this->label2->TabIndex = 24;
@@ -562,7 +589,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(350, 133);
+			this->label3->Location = System::Drawing::Point(650, 83);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(118, 17);
 			this->label3->TabIndex = 23;
@@ -571,7 +598,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(50, 183);
+			this->label4->Location = System::Drawing::Point(350, 133);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(126, 17);
 			this->label4->TabIndex = 22;
@@ -580,7 +607,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(350, 33);
+			this->label5->Location = System::Drawing::Point(350, 183);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(119, 17);
 			this->label5->TabIndex = 21;
@@ -589,7 +616,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(50, 133);
+			this->label6->Location = System::Drawing::Point(350, 83);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(57, 17);
 			this->label6->TabIndex = 20;
@@ -598,7 +625,7 @@ private: System::Windows::Forms::Button^ button1;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(50, 83);
+			this->label7->Location = System::Drawing::Point(350, 33);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(37, 17);
 			this->label7->TabIndex = 19;
@@ -846,7 +873,6 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
 	this->oSvc = gcnew NS_Comp_Svc::Service();
 	RafraichirPersonnel(sender, e);
-
 }
 private: System::Void RafraichirPersonnel(System::Object^ sender, System::EventArgs^ e) {
 
@@ -879,9 +905,25 @@ private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^
 	this->oSvc->updateUnPersonnel(this->ModifIDPersonnel->Text, this->ModifNomPersonnel->Text, this->ModifPrenomPersonnel->Text, this->ModifDateNaissancePersonnel->Text, this->ModifDateEmbauchePersonnel->Text);
 	this->oSvc->updateUneAdresse(this->ModifIDPersonnel->Text, this->ModifNomRuePersonnel->Text, this->ModifNumeroRuePersonnel->Text, this->ModifIDVillePersonnel->Text);
 
-	RafraichirPersonnel(sender, e);
+	RafraichirUnPersonnel(sender, e);
 }
-private: System::Void ModifIDPersonnel_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	RafraichirUnPersonnel(sender, e);
+	this->ModifNomPersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["NomPersonnel"]->Value->ToString();
+	this->ModifPrenomPersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["PrenomPersonnel"]->Value->ToString();
+	this->ModifNomRuePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["NomRue"]->Value->ToString();
+	this->ModifNumeroRuePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["NumeroRue"]->Value->ToString();
+	this->ModifDateNaissancePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["DateDeNaissancePersonnel"]->Value->ToString();
+	this->ModifDateEmbauchePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["DateEmbauchePersonnel"]->Value->ToString();
+	this->ModifIDVillePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["IDVille"]->Value->ToString();
+}
+private: System::Void RafraichirUnPersonnel(System::Object^ sender, System::EventArgs^ e) {
+
+	this->GridViewCréerPersonnel->Refresh();
+	this->oDs = this->oSvc->selectionnerUnPersonnel(this->ModifIDPersonnel->Text, "Rsl");
+	this->GridViewCréerPersonnel->DataSource = this->oDs;
+	this->GridViewCréerPersonnel->DataMember = "Rsl";
 }
 };
 }
