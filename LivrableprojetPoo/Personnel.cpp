@@ -19,7 +19,7 @@ System::String^ NS_Comp_Mappage::Personnel::UpdateDelete(void)
 }
 System::String^ NS_Comp_Mappage::Personnel::Update(void)
 {
-	return "";
+	return "UPDATE Personnel SET NomPersonnel = '" + this->Nom + "', PrenomPersonnel = '" + this->Prenom + "', DateDeNaissancePersonnel = '" + this->DateNaissance + "', DateEmbauchePersonnel = '" + this->DateEmbauche + "' WHERE IDPersonnel = '" + this->ID + "'; ";
 }
 
 ////////////////SET////////////////

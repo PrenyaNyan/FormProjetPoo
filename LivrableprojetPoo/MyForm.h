@@ -112,7 +112,8 @@ namespace LivrableprojetPoo {
 	private: System::Windows::Forms::Label^ IDDeletePersonnel;
 
 	private: System::Windows::Forms::Button^ ValiderDeletePersonnel;
-	private: System::Windows::Forms::TextBox^ ModifIDPatronPersonnel;
+	private: System::Windows::Forms::TextBox^ ModifIDVillePersonnel;
+
 
 	private: System::Windows::Forms::TextBox^ ModifNumeroRuePersonnel;
 	private: System::Windows::Forms::TextBox^ ModifNomRuePersonnel;
@@ -205,7 +206,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->ModifIDPersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->ModifIDPatronPersonnel = (gcnew System::Windows::Forms::TextBox());
+			this->ModifIDVillePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->ModifNumeroRuePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->ModifNomRuePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->ModifDateEmbauchePersonnel = (gcnew System::Windows::Forms::TextBox());
@@ -442,7 +443,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->PersonnelModifier->Controls->Add(this->button1);
 			this->PersonnelModifier->Controls->Add(this->ModifIDPersonnel);
 			this->PersonnelModifier->Controls->Add(this->label8);
-			this->PersonnelModifier->Controls->Add(this->ModifIDPatronPersonnel);
+			this->PersonnelModifier->Controls->Add(this->ModifIDVillePersonnel);
 			this->PersonnelModifier->Controls->Add(this->ModifNumeroRuePersonnel);
 			this->PersonnelModifier->Controls->Add(this->ModifNomRuePersonnel);
 			this->PersonnelModifier->Controls->Add(this->ModifDateEmbauchePersonnel);
@@ -480,6 +481,7 @@ private: System::Windows::Forms::Button^ button1;
 			this->ModifIDPersonnel->Name = L"ModifIDPersonnel";
 			this->ModifIDPersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifIDPersonnel->TabIndex = 34;
+			this->ModifIDPersonnel->TextChanged += gcnew System::EventHandler(this, &MyForm::ModifIDPersonnel_TextChanged);
 			// 
 			// label8
 			// 
@@ -490,12 +492,12 @@ private: System::Windows::Forms::Button^ button1;
 			this->label8->TabIndex = 33;
 			this->label8->Text = L"ID Personnel";
 			// 
-			// ModifIDPatronPersonnel
+			// ModifIDVillePersonnel
 			// 
-			this->ModifIDPatronPersonnel->Location = System::Drawing::Point(350, 203);
-			this->ModifIDPatronPersonnel->Name = L"ModifIDPatronPersonnel";
-			this->ModifIDPatronPersonnel->Size = System::Drawing::Size(178, 22);
-			this->ModifIDPatronPersonnel->TabIndex = 32;
+			this->ModifIDVillePersonnel->Location = System::Drawing::Point(350, 203);
+			this->ModifIDVillePersonnel->Name = L"ModifIDVillePersonnel";
+			this->ModifIDVillePersonnel->Size = System::Drawing::Size(178, 22);
+			this->ModifIDVillePersonnel->TabIndex = 32;
 			// 
 			// ModifNumeroRuePersonnel
 			// 
@@ -874,7 +876,12 @@ private: System::Void ValiderDeletePersonnel_Click(System::Object^ sender, Syste
 	RafraichirPersonnel(sender, e);
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc->supprimerUnPersonnel(this.inp)
+	this->oSvc->updateUnPersonnel(this->ModifIDPersonnel->Text, this->ModifNomPersonnel->Text, this->ModifPrenomPersonnel->Text, this->ModifDateNaissancePersonnel->Text, this->ModifDateEmbauchePersonnel->Text);
+	this->oSvc->updateUneAdresse(this->ModifIDPersonnel->Text, this->ModifNomRuePersonnel->Text, this->ModifNumeroRuePersonnel->Text, this->ModifIDVillePersonnel->Text);
+
+	RafraichirPersonnel(sender, e);
+}
+private: System::Void ModifIDPersonnel_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

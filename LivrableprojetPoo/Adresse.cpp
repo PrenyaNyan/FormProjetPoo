@@ -15,7 +15,7 @@ System::String^ NS_Comp_Mappage::Adresse::Delete(void)
 }
 System::String^ NS_Comp_Mappage::Adresse::Update(void)
 {
-	return "";
+	return "Update Adresse set NomRue = '" + this->NomRue + "', NumeroRue = '" + this->NumeroRue + "', IDVille = '" + this->IDVille + "' where IDAdresse = (Select Adresse.IDAdresse from Adresse inner join Personnel on Adresse.IDAdresse = Personnel.IDAdresse where IDPersonnel = '" + this->ID + "')";
 
 }
 

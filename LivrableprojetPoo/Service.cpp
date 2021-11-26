@@ -62,19 +62,41 @@ void NS_Comp_Svc::Service::supprimerUneAdresse(System::String^ ID)
 	this->oCad->actionRows(sql);
 }
 
-void NS_Comp_Svc::Service::updateUnPersonnel(System::String^ nom, System::String^ prenom, System::String^ ID) {
-
+void NS_Comp_Svc::Service::updateUnPersonnel(System::String^ ID, System::String^ nom, System::String^ prenom, System::String^ DateNaissance, System::String^ DateEmbauche) {
 	System::String^ sql;
 
+	this->oMappPersonnel->setID(int::Parse(ID));
 	this->oMappPersonnel->setNom(nom);
 	this->oMappPersonnel->setPrenom(prenom);
-	this->oMappPersonnel->setID(int::Parse(ID));
+	this->oMappPersonnel->setDateNaissance(DateNaissance);
+	this->oMappPersonnel->setDateEmbauche(DateEmbauche);
 
 	sql = this->oMappPersonnel->Update();
 
 	this->oCad->actionRows(sql);
 
 }
+
+void NS_Comp_Svc::Service::updateUneAdresse(System::String^ ID, System::String^ nom, System::String^ numero, System::String^ IDVille) {
+	System::String^ sql;
+
+	this->oMappAdresse->setID(int::Parse(ID));
+	this->oMappAdresse->setNomRue(nom);
+	this->oMappAdresse->setNumeroRue(int::Parse(numero));
+	this->oMappAdresse->setIDVille(int::Parse(IDVille));
+
+	sql = this->oMappAdresse->Update();
+
+	this->oCad->actionRows(sql);
+
+}
+
+
+
+
+
+
+
 
 void NS_Comp_Svc::Service::updateDeletePersonnel(System::String^ ID) {
 

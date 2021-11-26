@@ -18,8 +18,8 @@ namespace NS_Comp_Svc
 		void ajouterUneAdresse(System::String^, System::String^, System::String^);
 		void supprimerUnPersonnel(System::String^);
 		void supprimerUneAdresse(System::String^);
-		void updateUnPersonnel(System::String^, System::String^, System::String^);
+		void updateUnPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^);
+		void updateUneAdresse(System::String^, System::String^, System::String^, System::String^);
 		void updateDeletePersonnel(System::String^);
 	};
 }
-
