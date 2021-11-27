@@ -15,6 +15,7 @@ namespace NS_Comp_Mappage
 	public:
 		System::String^ Select(void);
 		System::String^ SelectOne(void);
+		System::String^ SelectCondition(System::String^, System::String^, System::String^, System::String^);
 		System::String^ Insert(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);
@@ -27,14 +28,6 @@ namespace NS_Comp_Mappage
 		void setDateEmbauche(System::String^);
 		void setIDAdresse(int);
 		void setIDPatron(int);
-
-		int getID(void);
-		System::String^ getNom(void);
-		System::String^ getPrenom(void);
-		System::String^ getDateNaissance(void);
-		System::String^ getDateEmbauche(void);
-		int getIDAdresse(void);
-		int getIDPatron(void);
 	};
 }
 

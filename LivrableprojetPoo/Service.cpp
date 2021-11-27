@@ -22,6 +22,12 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnPersonnel(System::Str
 	sql = this->oMappPersonnel->SelectOne();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerCondition(System::String^ Nom, System::String^ Prenom, System::String^ NomRue, System::String^ NomVille, System::String^ dataTableName)
+{
+	System::String^ sql;
+	sql = this->oMappPersonnel->SelectCondition(Nom, Prenom, NomRue, NomVille);
+	return this->oCad->getRows(sql, dataTableName);
+}
 void NS_Comp_Svc::Service::ajouterUnPersonnel(System::String^ Nom, System::String^ Prenom, System::String^ DateNaissance, System::String^ DateEmbauche)
 {
 	System::String^ sql;

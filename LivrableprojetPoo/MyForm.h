@@ -152,6 +152,22 @@ private: System::Windows::Forms::DataGridView^ dataGridView1;
 private: System::Windows::Forms::DataGridView^ dataGridView2;
 private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::Button^ ChercherPersonnel;
+private: System::Windows::Forms::TextBox^ InputChercheNomVille;
+
+private: System::Windows::Forms::TextBox^ InputChercheNomRue;
+
+private: System::Windows::Forms::TextBox^ InputCherchePrenom;
+
+private: System::Windows::Forms::TextBox^ InputChercheNom;
+
+private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Label^ label3;
+private: System::Windows::Forms::Label^ label4;
+
+
+
+private: System::Windows::Forms::Button^ ChercherNom;
 
 
 
@@ -234,6 +250,15 @@ private: System::Windows::Forms::Button^ ChercherPersonnel;
 			this->PrenomAff = (gcnew System::Windows::Forms::Label());
 			this->NomAff = (gcnew System::Windows::Forms::Label());
 			this->PersonnelAfficher = (gcnew System::Windows::Forms::TabPage());
+			this->ChercherNom = (gcnew System::Windows::Forms::Button());
+			this->InputChercheNomVille = (gcnew System::Windows::Forms::TextBox());
+			this->InputChercheNomRue = (gcnew System::Windows::Forms::TextBox());
+			this->InputCherchePrenom = (gcnew System::Windows::Forms::TextBox());
+			this->InputChercheNom = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->PersonnelSupprimer = (gcnew System::Windows::Forms::TabPage());
 			this->ValiderDeletePersonnel = (gcnew System::Windows::Forms::Button());
 			this->InputDeletePersonnel = (gcnew System::Windows::Forms::TextBox());
@@ -258,6 +283,7 @@ private: System::Windows::Forms::Button^ ChercherPersonnel;
 			this->TabPersonnel->SuspendLayout();
 			this->PersonnelCréer->SuspendLayout();
 			this->PersonnelModifier->SuspendLayout();
+			this->PersonnelAfficher->SuspendLayout();
 			this->PersonnelSupprimer->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerPersonnel))->BeginInit();
 			this->MainClient->SuspendLayout();
@@ -643,6 +669,15 @@ private: System::Windows::Forms::Button^ ChercherPersonnel;
 			// 
 			// PersonnelAfficher
 			// 
+			this->PersonnelAfficher->Controls->Add(this->ChercherNom);
+			this->PersonnelAfficher->Controls->Add(this->InputChercheNomVille);
+			this->PersonnelAfficher->Controls->Add(this->InputChercheNomRue);
+			this->PersonnelAfficher->Controls->Add(this->InputCherchePrenom);
+			this->PersonnelAfficher->Controls->Add(this->InputChercheNom);
+			this->PersonnelAfficher->Controls->Add(this->label1);
+			this->PersonnelAfficher->Controls->Add(this->label2);
+			this->PersonnelAfficher->Controls->Add(this->label3);
+			this->PersonnelAfficher->Controls->Add(this->label4);
 			this->PersonnelAfficher->Location = System::Drawing::Point(4, 25);
 			this->PersonnelAfficher->Name = L"PersonnelAfficher";
 			this->PersonnelAfficher->Padding = System::Windows::Forms::Padding(3);
@@ -650,6 +685,81 @@ private: System::Windows::Forms::Button^ ChercherPersonnel;
 			this->PersonnelAfficher->TabIndex = 2;
 			this->PersonnelAfficher->Text = L"Afficher";
 			this->PersonnelAfficher->UseVisualStyleBackColor = true;
+			// 
+			// ChercherNom
+			// 
+			this->ChercherNom->Location = System::Drawing::Point(323, 121);
+			this->ChercherNom->Name = L"ChercherNom";
+			this->ChercherNom->Size = System::Drawing::Size(95, 40);
+			this->ChercherNom->TabIndex = 23;
+			this->ChercherNom->Text = L"Chercher";
+			this->ChercherNom->UseVisualStyleBackColor = true;
+			this->ChercherNom->Click += gcnew System::EventHandler(this, &MyForm::ChercherNom_Click);
+			// 
+			// InputChercheNomVille
+			// 
+			this->InputChercheNomVille->Location = System::Drawing::Point(50, 203);
+			this->InputChercheNomVille->Name = L"InputChercheNomVille";
+			this->InputChercheNomVille->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNomVille->TabIndex = 22;
+			// 
+			// InputChercheNomRue
+			// 
+			this->InputChercheNomRue->Location = System::Drawing::Point(50, 153);
+			this->InputChercheNomRue->Name = L"InputChercheNomRue";
+			this->InputChercheNomRue->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNomRue->TabIndex = 21;
+			// 
+			// InputCherchePrenom
+			// 
+			this->InputCherchePrenom->Location = System::Drawing::Point(50, 103);
+			this->InputCherchePrenom->Name = L"InputCherchePrenom";
+			this->InputCherchePrenom->Size = System::Drawing::Size(178, 22);
+			this->InputCherchePrenom->TabIndex = 20;
+			// 
+			// InputChercheNom
+			// 
+			this->InputChercheNom->Location = System::Drawing::Point(50, 53);
+			this->InputChercheNom->Name = L"InputChercheNom";
+			this->InputChercheNom->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNom->TabIndex = 19;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(50, 133);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(97, 17);
+			this->label1->TabIndex = 18;
+			this->label1->Text = L"Nom de la rue";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(50, 183);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(100, 17);
+			this->label2->TabIndex = 17;
+			this->label2->Text = L"Nom de la ville";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(50, 83);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(57, 17);
+			this->label3->TabIndex = 16;
+			this->label3->Text = L"Prenom";
+			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(50, 33);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(37, 17);
+			this->label4->TabIndex = 15;
+			this->label4->Text = L"Nom";
 			// 
 			// PersonnelSupprimer
 			// 
@@ -865,6 +975,8 @@ private: System::Windows::Forms::Button^ ChercherPersonnel;
 			this->PersonnelCréer->PerformLayout();
 			this->PersonnelModifier->ResumeLayout(false);
 			this->PersonnelModifier->PerformLayout();
+			this->PersonnelAfficher->ResumeLayout(false);
+			this->PersonnelAfficher->PerformLayout();
 			this->PersonnelSupprimer->ResumeLayout(false);
 			this->PersonnelSupprimer->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerPersonnel))->EndInit();
@@ -946,6 +1058,14 @@ private: System::Void RafraichirUnPersonnel(System::Object^ sender, System::Even
 
 	this->GridViewCréerPersonnel->Refresh();
 	this->oDs = this->oSvc->selectionnerUnPersonnel(this->ModifIDPersonnel->Text, "Rsl");
+	this->GridViewCréerPersonnel->DataSource = this->oDs;
+	this->GridViewCréerPersonnel->DataMember = "Rsl";
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void ChercherNom_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->GridViewCréerPersonnel->Refresh();
+	this->oDs = this->oSvc->selectionnerCondition(this->InputChercheNom->Text,this->InputCherchePrenom->Text,this->InputChercheNomRue->Text,this->InputChercheNomVille->Text, "Rsl");
 	this->GridViewCréerPersonnel->DataSource = this->oDs;
 	this->GridViewCréerPersonnel->DataMember = "Rsl";
 }

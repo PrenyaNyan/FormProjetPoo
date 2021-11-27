@@ -37,9 +37,3 @@ void NS_Comp_Mappage::Adresse::setIDVille(int IDVille)
 {
 	this->IDVille = IDVille;
 }
-
-////////////////GET////////////////
-int NS_Comp_Mappage::Adresse::getID(void) { return this->ID; }
-System::String^ NS_Comp_Mappage::Adresse::getNomRue(void) { return this->NomRue; }
-int NS_Comp_Mappage::Adresse::getNumeroRue(void) { return this->NumeroRue; }
-int NS_Comp_Mappage::Adresse::getIDVille(void) { return this->IDVille; }

@@ -9,6 +9,10 @@ System::String^ NS_Comp_Mappage::Personnel::SelectOne(void)
 {
 	return "Select IDPersonnel, NomPersonnel, PrenomPersonnel,DateDeNaissancePersonnel, DateEmbauchePersonnel,NumeroRue,NomRue,NomVille,IDVille,NomPays from Pays inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, NomVille, Ville.IDVille, IDPays from Ville inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, IDVille, IDPersonnel_AvoirUnPatron as IDPatron from Personnel inner join Adresse on Personnel.IDAdresse = Adresse.IDAdresse)Tab1 on Ville.IDVille = Tab1.IDVille)Tab2 on Tab2.IDPays = Pays.IDPays where IDPersonnel = '" + this->ID + "'; ";
 }
+System::String^ NS_Comp_Mappage::Personnel::SelectCondition(System::String^ Nom, System::String^ Prenom, System::String^ NomRue, System::String^ NomVille)
+{
+	return "Select IDPersonnel, NomPersonnel, PrenomPersonnel,DateDeNaissancePersonnel, DateEmbauchePersonnel,NumeroRue,NomRue,NomVille,IDVille,NomPays  from Pays inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, NomVille, Ville.IDVille, IDPays from Ville inner join(Select IDPersonnel, NomPersonnel, PrenomPersonnel, DateDeNaissancePersonnel, DateEmbauchePersonnel, NumeroRue, NomRue, IDVille, IDPersonnel_AvoirUnPatron as IDPatron from Personnel inner join Adresse on Personnel.IDAdresse = Adresse.IDAdresse)Tab1 on Ville.IDVille = Tab1.IDVille)Tab2 on Tab2.IDPays = Pays.IDPays where NomPersonnel like '%"+Nom+"%' and PrenomPersonnel like '%"+Prenom+"%' and NomRue like '%" + NomRue + "%' and NomVille like '%" + NomVille + "%'; ";
+}
 System::String^ NS_Comp_Mappage::Personnel::Insert(void)
 {
 	return "Insert Into Personnel(NomPersonnel,PrenomPersonnel,DateEmbauchePersonnel,DateDeNaissancePersonnel,IDAdresse,IDPersonnel_AvoirUnPatron) values ('" + this->Nom + "','" + this->Prenom + "','" + this->DateEmbauche + "','" + this->DateNaissance + "',(Select top 1 IDAdresse from Adresse order by IDAdresse desc),'" + this->IDPatron + "');";
@@ -55,12 +59,3 @@ void NS_Comp_Mappage::Personnel::setIDPatron(int IDPatron)
 {
 	this->IDPatron = IDPatron;
 }
-
-////////////////GET////////////////
-int NS_Comp_Mappage::Personnel::getID(void) { return this->ID; }
-System::String^ NS_Comp_Mappage::Personnel::getNom(void) { return this->Nom; }
-System::String^ NS_Comp_Mappage::Personnel::getPrenom(void) { return this->Prenom; }
-System::String^ NS_Comp_Mappage::Personnel::getDateNaissance(void) { return this->DateNaissance; }
-System::String^ NS_Comp_Mappage::Personnel::getDateEmbauche(void) { return this->DateEmbauche; }
-int NS_Comp_Mappage::Personnel::getIDAdresse(void) { return this->IDAdresse; }
-int NS_Comp_Mappage::Personnel::getIDPatron(void) { return this->IDPatron; }

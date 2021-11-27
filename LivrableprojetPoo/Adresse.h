@@ -19,10 +19,5 @@ namespace NS_Comp_Mappage
 		void setNomRue(System::String^);
 		void setNumeroRue(int);
 		void setIDVille(int);
-
-		int getID(void);
-		System::String^ getNomRue(void);
-		int getNumeroRue(void);
-		int getIDVille(void);
 	};
 }
