@@ -128,15 +128,22 @@ private: System::Windows::Forms::TextBox^ ModifDateNaissancePersonnel;
 private: System::Windows::Forms::TextBox^ ModifPrenomPersonnel;
 
 private: System::Windows::Forms::TextBox^ ModifNomPersonnel;
+private: System::Windows::Forms::Label^ IDVilleAff;
 
 
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Label^ label7;
+
+private: System::Windows::Forms::Label^ NomRueAff;
+private: System::Windows::Forms::Label^ NumeroRueAff;
+
+
+private: System::Windows::Forms::Label^ NaissanceAff;
+private: System::Windows::Forms::Label^ EmbaucheAff;
+
+
+private: System::Windows::Forms::Label^ PrenomAff;
+
+private: System::Windows::Forms::Label^ NomAff;
+
 private: System::Windows::Forms::TextBox^ ModifIDPersonnel;
 
 
@@ -145,7 +152,7 @@ private: System::Windows::Forms::DataGridView^ dataGridView1;
 private: System::Windows::Forms::DataGridView^ dataGridView2;
 private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::Button^ ChercherPersonnel;
-private: System::Windows::Forms::Label^ TestRecup;
+
 
 
 
@@ -192,7 +199,6 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->MainPersonnel = (gcnew System::Windows::Forms::TabPage());
 			this->TabPersonnel = (gcnew System::Windows::Forms::TabControl());
 			this->PersonnelCréer = (gcnew System::Windows::Forms::TabPage());
-			this->TestRecup = (gcnew System::Windows::Forms::Label());
 			this->InputIDVillePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNumeroRuePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNomRuePersonnel = (gcnew System::Windows::Forms::TextBox());
@@ -220,13 +226,13 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifDateNaissancePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->ModifPrenomPersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->ModifNomPersonnel = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->IDVilleAff = (gcnew System::Windows::Forms::Label());
+			this->NomRueAff = (gcnew System::Windows::Forms::Label());
+			this->NumeroRueAff = (gcnew System::Windows::Forms::Label());
+			this->NaissanceAff = (gcnew System::Windows::Forms::Label());
+			this->EmbaucheAff = (gcnew System::Windows::Forms::Label());
+			this->PrenomAff = (gcnew System::Windows::Forms::Label());
+			this->NomAff = (gcnew System::Windows::Forms::Label());
 			this->PersonnelAfficher = (gcnew System::Windows::Forms::TabPage());
 			this->PersonnelSupprimer = (gcnew System::Windows::Forms::TabPage());
 			this->ValiderDeletePersonnel = (gcnew System::Windows::Forms::Button());
@@ -300,7 +306,6 @@ private: System::Windows::Forms::Label^ TestRecup;
 			// 
 			// PersonnelCréer
 			// 
-			this->PersonnelCréer->Controls->Add(this->TestRecup);
 			this->PersonnelCréer->Controls->Add(this->InputIDVillePersonnel);
 			this->PersonnelCréer->Controls->Add(this->InputNumeroRuePersonnel);
 			this->PersonnelCréer->Controls->Add(this->InputNomRuePersonnel);
@@ -323,15 +328,6 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->PersonnelCréer->TabIndex = 0;
 			this->PersonnelCréer->Text = L"Créer";
 			this->PersonnelCréer->UseVisualStyleBackColor = true;
-			// 
-			// TestRecup
-			// 
-			this->TestRecup->AutoSize = true;
-			this->TestRecup->Location = System::Drawing::Point(636, 55);
-			this->TestRecup->Name = L"TestRecup";
-			this->TestRecup->Size = System::Drawing::Size(46, 17);
-			this->TestRecup->TabIndex = 19;
-			this->TestRecup->Text = L"label9";
 			// 
 			// InputIDVillePersonnel
 			// 
@@ -468,13 +464,13 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->PersonnelModifier->Controls->Add(this->ModifDateNaissancePersonnel);
 			this->PersonnelModifier->Controls->Add(this->ModifPrenomPersonnel);
 			this->PersonnelModifier->Controls->Add(this->ModifNomPersonnel);
-			this->PersonnelModifier->Controls->Add(this->label1);
-			this->PersonnelModifier->Controls->Add(this->label2);
-			this->PersonnelModifier->Controls->Add(this->label3);
-			this->PersonnelModifier->Controls->Add(this->label4);
-			this->PersonnelModifier->Controls->Add(this->label5);
-			this->PersonnelModifier->Controls->Add(this->label6);
-			this->PersonnelModifier->Controls->Add(this->label7);
+			this->PersonnelModifier->Controls->Add(this->IDVilleAff);
+			this->PersonnelModifier->Controls->Add(this->NomRueAff);
+			this->PersonnelModifier->Controls->Add(this->NumeroRueAff);
+			this->PersonnelModifier->Controls->Add(this->NaissanceAff);
+			this->PersonnelModifier->Controls->Add(this->EmbaucheAff);
+			this->PersonnelModifier->Controls->Add(this->PrenomAff);
+			this->PersonnelModifier->Controls->Add(this->NomAff);
 			this->PersonnelModifier->Location = System::Drawing::Point(4, 25);
 			this->PersonnelModifier->Name = L"PersonnelModifier";
 			this->PersonnelModifier->Padding = System::Windows::Forms::Padding(3);
@@ -525,6 +521,7 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifIDVillePersonnel->Name = L"ModifIDVillePersonnel";
 			this->ModifIDVillePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifIDVillePersonnel->TabIndex = 32;
+			this->ModifIDVillePersonnel->Visible = false;
 			// 
 			// ModifNumeroRuePersonnel
 			// 
@@ -532,6 +529,7 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifNumeroRuePersonnel->Name = L"ModifNumeroRuePersonnel";
 			this->ModifNumeroRuePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifNumeroRuePersonnel->TabIndex = 31;
+			this->ModifNumeroRuePersonnel->Visible = false;
 			// 
 			// ModifNomRuePersonnel
 			// 
@@ -539,6 +537,7 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifNomRuePersonnel->Name = L"ModifNomRuePersonnel";
 			this->ModifNomRuePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifNomRuePersonnel->TabIndex = 30;
+			this->ModifNomRuePersonnel->Visible = false;
 			// 
 			// ModifDateEmbauchePersonnel
 			// 
@@ -546,6 +545,7 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifDateEmbauchePersonnel->Name = L"ModifDateEmbauchePersonnel";
 			this->ModifDateEmbauchePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifDateEmbauchePersonnel->TabIndex = 29;
+			this->ModifDateEmbauchePersonnel->Visible = false;
 			// 
 			// ModifDateNaissancePersonnel
 			// 
@@ -553,6 +553,7 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifDateNaissancePersonnel->Name = L"ModifDateNaissancePersonnel";
 			this->ModifDateNaissancePersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifDateNaissancePersonnel->TabIndex = 28;
+			this->ModifDateNaissancePersonnel->Visible = false;
 			// 
 			// ModifPrenomPersonnel
 			// 
@@ -560,6 +561,7 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifPrenomPersonnel->Name = L"ModifPrenomPersonnel";
 			this->ModifPrenomPersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifPrenomPersonnel->TabIndex = 27;
+			this->ModifPrenomPersonnel->Visible = false;
 			// 
 			// ModifNomPersonnel
 			// 
@@ -567,69 +569,77 @@ private: System::Windows::Forms::Label^ TestRecup;
 			this->ModifNomPersonnel->Name = L"ModifNomPersonnel";
 			this->ModifNomPersonnel->Size = System::Drawing::Size(178, 22);
 			this->ModifNomPersonnel->TabIndex = 26;
+			this->ModifNomPersonnel->Visible = false;
 			// 
-			// label1
+			// IDVilleAff
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(650, 133);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(84, 17);
-			this->label1->TabIndex = 25;
-			this->label1->Text = L"ID de la ville";
+			this->IDVilleAff->AutoSize = true;
+			this->IDVilleAff->Location = System::Drawing::Point(650, 133);
+			this->IDVilleAff->Name = L"IDVilleAff";
+			this->IDVilleAff->Size = System::Drawing::Size(84, 17);
+			this->IDVilleAff->TabIndex = 25;
+			this->IDVilleAff->Text = L"ID de la ville";
+			this->IDVilleAff->Visible = false;
 			// 
-			// label2
+			// NomRueAff
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(650, 33);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(97, 17);
-			this->label2->TabIndex = 24;
-			this->label2->Text = L"Nom de la rue";
+			this->NomRueAff->AutoSize = true;
+			this->NomRueAff->Location = System::Drawing::Point(650, 33);
+			this->NomRueAff->Name = L"NomRueAff";
+			this->NomRueAff->Size = System::Drawing::Size(97, 17);
+			this->NomRueAff->TabIndex = 24;
+			this->NomRueAff->Text = L"Nom de la rue";
+			this->NomRueAff->Visible = false;
 			// 
-			// label3
+			// NumeroRueAff
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(650, 83);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(118, 17);
-			this->label3->TabIndex = 23;
-			this->label3->Text = L"Numero de la rue";
+			this->NumeroRueAff->AutoSize = true;
+			this->NumeroRueAff->Location = System::Drawing::Point(650, 83);
+			this->NumeroRueAff->Name = L"NumeroRueAff";
+			this->NumeroRueAff->Size = System::Drawing::Size(118, 17);
+			this->NumeroRueAff->TabIndex = 23;
+			this->NumeroRueAff->Text = L"Numero de la rue";
+			this->NumeroRueAff->Visible = false;
 			// 
-			// label4
+			// NaissanceAff
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(350, 133);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(126, 17);
-			this->label4->TabIndex = 22;
-			this->label4->Text = L"Date de naissance";
+			this->NaissanceAff->AutoSize = true;
+			this->NaissanceAff->Location = System::Drawing::Point(350, 133);
+			this->NaissanceAff->Name = L"NaissanceAff";
+			this->NaissanceAff->Size = System::Drawing::Size(126, 17);
+			this->NaissanceAff->TabIndex = 22;
+			this->NaissanceAff->Text = L"Date de naissance";
+			this->NaissanceAff->Visible = false;
 			// 
-			// label5
+			// EmbaucheAff
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(350, 183);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(119, 17);
-			this->label5->TabIndex = 21;
-			this->label5->Text = L"Date d\'embauche";
+			this->EmbaucheAff->AutoSize = true;
+			this->EmbaucheAff->Location = System::Drawing::Point(350, 183);
+			this->EmbaucheAff->Name = L"EmbaucheAff";
+			this->EmbaucheAff->Size = System::Drawing::Size(119, 17);
+			this->EmbaucheAff->TabIndex = 21;
+			this->EmbaucheAff->Text = L"Date d\'embauche";
+			this->EmbaucheAff->Visible = false;
 			// 
-			// label6
+			// PrenomAff
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(350, 83);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(57, 17);
-			this->label6->TabIndex = 20;
-			this->label6->Text = L"Prenom";
+			this->PrenomAff->AutoSize = true;
+			this->PrenomAff->Location = System::Drawing::Point(350, 83);
+			this->PrenomAff->Name = L"PrenomAff";
+			this->PrenomAff->Size = System::Drawing::Size(57, 17);
+			this->PrenomAff->TabIndex = 20;
+			this->PrenomAff->Text = L"Prenom";
+			this->PrenomAff->Visible = false;
 			// 
-			// label7
+			// NomAff
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(350, 33);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(37, 17);
-			this->label7->TabIndex = 19;
-			this->label7->Text = L"Nom";
+			this->NomAff->AutoSize = true;
+			this->NomAff->Location = System::Drawing::Point(350, 33);
+			this->NomAff->Name = L"NomAff";
+			this->NomAff->Size = System::Drawing::Size(37, 17);
+			this->NomAff->TabIndex = 19;
+			this->NomAff->Text = L"Nom";
+			this->NomAff->Visible = false;
 			// 
 			// PersonnelAfficher
 			// 
@@ -911,12 +921,26 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	
 	RafraichirUnPersonnel(sender, e);
 	this->ModifNomPersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["NomPersonnel"]->Value->ToString();
+	this->ModifNomPersonnel->Visible = true;
+	this->NomAff->Visible = true;
 	this->ModifPrenomPersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["PrenomPersonnel"]->Value->ToString();
+	this->ModifPrenomPersonnel->Visible = true;
+	this->PrenomAff->Visible = true;
 	this->ModifNomRuePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["NomRue"]->Value->ToString();
+	this->ModifNomRuePersonnel->Visible = true;
+	this->NomRueAff->Visible = true;
 	this->ModifNumeroRuePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["NumeroRue"]->Value->ToString();
+	this->ModifNumeroRuePersonnel->Visible = true;
+	this->NumeroRueAff->Visible = true;
 	this->ModifDateNaissancePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["DateDeNaissancePersonnel"]->Value->ToString();
+	this->ModifDateNaissancePersonnel->Visible = true;
+	this->NaissanceAff->Visible = true;
 	this->ModifDateEmbauchePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["DateEmbauchePersonnel"]->Value->ToString();
+	this->ModifDateEmbauchePersonnel->Visible = true;
+	this->EmbaucheAff->Visible = true;
 	this->ModifIDVillePersonnel->Text = this->GridViewCréerPersonnel->Rows[0]->Cells["IDVille"]->Value->ToString();
+	this->ModifIDVillePersonnel->Visible = true;
+	this->IDVilleAff->Visible = true;
 }
 private: System::Void RafraichirUnPersonnel(System::Object^ sender, System::EventArgs^ e) {
 
