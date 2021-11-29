@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClInclude Include="Adresse.h" />
     <ClInclude Include="CAD.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Habiter.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -141,6 +143,8 @@
     <ClCompile Include="Adresse.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CAD.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Habiter.cpp" />
     <ClCompile Include="LivrableprojetPoo.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="pch.cpp">

@@ -148,7 +148,9 @@ private: System::Windows::Forms::TextBox^ ModifIDPersonnel;
 
 
 private: System::Windows::Forms::Label^ label8;
-private: System::Windows::Forms::DataGridView^ dataGridView1;
+
+
+
 private: System::Windows::Forms::DataGridView^ dataGridView2;
 private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::Button^ ChercherPersonnel;
@@ -168,6 +170,83 @@ private: System::Windows::Forms::Label^ label4;
 
 
 private: System::Windows::Forms::Button^ ChercherNom;
+private: System::Windows::Forms::TextBox^ IDVilleClient;
+
+private: System::Windows::Forms::TextBox^ InputNumeroRueClient;
+
+private: System::Windows::Forms::TextBox^ InputNomRueClient;
+
+private: System::Windows::Forms::TextBox^ InputNaissanceClient;
+
+
+private: System::Windows::Forms::TextBox^ InputPrenomClient;
+
+private: System::Windows::Forms::TextBox^ InputNomClient;
+
+private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Label^ label9;
+
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::DataGridView^ GridViewCréerClient;
+
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::ComboBox^ ChoixTypeClient;
+private: System::Windows::Forms::Button^ button3;
+private: System::Windows::Forms::TextBox^ InputModifIDClient;
+
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::TextBox^ ModifIDVilleClient;
+
+
+private: System::Windows::Forms::TextBox^ ModifNumeroRueClient;
+
+private: System::Windows::Forms::TextBox^ ModifNomRueClient;
+
+private: System::Windows::Forms::TextBox^ ModifNaissanceClient;
+
+private: System::Windows::Forms::TextBox^ ModifPrenomClient;
+
+private: System::Windows::Forms::TextBox^ ModifNomClient;
+
+private: System::Windows::Forms::Label^ TypeAdresseModifClient;
+
+private: System::Windows::Forms::Label^ NumeroRueModifClient;
+private: System::Windows::Forms::Label^ IDVilleModifClient;
+
+
+private: System::Windows::Forms::Label^ NaissanceModifClient;
+private: System::Windows::Forms::Label^ NomRueModifClient;
+
+
+private: System::Windows::Forms::Label^ PrenomModifClient;
+
+private: System::Windows::Forms::Label^ NomModifClient;
+private: System::Windows::Forms::ComboBox^ ModifTypeAdresseClient;
+private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::TextBox^ InputChercheNomVilleClient;
+
+private: System::Windows::Forms::TextBox^ InputChercheNomRueClient;
+
+private: System::Windows::Forms::TextBox^ InputCherchePrenomClient;
+
+private: System::Windows::Forms::TextBox^ InputChercheNomClient;
+
+
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Button^ button6;
+private: System::Windows::Forms::TextBox^ InputDeleteClient;
+private: System::Windows::Forms::Label^ label18;
+
+
+
 
 
 
@@ -265,11 +344,53 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->IDDeletePersonnel = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerPersonnel = (gcnew System::Windows::Forms::DataGridView());
 			this->MainClient = (gcnew System::Windows::Forms::TabPage());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->GridViewCréerClient = (gcnew System::Windows::Forms::DataGridView());
 			this->TabClient = (gcnew System::Windows::Forms::TabControl());
 			this->ClientCréer = (gcnew System::Windows::Forms::TabPage());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->ChoixTypeClient = (gcnew System::Windows::Forms::ComboBox());
+			this->IDVilleClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputNumeroRueClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputNomRueClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputNaissanceClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputPrenomClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputNomClient = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->ClientModifier = (gcnew System::Windows::Forms::TabPage());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->ModifTypeAdresseClient = (gcnew System::Windows::Forms::ComboBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->InputModifIDClient = (gcnew System::Windows::Forms::TextBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->ModifIDVilleClient = (gcnew System::Windows::Forms::TextBox());
+			this->ModifNumeroRueClient = (gcnew System::Windows::Forms::TextBox());
+			this->ModifNomRueClient = (gcnew System::Windows::Forms::TextBox());
+			this->ModifNaissanceClient = (gcnew System::Windows::Forms::TextBox());
+			this->ModifPrenomClient = (gcnew System::Windows::Forms::TextBox());
+			this->ModifNomClient = (gcnew System::Windows::Forms::TextBox());
+			this->TypeAdresseModifClient = (gcnew System::Windows::Forms::Label());
+			this->NumeroRueModifClient = (gcnew System::Windows::Forms::Label());
+			this->IDVilleModifClient = (gcnew System::Windows::Forms::Label());
+			this->NaissanceModifClient = (gcnew System::Windows::Forms::Label());
+			this->NomRueModifClient = (gcnew System::Windows::Forms::Label());
+			this->PrenomModifClient = (gcnew System::Windows::Forms::Label());
+			this->NomModifClient = (gcnew System::Windows::Forms::Label());
 			this->ClientAfficher = (gcnew System::Windows::Forms::TabPage());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->InputChercheNomVilleClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputChercheNomRueClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputCherchePrenomClient = (gcnew System::Windows::Forms::TextBox());
+			this->InputChercheNomClient = (gcnew System::Windows::Forms::TextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->ClientSupprimer = (gcnew System::Windows::Forms::TabPage());
 			this->MainCommande = (gcnew System::Windows::Forms::TabPage());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
@@ -278,6 +399,9 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->CommandeModifier = (gcnew System::Windows::Forms::TabPage());
 			this->CommandeAfficher = (gcnew System::Windows::Forms::TabPage());
 			this->CommandeSupprimer = (gcnew System::Windows::Forms::TabPage());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->InputDeleteClient = (gcnew System::Windows::Forms::TextBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -287,8 +411,12 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->PersonnelSupprimer->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerPersonnel))->BeginInit();
 			this->MainClient->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerClient))->BeginInit();
 			this->TabClient->SuspendLayout();
+			this->ClientCréer->SuspendLayout();
+			this->ClientModifier->SuspendLayout();
+			this->ClientAfficher->SuspendLayout();
+			this->ClientSupprimer->SuspendLayout();
 			this->MainCommande->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->TabCommande->SuspendLayout();
@@ -808,12 +936,12 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->GridViewCréerPersonnel->Name = L"GridViewCréerPersonnel";
 			this->GridViewCréerPersonnel->RowHeadersWidth = 51;
 			this->GridViewCréerPersonnel->RowTemplate->Height = 24;
-			this->GridViewCréerPersonnel->Size = System::Drawing::Size(1138, 273);
+			this->GridViewCréerPersonnel->Size = System::Drawing::Size(1139, 273);
 			this->GridViewCréerPersonnel->TabIndex = 0;
 			// 
 			// MainClient
 			// 
-			this->MainClient->Controls->Add(this->dataGridView1);
+			this->MainClient->Controls->Add(this->GridViewCréerClient);
 			this->MainClient->Controls->Add(this->TabClient);
 			this->MainClient->Location = System::Drawing::Point(4, 25);
 			this->MainClient->Name = L"MainClient";
@@ -823,15 +951,15 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->MainClient->Text = L"Client";
 			this->MainClient->UseVisualStyleBackColor = true;
 			// 
-			// dataGridView1
+			// GridViewCréerClient
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(8, 6);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(1138, 273);
-			this->dataGridView1->TabIndex = 1;
+			this->GridViewCréerClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->GridViewCréerClient->Location = System::Drawing::Point(8, 6);
+			this->GridViewCréerClient->Name = L"GridViewCréerClient";
+			this->GridViewCréerClient->RowHeadersWidth = 51;
+			this->GridViewCréerClient->RowTemplate->Height = 24;
+			this->GridViewCréerClient->Size = System::Drawing::Size(1139, 273);
+			this->GridViewCréerClient->TabIndex = 1;
 			// 
 			// TabClient
 			// 
@@ -847,6 +975,21 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			// 
 			// ClientCréer
 			// 
+			this->ClientCréer->Controls->Add(this->label10);
+			this->ClientCréer->Controls->Add(this->ChoixTypeClient);
+			this->ClientCréer->Controls->Add(this->IDVilleClient);
+			this->ClientCréer->Controls->Add(this->InputNumeroRueClient);
+			this->ClientCréer->Controls->Add(this->InputNomRueClient);
+			this->ClientCréer->Controls->Add(this->InputNaissanceClient);
+			this->ClientCréer->Controls->Add(this->InputPrenomClient);
+			this->ClientCréer->Controls->Add(this->InputNomClient);
+			this->ClientCréer->Controls->Add(this->label5);
+			this->ClientCréer->Controls->Add(this->label6);
+			this->ClientCréer->Controls->Add(this->label7);
+			this->ClientCréer->Controls->Add(this->label9);
+			this->ClientCréer->Controls->Add(this->label11);
+			this->ClientCréer->Controls->Add(this->label12);
+			this->ClientCréer->Controls->Add(this->button2);
 			this->ClientCréer->Location = System::Drawing::Point(4, 25);
 			this->ClientCréer->Name = L"ClientCréer";
 			this->ClientCréer->Padding = System::Windows::Forms::Padding(3);
@@ -855,8 +998,150 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->ClientCréer->Text = L"Créer";
 			this->ClientCréer->UseVisualStyleBackColor = true;
 			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(350, 183);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(106, 17);
+			this->label10->TabIndex = 35;
+			this->label10->Text = L"Type d\'adresse";
+			// 
+			// ChoixTypeClient
+			// 
+			this->ChoixTypeClient->FormattingEnabled = true;
+			this->ChoixTypeClient->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Fact", L"Livr", L"Both" });
+			this->ChoixTypeClient->Location = System::Drawing::Point(350, 203);
+			this->ChoixTypeClient->Name = L"ChoixTypeClient";
+			this->ChoixTypeClient->Size = System::Drawing::Size(121, 24);
+			this->ChoixTypeClient->TabIndex = 34;
+			// 
+			// IDVilleClient
+			// 
+			this->IDVilleClient->Location = System::Drawing::Point(350, 153);
+			this->IDVilleClient->Name = L"IDVilleClient";
+			this->IDVilleClient->Size = System::Drawing::Size(178, 22);
+			this->IDVilleClient->TabIndex = 33;
+			// 
+			// InputNumeroRueClient
+			// 
+			this->InputNumeroRueClient->Location = System::Drawing::Point(350, 103);
+			this->InputNumeroRueClient->Name = L"InputNumeroRueClient";
+			this->InputNumeroRueClient->Size = System::Drawing::Size(178, 22);
+			this->InputNumeroRueClient->TabIndex = 32;
+			// 
+			// InputNomRueClient
+			// 
+			this->InputNomRueClient->Location = System::Drawing::Point(350, 53);
+			this->InputNomRueClient->Name = L"InputNomRueClient";
+			this->InputNomRueClient->Size = System::Drawing::Size(178, 22);
+			this->InputNomRueClient->TabIndex = 31;
+			// 
+			// InputNaissanceClient
+			// 
+			this->InputNaissanceClient->Location = System::Drawing::Point(50, 153);
+			this->InputNaissanceClient->Name = L"InputNaissanceClient";
+			this->InputNaissanceClient->Size = System::Drawing::Size(178, 22);
+			this->InputNaissanceClient->TabIndex = 29;
+			// 
+			// InputPrenomClient
+			// 
+			this->InputPrenomClient->Location = System::Drawing::Point(50, 103);
+			this->InputPrenomClient->Name = L"InputPrenomClient";
+			this->InputPrenomClient->Size = System::Drawing::Size(178, 22);
+			this->InputPrenomClient->TabIndex = 28;
+			// 
+			// InputNomClient
+			// 
+			this->InputNomClient->Location = System::Drawing::Point(50, 53);
+			this->InputNomClient->Name = L"InputNomClient";
+			this->InputNomClient->Size = System::Drawing::Size(178, 22);
+			this->InputNomClient->TabIndex = 27;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(350, 133);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(84, 17);
+			this->label5->TabIndex = 26;
+			this->label5->Text = L"ID de la ville";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(350, 33);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(97, 17);
+			this->label6->TabIndex = 25;
+			this->label6->Text = L"Nom de la rue";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(350, 83);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(118, 17);
+			this->label7->TabIndex = 24;
+			this->label7->Text = L"Numero de la rue";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(50, 133);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(126, 17);
+			this->label9->TabIndex = 23;
+			this->label9->Text = L"Date de naissance";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(50, 83);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(57, 17);
+			this->label11->TabIndex = 21;
+			this->label11->Text = L"Prenom";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(50, 33);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(37, 17);
+			this->label12->TabIndex = 20;
+			this->label12->Text = L"Nom";
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(1039, 253);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(95, 40);
+			this->button2->TabIndex = 19;
+			this->button2->Text = L"Valider";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click_1);
+			// 
 			// ClientModifier
 			// 
+			this->ClientModifier->Controls->Add(this->button4);
+			this->ClientModifier->Controls->Add(this->ModifTypeAdresseClient);
+			this->ClientModifier->Controls->Add(this->button3);
+			this->ClientModifier->Controls->Add(this->InputModifIDClient);
+			this->ClientModifier->Controls->Add(this->label13);
+			this->ClientModifier->Controls->Add(this->ModifIDVilleClient);
+			this->ClientModifier->Controls->Add(this->ModifNumeroRueClient);
+			this->ClientModifier->Controls->Add(this->ModifNomRueClient);
+			this->ClientModifier->Controls->Add(this->ModifNaissanceClient);
+			this->ClientModifier->Controls->Add(this->ModifPrenomClient);
+			this->ClientModifier->Controls->Add(this->ModifNomClient);
+			this->ClientModifier->Controls->Add(this->TypeAdresseModifClient);
+			this->ClientModifier->Controls->Add(this->NumeroRueModifClient);
+			this->ClientModifier->Controls->Add(this->IDVilleModifClient);
+			this->ClientModifier->Controls->Add(this->NaissanceModifClient);
+			this->ClientModifier->Controls->Add(this->NomRueModifClient);
+			this->ClientModifier->Controls->Add(this->PrenomModifClient);
+			this->ClientModifier->Controls->Add(this->NomModifClient);
 			this->ClientModifier->Location = System::Drawing::Point(4, 25);
 			this->ClientModifier->Name = L"ClientModifier";
 			this->ClientModifier->Padding = System::Windows::Forms::Padding(3);
@@ -865,8 +1150,182 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->ClientModifier->Text = L"Modifier";
 			this->ClientModifier->UseVisualStyleBackColor = true;
 			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(1039, 253);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(95, 40);
+			this->button4->TabIndex = 55;
+			this->button4->Text = L"Valider";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			// 
+			// ModifTypeAdresseClient
+			// 
+			this->ModifTypeAdresseClient->FormattingEnabled = true;
+			this->ModifTypeAdresseClient->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Fact", L"Livr", L"Both" });
+			this->ModifTypeAdresseClient->Location = System::Drawing::Point(650, 153);
+			this->ModifTypeAdresseClient->Name = L"ModifTypeAdresseClient";
+			this->ModifTypeAdresseClient->Size = System::Drawing::Size(121, 24);
+			this->ModifTypeAdresseClient->TabIndex = 54;
+			this->ModifTypeAdresseClient->Visible = false;
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(50, 83);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(89, 42);
+			this->button3->TabIndex = 53;
+			this->button3->Text = L"Chercher";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			// 
+			// InputModifIDClient
+			// 
+			this->InputModifIDClient->Location = System::Drawing::Point(50, 53);
+			this->InputModifIDClient->Name = L"InputModifIDClient";
+			this->InputModifIDClient->Size = System::Drawing::Size(178, 22);
+			this->InputModifIDClient->TabIndex = 52;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(50, 33);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(60, 17);
+			this->label13->TabIndex = 51;
+			this->label13->Text = L"ID Client";
+			// 
+			// ModifIDVilleClient
+			// 
+			this->ModifIDVilleClient->Location = System::Drawing::Point(650, 103);
+			this->ModifIDVilleClient->Name = L"ModifIDVilleClient";
+			this->ModifIDVilleClient->Size = System::Drawing::Size(178, 22);
+			this->ModifIDVilleClient->TabIndex = 49;
+			this->ModifIDVilleClient->Visible = false;
+			// 
+			// ModifNumeroRueClient
+			// 
+			this->ModifNumeroRueClient->Location = System::Drawing::Point(650, 53);
+			this->ModifNumeroRueClient->Name = L"ModifNumeroRueClient";
+			this->ModifNumeroRueClient->Size = System::Drawing::Size(178, 22);
+			this->ModifNumeroRueClient->TabIndex = 48;
+			this->ModifNumeroRueClient->Visible = false;
+			// 
+			// ModifNomRueClient
+			// 
+			this->ModifNomRueClient->Location = System::Drawing::Point(350, 203);
+			this->ModifNomRueClient->Name = L"ModifNomRueClient";
+			this->ModifNomRueClient->Size = System::Drawing::Size(178, 22);
+			this->ModifNomRueClient->TabIndex = 47;
+			this->ModifNomRueClient->Visible = false;
+			// 
+			// ModifNaissanceClient
+			// 
+			this->ModifNaissanceClient->Location = System::Drawing::Point(350, 153);
+			this->ModifNaissanceClient->Name = L"ModifNaissanceClient";
+			this->ModifNaissanceClient->Size = System::Drawing::Size(178, 22);
+			this->ModifNaissanceClient->TabIndex = 46;
+			this->ModifNaissanceClient->Visible = false;
+			// 
+			// ModifPrenomClient
+			// 
+			this->ModifPrenomClient->Location = System::Drawing::Point(350, 103);
+			this->ModifPrenomClient->Name = L"ModifPrenomClient";
+			this->ModifPrenomClient->Size = System::Drawing::Size(178, 22);
+			this->ModifPrenomClient->TabIndex = 45;
+			this->ModifPrenomClient->Visible = false;
+			// 
+			// ModifNomClient
+			// 
+			this->ModifNomClient->Location = System::Drawing::Point(350, 53);
+			this->ModifNomClient->Name = L"ModifNomClient";
+			this->ModifNomClient->Size = System::Drawing::Size(178, 22);
+			this->ModifNomClient->TabIndex = 44;
+			this->ModifNomClient->Visible = false;
+			this->ModifNomClient->TextChanged += gcnew System::EventHandler(this, &MyForm::ModifNomClient_TextChanged);
+			// 
+			// TypeAdresseModifClient
+			// 
+			this->TypeAdresseModifClient->AutoSize = true;
+			this->TypeAdresseModifClient->Location = System::Drawing::Point(650, 133);
+			this->TypeAdresseModifClient->Name = L"TypeAdresseModifClient";
+			this->TypeAdresseModifClient->Size = System::Drawing::Size(106, 17);
+			this->TypeAdresseModifClient->TabIndex = 43;
+			this->TypeAdresseModifClient->Text = L"Type d\'adresse";
+			this->TypeAdresseModifClient->Visible = false;
+			// 
+			// NumeroRueModifClient
+			// 
+			this->NumeroRueModifClient->AutoSize = true;
+			this->NumeroRueModifClient->Location = System::Drawing::Point(650, 33);
+			this->NumeroRueModifClient->Name = L"NumeroRueModifClient";
+			this->NumeroRueModifClient->Size = System::Drawing::Size(118, 17);
+			this->NumeroRueModifClient->TabIndex = 42;
+			this->NumeroRueModifClient->Text = L"Numero de la rue";
+			this->NumeroRueModifClient->Visible = false;
+			// 
+			// IDVilleModifClient
+			// 
+			this->IDVilleModifClient->AutoSize = true;
+			this->IDVilleModifClient->Location = System::Drawing::Point(650, 83);
+			this->IDVilleModifClient->Name = L"IDVilleModifClient";
+			this->IDVilleModifClient->Size = System::Drawing::Size(84, 17);
+			this->IDVilleModifClient->TabIndex = 41;
+			this->IDVilleModifClient->Text = L"ID de la ville";
+			this->IDVilleModifClient->Visible = false;
+			// 
+			// NaissanceModifClient
+			// 
+			this->NaissanceModifClient->AutoSize = true;
+			this->NaissanceModifClient->Location = System::Drawing::Point(350, 133);
+			this->NaissanceModifClient->Name = L"NaissanceModifClient";
+			this->NaissanceModifClient->Size = System::Drawing::Size(126, 17);
+			this->NaissanceModifClient->TabIndex = 40;
+			this->NaissanceModifClient->Text = L"Date de naissance";
+			this->NaissanceModifClient->Visible = false;
+			// 
+			// NomRueModifClient
+			// 
+			this->NomRueModifClient->AutoSize = true;
+			this->NomRueModifClient->Location = System::Drawing::Point(350, 183);
+			this->NomRueModifClient->Name = L"NomRueModifClient";
+			this->NomRueModifClient->Size = System::Drawing::Size(97, 17);
+			this->NomRueModifClient->TabIndex = 39;
+			this->NomRueModifClient->Text = L"Nom de la rue";
+			this->NomRueModifClient->Visible = false;
+			// 
+			// PrenomModifClient
+			// 
+			this->PrenomModifClient->AutoSize = true;
+			this->PrenomModifClient->Location = System::Drawing::Point(350, 83);
+			this->PrenomModifClient->Name = L"PrenomModifClient";
+			this->PrenomModifClient->Size = System::Drawing::Size(57, 17);
+			this->PrenomModifClient->TabIndex = 38;
+			this->PrenomModifClient->Text = L"Prenom";
+			this->PrenomModifClient->Visible = false;
+			// 
+			// NomModifClient
+			// 
+			this->NomModifClient->AutoSize = true;
+			this->NomModifClient->Location = System::Drawing::Point(350, 33);
+			this->NomModifClient->Name = L"NomModifClient";
+			this->NomModifClient->Size = System::Drawing::Size(37, 17);
+			this->NomModifClient->TabIndex = 37;
+			this->NomModifClient->Text = L"Nom";
+			this->NomModifClient->Visible = false;
+			// 
 			// ClientAfficher
 			// 
+			this->ClientAfficher->Controls->Add(this->button5);
+			this->ClientAfficher->Controls->Add(this->InputChercheNomVilleClient);
+			this->ClientAfficher->Controls->Add(this->InputChercheNomRueClient);
+			this->ClientAfficher->Controls->Add(this->InputCherchePrenomClient);
+			this->ClientAfficher->Controls->Add(this->InputChercheNomClient);
+			this->ClientAfficher->Controls->Add(this->label14);
+			this->ClientAfficher->Controls->Add(this->label15);
+			this->ClientAfficher->Controls->Add(this->label16);
+			this->ClientAfficher->Controls->Add(this->label17);
 			this->ClientAfficher->Location = System::Drawing::Point(4, 25);
 			this->ClientAfficher->Name = L"ClientAfficher";
 			this->ClientAfficher->Padding = System::Windows::Forms::Padding(3);
@@ -875,8 +1334,85 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->ClientAfficher->Text = L"Afficher";
 			this->ClientAfficher->UseVisualStyleBackColor = true;
 			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(323, 121);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(95, 40);
+			this->button5->TabIndex = 32;
+			this->button5->Text = L"Chercher";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			// 
+			// InputChercheNomVilleClient
+			// 
+			this->InputChercheNomVilleClient->Location = System::Drawing::Point(50, 203);
+			this->InputChercheNomVilleClient->Name = L"InputChercheNomVilleClient";
+			this->InputChercheNomVilleClient->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNomVilleClient->TabIndex = 31;
+			// 
+			// InputChercheNomRueClient
+			// 
+			this->InputChercheNomRueClient->Location = System::Drawing::Point(50, 153);
+			this->InputChercheNomRueClient->Name = L"InputChercheNomRueClient";
+			this->InputChercheNomRueClient->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNomRueClient->TabIndex = 30;
+			// 
+			// InputCherchePrenomClient
+			// 
+			this->InputCherchePrenomClient->Location = System::Drawing::Point(50, 103);
+			this->InputCherchePrenomClient->Name = L"InputCherchePrenomClient";
+			this->InputCherchePrenomClient->Size = System::Drawing::Size(178, 22);
+			this->InputCherchePrenomClient->TabIndex = 29;
+			// 
+			// InputChercheNomClient
+			// 
+			this->InputChercheNomClient->Location = System::Drawing::Point(50, 53);
+			this->InputChercheNomClient->Name = L"InputChercheNomClient";
+			this->InputChercheNomClient->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNomClient->TabIndex = 28;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(50, 133);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(97, 17);
+			this->label14->TabIndex = 27;
+			this->label14->Text = L"Nom de la rue";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(50, 183);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(100, 17);
+			this->label15->TabIndex = 26;
+			this->label15->Text = L"Nom de la ville";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(50, 83);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(57, 17);
+			this->label16->TabIndex = 25;
+			this->label16->Text = L"Prenom";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(50, 33);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(37, 17);
+			this->label17->TabIndex = 24;
+			this->label17->Text = L"Nom";
+			// 
 			// ClientSupprimer
 			// 
+			this->ClientSupprimer->Controls->Add(this->button6);
+			this->ClientSupprimer->Controls->Add(this->InputDeleteClient);
+			this->ClientSupprimer->Controls->Add(this->label18);
 			this->ClientSupprimer->Location = System::Drawing::Point(4, 25);
 			this->ClientSupprimer->Name = L"ClientSupprimer";
 			this->ClientSupprimer->Padding = System::Windows::Forms::Padding(3);
@@ -904,7 +1440,7 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(1138, 273);
+			this->dataGridView2->Size = System::Drawing::Size(1139, 273);
 			this->dataGridView2->TabIndex = 1;
 			// 
 			// TabCommande
@@ -959,6 +1495,32 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->CommandeSupprimer->Text = L"Supprimer";
 			this->CommandeSupprimer->UseVisualStyleBackColor = true;
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(1039, 253);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(95, 40);
+			this->button6->TabIndex = 5;
+			this->button6->Text = L"Valider";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// InputDeleteClient
+			// 
+			this->InputDeleteClient->Location = System::Drawing::Point(453, 109);
+			this->InputDeleteClient->Name = L"InputDeleteClient";
+			this->InputDeleteClient->Size = System::Drawing::Size(100, 22);
+			this->InputDeleteClient->TabIndex = 4;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(450, 89);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(108, 17);
+			this->label18->TabIndex = 3;
+			this->label18->Text = L"ID du personnel";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -981,8 +1543,16 @@ private: System::Windows::Forms::Button^ ChercherNom;
 			this->PersonnelSupprimer->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerPersonnel))->EndInit();
 			this->MainClient->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerClient))->EndInit();
 			this->TabClient->ResumeLayout(false);
+			this->ClientCréer->ResumeLayout(false);
+			this->ClientCréer->PerformLayout();
+			this->ClientModifier->ResumeLayout(false);
+			this->ClientModifier->PerformLayout();
+			this->ClientAfficher->ResumeLayout(false);
+			this->ClientAfficher->PerformLayout();
+			this->ClientSupprimer->ResumeLayout(false);
+			this->ClientSupprimer->PerformLayout();
 			this->MainCommande->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->TabCommande->ResumeLayout(false);
@@ -994,14 +1564,22 @@ private: System::Windows::Forms::Button^ ChercherNom;
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
 	this->oSvc = gcnew NS_Comp_Svc::Service();
-	RafraichirPersonnel(sender, e);
+	//RafraichirPersonnel(sender, e);
+	RafraichirClient(sender, e);
 }
 private: System::Void RafraichirPersonnel(System::Object^ sender, System::EventArgs^ e) {
 
 	this->GridViewCréerPersonnel->Refresh();
-	this->oDs = this->oSvc->selectionnerToutLePersonnel("Rsl");
+	this->oDs = this->oSvc->selectionnerToutLePersonnel("A");
 	this->GridViewCréerPersonnel->DataSource = this->oDs;
-	this->GridViewCréerPersonnel->DataMember = "Rsl";
+	this->GridViewCréerPersonnel->DataMember = "A";
+}
+private: System::Void RafraichirClient(System::Object^ sender, System::EventArgs^ e) {
+
+	this->GridViewCréerClient->Refresh();
+	this->oDs = this->oSvc->selectionnerToutLesClients("B");
+	this->GridViewCréerClient->DataSource = this->oDs;
+	this->GridViewCréerClient->DataMember = "B";
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -1018,14 +1596,14 @@ private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void ValiderDeletePersonnel_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	this->oSvc->updateDeletePersonnel(this->InputDeletePersonnel->Text);
-	this->oSvc->supprimerUneAdresse(this->InputDeletePersonnel->Text);
+	this->oSvc->supprimerUneAdressePersonnel(this->InputDeletePersonnel->Text);
 	this->oSvc->supprimerUnPersonnel(this->InputDeletePersonnel->Text);
 
 	RafraichirPersonnel(sender, e);
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->updateUnPersonnel(this->ModifIDPersonnel->Text, this->ModifNomPersonnel->Text, this->ModifPrenomPersonnel->Text, this->ModifDateNaissancePersonnel->Text, this->ModifDateEmbauchePersonnel->Text);
-	this->oSvc->updateUneAdresse(this->ModifIDPersonnel->Text, this->ModifNomRuePersonnel->Text, this->ModifNumeroRuePersonnel->Text, this->ModifIDVillePersonnel->Text);
+	this->oSvc->updateUneAdressePersonnel(this->ModifIDPersonnel->Text, this->ModifNomRuePersonnel->Text, this->ModifNumeroRuePersonnel->Text, this->ModifIDVillePersonnel->Text);
 
 	RafraichirUnPersonnel(sender, e);
 }
@@ -1061,13 +1639,76 @@ private: System::Void RafraichirUnPersonnel(System::Object^ sender, System::Even
 	this->GridViewCréerPersonnel->DataSource = this->oDs;
 	this->GridViewCréerPersonnel->DataMember = "Rsl";
 }
+private: System::Void RafraichirUnClient(System::Object^ sender, System::EventArgs^ e) {
+
+	this->GridViewCréerClient->Refresh();
+	this->oDs = this->oSvc->selectionnerUnClient(this->InputModifIDClient->Text, "Rsl");
+	this->GridViewCréerClient->DataSource = this->oDs;
+	this->GridViewCréerClient->DataMember = "Rsl";
+}
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void ChercherNom_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->GridViewCréerPersonnel->Refresh();
-	this->oDs = this->oSvc->selectionnerCondition(this->InputChercheNom->Text,this->InputCherchePrenom->Text,this->InputChercheNomRue->Text,this->InputChercheNomVille->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerConditionPersonnel(this->InputChercheNom->Text,this->InputCherchePrenom->Text,this->InputChercheNomRue->Text,this->InputChercheNomVille->Text, "Rsl");
 	this->GridViewCréerPersonnel->DataSource = this->oDs;
 	this->GridViewCréerPersonnel->DataMember = "Rsl";
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->ajouterUnClient(this->InputNomClient->Text, this->InputPrenomClient->Text, this->InputNaissanceClient->Text);
+	this->oSvc->ajouterUneAdresse(this->InputNomRueClient->Text, this->InputNumeroRueClient->Text, this->IDVilleClient->Text);
+	this->oSvc->ajouterHabiter(this->ChoixTypeClient->Text);
+	RafraichirClient(sender, e);
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	RafraichirUnClient(sender , e);
+	this->NomModifClient->Visible = true;
+	this->ModifNomClient->Visible = true;
+	this->ModifNomClient->Text = this->GridViewCréerClient->Rows[0]->Cells["NomClient"]->Value->ToString();
+	this->PrenomModifClient->Visible = true;
+	this->ModifPrenomClient->Visible = true;
+	this->ModifPrenomClient->Text = this->GridViewCréerClient->Rows[0]->Cells["PrenomClient"]->Value->ToString();
+	this->NaissanceModifClient->Visible = true;
+	this->ModifNaissanceClient->Visible = true;
+	this->ModifNaissanceClient->Text = this->GridViewCréerClient->Rows[0]->Cells["DateDeNaissanceClient"]->Value->ToString();
+	this->NomRueModifClient->Visible = true;
+	this->ModifNomRueClient->Visible = true;
+	this->ModifNomRueClient->Text = this->GridViewCréerClient->Rows[0]->Cells["NomRue"]->Value->ToString();
+	this->NumeroRueModifClient->Visible = true;
+	this->ModifNumeroRueClient->Visible = true;
+	this->ModifNumeroRueClient->Text = this->GridViewCréerClient->Rows[0]->Cells["NumeroRue"]->Value->ToString();
+	this->IDVilleModifClient->Visible = true;
+	this->ModifIDVilleClient->Visible = true;
+	this->ModifIDVilleClient->Text = this->GridViewCréerClient->Rows[0]->Cells["IDVIlle"]->Value->ToString();
+	this->TypeAdresseModifClient->Visible = true;
+	this->ModifTypeAdresseClient->Visible = true;
+	this->ModifTypeAdresseClient->Text = this->GridViewCréerClient->Rows[0]->Cells["TypeAdresse"]->Value->ToString();
+
+	
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->updateUnClient(this->InputModifIDClient->Text,this->ModifNomClient->Text, this->ModifPrenomClient->Text, this->ModifNaissanceClient->Text);
+	this->oSvc->updateUneAdresseClient(this->InputModifIDClient->Text, this->ModifNomRueClient->Text, this->ModifNumeroRueClient->Text, this->ModifIDVilleClient->Text);
+	this->oSvc->updateHabiter(this->InputModifIDClient->Text, this->ModifTypeAdresseClient->Text);
+
+	RafraichirUnClient(sender, e);
+}
+private: System::Void ModifNomClient_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->GridViewCréerClient->Refresh();
+	this->oDs = this->oSvc->selectionnerConditionClient(this->InputChercheNomClient->Text, this->InputCherchePrenomClient->Text, this->InputChercheNomRueClient->Text, this->InputChercheNomVilleClient->Text, "Rsl");
+	this->GridViewCréerClient->DataSource = this->oDs;
+	this->GridViewCréerClient->DataMember = "Rsl";
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->oSvc->supprimerHabiter(this->InputDeletePersonnel->Text);
+	this->oSvc->supprimerUneAdresseClient(this->InputDeletePersonnel->Text);
+	this->oSvc->supprimerUnClient(this->InputDeletePersonnel->Text);
+	
+
+	RafraichirClient(sender, e);
 }
 };
 }

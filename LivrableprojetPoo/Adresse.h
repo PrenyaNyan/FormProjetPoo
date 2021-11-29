@@ -12,8 +12,10 @@ namespace NS_Comp_Mappage
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
-		System::String^ Delete(void);
-		System::String^ Update(void);
+		System::String^ DeletePersonnel(void);
+		System::String^ DeleteClient(void);
+		System::String^ UpdatePersonnel(void);
+		System::String^ UpdateClient(void);
 
 		void setID(int);
 		void setNomRue(System::String^);
