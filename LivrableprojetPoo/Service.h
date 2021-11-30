@@ -22,8 +22,10 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerToutLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutLesClients(System::String^);
 		System::Data::DataSet^ selectionnerArticle(System::String^);
+		System::Data::DataSet^ selectionnerUneCommande(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnPersonnel(System::String^, System::String^);
-		System::Data::DataSet^ selectionnerUnClient(System::String^, System::String^);
+		System::Data::DataSet^ selectionnerUnClient(System::String^, System::String^); 
+			System::Data::DataSet^ selectionnerUnArticle(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerConditionPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^);
 		System::Data::DataSet^ selectionnerConditionClient(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void ajouterUnPersonnel(System::String^, System::String^, System::String^, System::String^);

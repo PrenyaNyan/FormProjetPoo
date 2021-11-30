@@ -215,3 +215,17 @@ void NS_Comp_Svc::Service::updateHabiter(System::String^ ID, System::String^ Typ
 	this->oCad->actionRows(sql);
 
 }
+
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnArticle(System::String^ ID, System::String^ dataTableName)
+{
+	System::String^ sql;
+	sql = this->oMappCommande->SelectConditionCommande(ID);
+	return this->oCad->getRows(sql, dataTableName);
+}
+
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUneCommande(System::String^ ID, System::String^ dataTableName)
+{
+	System::String^ sql;
+	sql = this->oMappCommande->SelectConditionUneCommande(ID);
+	return this->oCad->getRows(sql, dataTableName);
+}

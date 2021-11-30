@@ -11,7 +11,8 @@ namespace NS_Comp_Mappage
 		int IDClient;
 	public:
 		System::String^ Select(void);
-		System::String^ SelectOne(void);
+		System::String^ SelectConditionCommande(System::String^);
+		System::String^ SelectConditionUneCommande(System::String^);
 		System::String^ Insert(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);

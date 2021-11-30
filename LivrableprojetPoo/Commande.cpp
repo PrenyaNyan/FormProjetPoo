@@ -5,9 +5,13 @@ System::String^ NS_Comp_Mappage::Commande::Select(void)
 {
 	return "select * from Produit";
 }
-System::String^ NS_Comp_Mappage::Commande::SelectOne(void)
+System::String^ NS_Comp_Mappage::Commande::SelectConditionCommande(System::String^ IDArticle)
 {
-	return "";
+	return "select * from Produit where IDProduit = '"+IDArticle+"'";
+}
+System::String^ NS_Comp_Mappage::Commande::SelectConditionUneCommande(System::String^ IDClient)
+{
+	return "Select  IDClient,IDCommande,NomProduit,Quantite,DateLivraison from Produit inner join (Select IDClient, Commande.IDCommande, DateLivraison, IDProduit, Quantite from Commande inner join Composer on Commande.IDCommande = Composer.IDCommande where Commande.IDCommande = "+IDClient+")Tab1 on Tab1.IDProduit = Produit.IDProduit;";
 }
 System::String^ NS_Comp_Mappage::Commande::Insert(void)
 {
