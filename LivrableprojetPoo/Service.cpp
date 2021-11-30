@@ -25,6 +25,14 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerToutLesClients(System::
 	sql = this->oMappClient->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerArticle(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMappCommande->Select();
+	return this->oCad->getRows(sql, dataTableName);
+}
+
 System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnPersonnel(System::String^ IDPersonnel ,System::String^ dataTableName)
 {
 	System::String^ sql;
@@ -118,30 +126,11 @@ void NS_Comp_Svc::Service::supprimerUneAdressePersonnel(System::String^ ID)
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::Service::supprimerUneAdresseClient(System::String^ ID)
-{
-	System::String^ sql;
-
-	this->oMappAdresse->setID(int::Parse(ID));
-	sql = this->oMappAdresse->DeleteClient();
-
-	this->oCad->actionRows(sql);
-}
 void NS_Comp_Svc::Service::supprimerUnClient(System::String^ ID)
 {
 	System::String^ sql;
 
 	this->oMappClient->setID(int::Parse(ID));
-	sql = this->oMappClient->Delete();
-
-	this->oCad->actionRows(sql);
-}
-
-void NS_Comp_Svc::Service::supprimerHabiter(System::String^ ID)
-{
-	System::String^ sql;
-
-	this->oMappHabiter->setIDClient(int::Parse(ID));
 	sql = this->oMappClient->Delete();
 
 	this->oCad->actionRows(sql);

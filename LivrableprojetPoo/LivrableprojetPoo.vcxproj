@@ -130,12 +130,17 @@
     <ClInclude Include="Adresse.h" />
     <ClInclude Include="CAD.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Commande.h" />
+    <ClInclude Include="Composer.h" />
     <ClInclude Include="Habiter.h" />
+    <ClInclude Include="ModePaiement.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Paiement.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personnel.h" />
+    <ClInclude Include="Produit.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Service.h" />
   </ItemGroup>
@@ -144,9 +149,13 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CAD.cpp" />
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Commande.cpp" />
+    <ClCompile Include="Composer.cpp" />
     <ClCompile Include="Habiter.cpp" />
     <ClCompile Include="LivrableprojetPoo.cpp" />
+    <ClCompile Include="ModePaiement.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Paiement.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -154,6 +163,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Personnel.cpp" />
+    <ClCompile Include="Produit.cpp" />
     <ClCompile Include="Service.cpp" />
   </ItemGroup>
   <ItemGroup>

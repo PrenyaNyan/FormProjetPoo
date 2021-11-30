@@ -19,7 +19,7 @@ System::String^ NS_Comp_Mappage::Client::Insert(void)
 }
 System::String^ NS_Comp_Mappage::Client::Delete(void)
 {
-	return "";
+	return "exec DelClient "+ID+"";
 }
 System::String^ NS_Comp_Mappage::Client::UpdateDelete(void)
 {

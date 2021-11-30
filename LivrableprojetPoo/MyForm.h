@@ -63,6 +63,7 @@ namespace LivrableprojetPoo {
 
 	private: NS_Comp_Svc::Service^ oSvc;
 	private: System::Data::DataSet^ oDs;
+
 	public: System::Data::DataTableReader^ reader;
 
 
@@ -148,10 +149,11 @@ private: System::Windows::Forms::TextBox^ ModifIDPersonnel;
 
 
 private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::DataGridView^ GridViewCréerCommande;
 
 
 
-private: System::Windows::Forms::DataGridView^ dataGridView2;
+
 private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::Button^ ChercherPersonnel;
 private: System::Windows::Forms::TextBox^ InputChercheNomVille;
@@ -244,6 +246,28 @@ private: System::Windows::Forms::Label^ label17;
 private: System::Windows::Forms::Button^ button6;
 private: System::Windows::Forms::TextBox^ InputDeleteClient;
 private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Button^ button8;
+private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::TextBox^ textBox3;
+private: System::Windows::Forms::TextBox^ textBox4;
+private: System::Windows::Forms::TextBox^ textBox5;
+private: System::Windows::Forms::TextBox^ textBox6;
+private: System::Windows::Forms::TextBox^ textBox7;
+private: System::Windows::Forms::Label^ label19;
+private: System::Windows::Forms::Label^ label20;
+private: System::Windows::Forms::Label^ label22;
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::Label^ label25;
+private: System::Windows::Forms::Button^ button7;
+private: System::Windows::Forms::Button^ button9;
+private: System::Windows::Forms::Button^ button10;
+private: System::Windows::Forms::Button^ button11;
+private: System::Windows::Forms::ListBox^ PanierClient;
+
+private: System::Windows::Forms::TabPage^ MainArticle;
+private: System::Windows::Forms::Button^ button12;
+
 
 
 
@@ -294,6 +318,7 @@ private: System::Windows::Forms::Label^ label18;
 			this->MainPersonnel = (gcnew System::Windows::Forms::TabPage());
 			this->TabPersonnel = (gcnew System::Windows::Forms::TabControl());
 			this->PersonnelCréer = (gcnew System::Windows::Forms::TabPage());
+			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->InputIDVillePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNumeroRuePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNomRuePersonnel = (gcnew System::Windows::Forms::TextBox());
@@ -347,6 +372,7 @@ private: System::Windows::Forms::Label^ label18;
 			this->GridViewCréerClient = (gcnew System::Windows::Forms::DataGridView());
 			this->TabClient = (gcnew System::Windows::Forms::TabControl());
 			this->ClientCréer = (gcnew System::Windows::Forms::TabPage());
+			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->ChoixTypeClient = (gcnew System::Windows::Forms::ComboBox());
 			this->IDVilleClient = (gcnew System::Windows::Forms::TextBox());
@@ -392,16 +418,34 @@ private: System::Windows::Forms::Label^ label18;
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->ClientSupprimer = (gcnew System::Windows::Forms::TabPage());
-			this->MainCommande = (gcnew System::Windows::Forms::TabPage());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
-			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
-			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
-			this->CommandeModifier = (gcnew System::Windows::Forms::TabPage());
-			this->CommandeAfficher = (gcnew System::Windows::Forms::TabPage());
-			this->CommandeSupprimer = (gcnew System::Windows::Forms::TabPage());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->InputDeleteClient = (gcnew System::Windows::Forms::TextBox());
 			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->MainCommande = (gcnew System::Windows::Forms::TabPage());
+			this->GridViewCréerCommande = (gcnew System::Windows::Forms::DataGridView());
+			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
+			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
+			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->PanierClient = (gcnew System::Windows::Forms::ListBox());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->CommandeModifier = (gcnew System::Windows::Forms::TabPage());
+			this->CommandeAfficher = (gcnew System::Windows::Forms::TabPage());
+			this->CommandeSupprimer = (gcnew System::Windows::Forms::TabPage());
+			this->MainArticle = (gcnew System::Windows::Forms::TabPage());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -418,8 +462,9 @@ private: System::Windows::Forms::Label^ label18;
 			this->ClientAfficher->SuspendLayout();
 			this->ClientSupprimer->SuspendLayout();
 			this->MainCommande->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerCommande))->BeginInit();
 			this->TabCommande->SuspendLayout();
+			this->CommandeCréer->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// MainTab
@@ -427,6 +472,7 @@ private: System::Windows::Forms::Label^ label18;
 			this->MainTab->Controls->Add(this->MainPersonnel);
 			this->MainTab->Controls->Add(this->MainClient);
 			this->MainTab->Controls->Add(this->MainCommande);
+			this->MainTab->Controls->Add(this->MainArticle);
 			this->MainTab->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->MainTab->Location = System::Drawing::Point(0, 0);
 			this->MainTab->Name = L"MainTab";
@@ -460,6 +506,7 @@ private: System::Windows::Forms::Label^ label18;
 			// 
 			// PersonnelCréer
 			// 
+			this->PersonnelCréer->Controls->Add(this->button10);
 			this->PersonnelCréer->Controls->Add(this->InputIDVillePersonnel);
 			this->PersonnelCréer->Controls->Add(this->InputNumeroRuePersonnel);
 			this->PersonnelCréer->Controls->Add(this->InputNomRuePersonnel);
@@ -482,6 +529,16 @@ private: System::Windows::Forms::Label^ label18;
 			this->PersonnelCréer->TabIndex = 0;
 			this->PersonnelCréer->Text = L"Créer";
 			this->PersonnelCréer->UseVisualStyleBackColor = true;
+			// 
+			// button10
+			// 
+			this->button10->Location = System::Drawing::Point(1052, 6);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(82, 23);
+			this->button10->TabIndex = 19;
+			this->button10->Text = L"Rafraichir";
+			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			// 
 			// InputIDVillePersonnel
 			// 
@@ -975,6 +1032,7 @@ private: System::Windows::Forms::Label^ label18;
 			// 
 			// ClientCréer
 			// 
+			this->ClientCréer->Controls->Add(this->button11);
 			this->ClientCréer->Controls->Add(this->label10);
 			this->ClientCréer->Controls->Add(this->ChoixTypeClient);
 			this->ClientCréer->Controls->Add(this->IDVilleClient);
@@ -997,6 +1055,16 @@ private: System::Windows::Forms::Label^ label18;
 			this->ClientCréer->TabIndex = 0;
 			this->ClientCréer->Text = L"Créer";
 			this->ClientCréer->UseVisualStyleBackColor = true;
+			// 
+			// button11
+			// 
+			this->button11->Location = System::Drawing::Point(1052, 6);
+			this->button11->Name = L"button11";
+			this->button11->Size = System::Drawing::Size(82, 23);
+			this->button11->TabIndex = 36;
+			this->button11->Text = L"Rafraichir";
+			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
 			// 
 			// label10
 			// 
@@ -1421,9 +1489,35 @@ private: System::Windows::Forms::Label^ label18;
 			this->ClientSupprimer->Text = L"Supprimer";
 			this->ClientSupprimer->UseVisualStyleBackColor = true;
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(1039, 253);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(95, 40);
+			this->button6->TabIndex = 5;
+			this->button6->Text = L"Valider";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// InputDeleteClient
+			// 
+			this->InputDeleteClient->Location = System::Drawing::Point(453, 109);
+			this->InputDeleteClient->Name = L"InputDeleteClient";
+			this->InputDeleteClient->Size = System::Drawing::Size(100, 22);
+			this->InputDeleteClient->TabIndex = 4;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(450, 89);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(78, 17);
+			this->label18->TabIndex = 3;
+			this->label18->Text = L"ID du client";
+			// 
 			// MainCommande
 			// 
-			this->MainCommande->Controls->Add(this->dataGridView2);
+			this->MainCommande->Controls->Add(this->GridViewCréerCommande);
 			this->MainCommande->Controls->Add(this->TabCommande);
 			this->MainCommande->Location = System::Drawing::Point(4, 25);
 			this->MainCommande->Name = L"MainCommande";
@@ -1433,15 +1527,15 @@ private: System::Windows::Forms::Label^ label18;
 			this->MainCommande->Text = L"Commande";
 			this->MainCommande->UseVisualStyleBackColor = true;
 			// 
-			// dataGridView2
+			// GridViewCréerCommande
 			// 
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(8, 6);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->RowHeadersWidth = 51;
-			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(1139, 273);
-			this->dataGridView2->TabIndex = 1;
+			this->GridViewCréerCommande->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->GridViewCréerCommande->Location = System::Drawing::Point(8, 6);
+			this->GridViewCréerCommande->Name = L"GridViewCréerCommande";
+			this->GridViewCréerCommande->RowHeadersWidth = 51;
+			this->GridViewCréerCommande->RowTemplate->Height = 24;
+			this->GridViewCréerCommande->Size = System::Drawing::Size(1139, 273);
+			this->GridViewCréerCommande->TabIndex = 1;
 			// 
 			// TabCommande
 			// 
@@ -1457,6 +1551,23 @@ private: System::Windows::Forms::Label^ label18;
 			// 
 			// CommandeCréer
 			// 
+			this->CommandeCréer->Controls->Add(this->button12);
+			this->CommandeCréer->Controls->Add(this->PanierClient);
+			this->CommandeCréer->Controls->Add(this->button9);
+			this->CommandeCréer->Controls->Add(this->button8);
+			this->CommandeCréer->Controls->Add(this->textBox1);
+			this->CommandeCréer->Controls->Add(this->textBox3);
+			this->CommandeCréer->Controls->Add(this->textBox4);
+			this->CommandeCréer->Controls->Add(this->textBox5);
+			this->CommandeCréer->Controls->Add(this->textBox6);
+			this->CommandeCréer->Controls->Add(this->textBox7);
+			this->CommandeCréer->Controls->Add(this->label19);
+			this->CommandeCréer->Controls->Add(this->label20);
+			this->CommandeCréer->Controls->Add(this->label22);
+			this->CommandeCréer->Controls->Add(this->label23);
+			this->CommandeCréer->Controls->Add(this->label24);
+			this->CommandeCréer->Controls->Add(this->label25);
+			this->CommandeCréer->Controls->Add(this->button7);
 			this->CommandeCréer->Location = System::Drawing::Point(4, 25);
 			this->CommandeCréer->Name = L"CommandeCréer";
 			this->CommandeCréer->Padding = System::Windows::Forms::Padding(3);
@@ -1464,6 +1575,151 @@ private: System::Windows::Forms::Label^ label18;
 			this->CommandeCréer->TabIndex = 0;
 			this->CommandeCréer->Text = L"Créer";
 			this->CommandeCréer->UseVisualStyleBackColor = true;
+			// 
+			// button12
+			// 
+			this->button12->Location = System::Drawing::Point(1052, 6);
+			this->button12->Name = L"button12";
+			this->button12->Size = System::Drawing::Size(82, 23);
+			this->button12->TabIndex = 37;
+			this->button12->Text = L"Rafraichir";
+			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click_1);
+			// 
+			// PanierClient
+			// 
+			this->PanierClient->FormattingEnabled = true;
+			this->PanierClient->ItemHeight = 16;
+			this->PanierClient->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"jhlkgfdsdqh,jgnfbd" });
+			this->PanierClient->Location = System::Drawing::Point(601, 43);
+			this->PanierClient->Name = L"PanierClient";
+			this->PanierClient->Size = System::Drawing::Size(533, 196);
+			this->PanierClient->TabIndex = 36;
+			this->PanierClient->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::PanierClient_SelectedIndexChanged);
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(548, 169);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(30, 30);
+			this->button9->TabIndex = 35;
+			this->button9->Text = L"-";
+			this->button9->UseVisualStyleBackColor = true;
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(548, 133);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(30, 30);
+			this->button8->TabIndex = 34;
+			this->button8->Text = L"+";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(350, 153);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(178, 22);
+			this->textBox1->TabIndex = 33;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(350, 53);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(178, 22);
+			this->textBox3->TabIndex = 31;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(50, 203);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(178, 22);
+			this->textBox4->TabIndex = 30;
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(50, 153);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(178, 22);
+			this->textBox5->TabIndex = 29;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(50, 103);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(178, 22);
+			this->textBox6->TabIndex = 28;
+			// 
+			// textBox7
+			// 
+			this->textBox7->Location = System::Drawing::Point(50, 53);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->Size = System::Drawing::Size(178, 22);
+			this->textBox7->TabIndex = 27;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(350, 133);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(90, 17);
+			this->label19->TabIndex = 26;
+			this->label19->Text = L"ID du Produit";
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(350, 33);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(120, 17);
+			this->label20->TabIndex = 25;
+			this->label20->Text = L"Date de paiement";
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(50, 33);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(80, 17);
+			this->label22->TabIndex = 23;
+			this->label22->Text = L"ID du Client";
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Location = System::Drawing::Point(50, 183);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(125, 17);
+			this->label23->TabIndex = 22;
+			this->label23->Text = L"Mode de paiement";
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(50, 83);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(114, 17);
+			this->label24->TabIndex = 21;
+			this->label24->Text = L"Date de livraison";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(50, 133);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(117, 17);
+			this->label25->TabIndex = 20;
+			this->label25->Text = L"Date d\'expedition";
+			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(1039, 253);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(95, 40);
+			this->button7->TabIndex = 19;
+			this->button7->Text = L"Valider";
+			this->button7->UseVisualStyleBackColor = true;
 			// 
 			// CommandeModifier
 			// 
@@ -1495,31 +1751,15 @@ private: System::Windows::Forms::Label^ label18;
 			this->CommandeSupprimer->Text = L"Supprimer";
 			this->CommandeSupprimer->UseVisualStyleBackColor = true;
 			// 
-			// button6
+			// MainArticle
 			// 
-			this->button6->Location = System::Drawing::Point(1039, 253);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(95, 40);
-			this->button6->TabIndex = 5;
-			this->button6->Text = L"Valider";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
-			// 
-			// InputDeleteClient
-			// 
-			this->InputDeleteClient->Location = System::Drawing::Point(453, 109);
-			this->InputDeleteClient->Name = L"InputDeleteClient";
-			this->InputDeleteClient->Size = System::Drawing::Size(100, 22);
-			this->InputDeleteClient->TabIndex = 4;
-			// 
-			// label18
-			// 
-			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(450, 89);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(108, 17);
-			this->label18->TabIndex = 3;
-			this->label18->Text = L"ID du personnel";
+			this->MainArticle->Location = System::Drawing::Point(4, 25);
+			this->MainArticle->Name = L"MainArticle";
+			this->MainArticle->Padding = System::Windows::Forms::Padding(3);
+			this->MainArticle->Size = System::Drawing::Size(1154, 616);
+			this->MainArticle->TabIndex = 3;
+			this->MainArticle->Text = L"Article";
+			this->MainArticle->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
@@ -1554,8 +1794,10 @@ private: System::Windows::Forms::Label^ label18;
 			this->ClientSupprimer->ResumeLayout(false);
 			this->ClientSupprimer->PerformLayout();
 			this->MainCommande->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerCommande))->EndInit();
 			this->TabCommande->ResumeLayout(false);
+			this->CommandeCréer->ResumeLayout(false);
+			this->CommandeCréer->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -1564,8 +1806,7 @@ private: System::Windows::Forms::Label^ label18;
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
 	this->oSvc = gcnew NS_Comp_Svc::Service();
-	//RafraichirPersonnel(sender, e);
-	RafraichirClient(sender, e);
+	RafraichirPersonnel(sender, e);
 }
 private: System::Void RafraichirPersonnel(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1703,12 +1944,30 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->oSvc->supprimerHabiter(this->InputDeletePersonnel->Text);
-	this->oSvc->supprimerUneAdresseClient(this->InputDeletePersonnel->Text);
-	this->oSvc->supprimerUnClient(this->InputDeletePersonnel->Text);
+	this->oSvc->supprimerUnClient(this->InputDeleteClient->Text);
 	
 
 	RafraichirClient(sender, e);
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+	RafraichirPersonnel(sender, e);
+}
+private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+	RafraichirClient(sender, e);
+}
+private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button12_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+	this->GridViewCréerCommande->Refresh();
+	this->oDs = this->oSvc->selectionnerArticle("Rsl");
+	this->GridViewCréerCommande->DataSource = this->oDs;
+	this->GridViewCréerCommande->DataMember = "Rsl";
+	this->PanierClient->Items->Clear();
+}
+private: System::Void PanierClient_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
