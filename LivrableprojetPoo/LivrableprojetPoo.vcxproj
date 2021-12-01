@@ -96,7 +96,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -182,6 +183,35 @@
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AfficherClient.sql" />
+    <None Include="AfficherCommande.sql" />
+    <None Include="AfficherInfoPersonnel.sql" />
+    <None Include="AfficherPersonnel.sql" />
+    <None Include="AfficherProduit.sql" />
+    <None Include="AjouterClient.sql" />
+    <None Include="AjouterCommande.sql" />
+    <None Include="AjouterPersonnel.sql" />
+    <None Include="AjouterProduit.sql" />
+    <None Include="ChiffreAffaire.sql" />
+    <None Include="CreationBDD.sql" />
+    <None Include="InsertionDonnees.sql" />
+    <None Include="ModifierClient.sql" />
+    <None Include="ModifierCommande.sql" />
+    <None Include="ModifierPersonnel.sql" />
+    <None Include="ModifierProduit.sql" />
+    <None Include="MontantAchatClient.sql" />
+    <None Include="PrixCommande.sql" />
+    <None Include="ProduitMoinsVendu.sql" />
+    <None Include="ProduitPlusVendu.sql" />
+    <None Include="SimulationVariation.sql" />
+    <None Include="SupprimerClient.sql" />
+    <None Include="SupprimerCommande.sql" />
+    <None Include="SupprimerPersonnel.sql" />
+    <None Include="SupprimerProduit.sql" />
+    <None Include="ValeurAchatStock.sql" />
+    <None Include="ValeurCommercialeStock.sql" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
