@@ -340,6 +340,9 @@ private: System::Windows::Forms::Label^ NomPrixproduit;
 private: System::Windows::Forms::Label^ NomAffproduit;
 
 private: System::Windows::Forms::Button^ button19;
+private: System::Windows::Forms::Button^ ButtonDelCommande;
+private: System::Windows::Forms::TextBox^ TextDelCommande;
+private: System::Windows::Forms::Label^ label36;
 
 
 
@@ -568,6 +571,9 @@ private: System::Windows::Forms::Button^ button19;
 			this->InputDeleteProduit = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
+			this->ButtonDelCommande = (gcnew System::Windows::Forms::Button());
+			this->TextDelCommande = (gcnew System::Windows::Forms::TextBox());
+			this->label36 = (gcnew System::Windows::Forms::Label());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -588,6 +594,7 @@ private: System::Windows::Forms::Button^ button19;
 			this->TabCommande->SuspendLayout();
 			this->CommandeCréer->SuspendLayout();
 			this->CommandeAfficher->SuspendLayout();
+			this->CommandeSupprimer->SuspendLayout();
 			this->MainArticle->SuspendLayout();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -1932,6 +1939,9 @@ private: System::Windows::Forms::Button^ button19;
 			// 
 			// CommandeSupprimer
 			// 
+			this->CommandeSupprimer->Controls->Add(this->ButtonDelCommande);
+			this->CommandeSupprimer->Controls->Add(this->TextDelCommande);
+			this->CommandeSupprimer->Controls->Add(this->label36);
 			this->CommandeSupprimer->Location = System::Drawing::Point(4, 25);
 			this->CommandeSupprimer->Name = L"CommandeSupprimer";
 			this->CommandeSupprimer->Padding = System::Windows::Forms::Padding(3);
@@ -2340,6 +2350,32 @@ private: System::Windows::Forms::Button^ button19;
 			this->GridViewCréerArticle->Size = System::Drawing::Size(1139, 273);
 			this->GridViewCréerArticle->TabIndex = 2;
 			// 
+			// ButtonDelCommande
+			// 
+			this->ButtonDelCommande->Location = System::Drawing::Point(323, 46);
+			this->ButtonDelCommande->Name = L"ButtonDelCommande";
+			this->ButtonDelCommande->Size = System::Drawing::Size(95, 40);
+			this->ButtonDelCommande->TabIndex = 44;
+			this->ButtonDelCommande->Text = L"Chercher";
+			this->ButtonDelCommande->UseVisualStyleBackColor = true;
+			this->ButtonDelCommande->Click += gcnew System::EventHandler(this, &MyForm::ButtonDelCommande_Click);
+			// 
+			// TextDelCommande
+			// 
+			this->TextDelCommande->Location = System::Drawing::Point(50, 53);
+			this->TextDelCommande->Name = L"TextDelCommande";
+			this->TextDelCommande->Size = System::Drawing::Size(178, 22);
+			this->TextDelCommande->TabIndex = 43;
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Location = System::Drawing::Point(50, 33);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(56, 17);
+			this->label36->TabIndex = 42;
+			this->label36->Text = L"IDClient";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -2379,6 +2415,8 @@ private: System::Windows::Forms::Button^ button19;
 			this->CommandeCréer->PerformLayout();
 			this->CommandeAfficher->ResumeLayout(false);
 			this->CommandeAfficher->PerformLayout();
+			this->CommandeSupprimer->ResumeLayout(false);
+			this->CommandeSupprimer->PerformLayout();
 			this->MainArticle->ResumeLayout(false);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
@@ -2640,6 +2678,8 @@ private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ 
 	this->oSvc->updateUnproduit(this->ModifIDProduit->Text, this->ModifNomProduit->Text, this->ModifPrixProduit->Text, this->ModifStockProduit->Text, this->ModifPrixAchatProduit->Text);
 
 	button18_Click(sender, e);
+}
+private: System::Void ButtonDelCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

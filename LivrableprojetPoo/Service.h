@@ -43,6 +43,7 @@ namespace NS_Comp_Svc
 		void supprimerUnPersonnel(System::String^);
 		void supprimerUnClient(System::String^);
 		void supprimerUnProduit(System::String^);
+		void supprimerUneCommande(System::String^);
 		void updateUnPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void updateUneAdressePersonnel(System::String^, System::String^, System::String^, System::String^);
 		void updateUneAdresseClient(System::String^, System::String^, System::String^, System::String^);

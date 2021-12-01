@@ -17,9 +17,9 @@ System::String^ NS_Comp_Mappage::Commande::Insert(void)
 {
 	return "Insert into Commande (DateLivraison,DateExpedition,IDClient) values ('"+DateLivraison+"','" + DateExpedition + "','" + IDClient + "');";
 }
-System::String^ NS_Comp_Mappage::Commande::Delete(void)
+System::String^ NS_Comp_Mappage::Commande::Delete(System::String^ ID)
 {
-	return "";
+	return "Exec DelCommande "+ID+";";
 }
 System::String^ NS_Comp_Mappage::Commande::UpdateDelete(void)
 {

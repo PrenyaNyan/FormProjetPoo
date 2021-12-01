@@ -273,3 +273,11 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnSeulProduit(System::S
 	sql = this->oMappProduit->SelectUnProduit(ID);
 	return this->oCad->getRows(sql, dataTableName);
 }
+void NS_Comp_Svc::Service::supprimerUneCommande(System::String^ ID)
+{
+	System::String^ sql;
+
+	sql = this->oMappCommande->Delete(ID);
+
+	this->oCad->actionRows(sql);
+}

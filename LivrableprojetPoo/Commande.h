@@ -14,7 +14,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectConditionCommande(System::String^);
 		System::String^ SelectConditionUneCommande(System::String^);
 		System::String^ Insert(void);
-		System::String^ Delete(void);
+		System::String^ Delete(System::String^);
 		System::String^ Update(void);
 		System::String^ UpdateDelete(void);
 
