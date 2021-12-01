@@ -120,12 +120,14 @@ void NS_Comp_Svc::Service::ajouterUneCommande(System::String^ DateExpedition, Sy
 	this->oCad->actionRows(sql);
 
 }
-void NS_Comp_Svc::Service::ajouterUnArticle(System::String^ Nom, System::String^ Prix, System::String^ Stock, System::String^ Taxe)
+
+void NS_Comp_Svc::Service::ajouterUnArticle(System::String^ Nom, System::String^ Prix, System::String^ Stock, System::String^ Taxe, System::String^ PrixAchat)
 {
 	System::String^ sql;
 
 	this->oMappProduit->setNomProduit(Nom);
 	this->oMappProduit->setPrix(Prix);
+	this->oMappProduit->setPrixAchat(PrixAchat);
 	this->oMappProduit->setStock(int::Parse(Stock));
 	sql = this->oMappProduit->Insert(Taxe);
 
@@ -139,16 +141,6 @@ void NS_Comp_Svc::Service::supprimerUnPersonnel(System::String^ ID)
 
 	this->oMappPersonnel->setID(int::Parse(ID));
 	sql = this->oMappPersonnel->Delete();
-
-	this->oCad->actionRows(sql);
-}
-
-void NS_Comp_Svc::Service::supprimerUneAdressePersonnel(System::String^ ID)
-{
-	System::String^ sql;
-
-	this->oMappAdresse->setID(int::Parse(ID));
-	sql = this->oMappAdresse->DeletePersonnel();
 
 	this->oCad->actionRows(sql);
 }
@@ -214,18 +206,6 @@ void NS_Comp_Svc::Service::updateUneAdresseClient(System::String^ ID, System::St
 
 }
 
-void NS_Comp_Svc::Service::updateDeletePersonnel(System::String^ ID) {
-
-	System::String^ sql;
-
-	this->oMappPersonnel->setID(int::Parse(ID));
-
-	sql = this->oMappPersonnel->UpdateDelete();
-
-	this->oCad->actionRows(sql);
-
-}
-
 void NS_Comp_Svc::Service::updateUnClient(System::String^ ID, System::String^ nom, System::String^ prenom, System::String^ Naissance) {
 	System::String^ sql;
 
@@ -252,6 +232,20 @@ void NS_Comp_Svc::Service::updateHabiter(System::String^ ID, System::String^ Typ
 
 }
 
+void NS_Comp_Svc::Service::updateUnproduit(System::String^ ID, System::String^ Nom, System::String^ Prix, System::String^ Stock, System::String^ PrixAchat) {
+	System::String^ sql;
+
+	this->oMappProduit->setIDProduit(int::Parse(ID));
+	this->oMappProduit->setPrix(Prix);
+	this->oMappProduit->setStock(int::Parse(Stock));
+	this->oMappProduit->setNomProduit(Nom);
+	this->oMappProduit->setPrixAchat(PrixAchat);
+
+	sql = this->oMappProduit->Update();
+
+	this->oCad->actionRows(sql);
+
+}
 System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnArticle(System::String^ ID, System::String^ dataTableName)
 {
 	System::String^ sql;
@@ -269,6 +263,13 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUneCommande(System::Str
 System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnProduit(System::String^ Nom, System::String^ Prix, System::String^ stock, System::String^ dataTableName)
 {
 	System::String^ sql;
-	sql = this->oMappProduit->SelectConditionPersonnel(Nom, Prix, stock);
+	sql = this->oMappProduit->SelectConditionProduit(Nom, Prix, stock);
+	return this->oCad->getRows(sql, dataTableName);
+}
+
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnSeulProduit(System::String^ ID, System::String^ dataTableName)
+{
+	System::String^ sql;
+	sql = this->oMappProduit->SelectUnProduit(ID);
 	return this->oCad->getRows(sql, dataTableName);
 }
