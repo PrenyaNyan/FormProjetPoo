@@ -143,6 +143,7 @@
     <ClInclude Include="Produit.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Service.h" />
+    <ClInclude Include="Taxer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Adresse.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="Service.cpp" />
+    <ClCompile Include="Taxer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />

@@ -8,6 +8,7 @@ NS_Comp_Svc::Service::Service(void)
 	this->oMappAdresse = gcnew NS_Comp_Mappage::Adresse();
 	this->oMappClient = gcnew NS_Comp_Mappage::Client();
 	this->oMappHabiter = gcnew NS_Comp_Mappage::Habiter();
+	this->oMappProduit = gcnew NS_Comp_Mappage::Produit();
 
 
 }
@@ -106,6 +107,31 @@ void NS_Comp_Svc::Service::ajouterHabiter(System::String^ Type)
 
 }
 
+void NS_Comp_Svc::Service::ajouterUneCommande(System::String^ DateExpedition, System::String^ DateLivraison, System::String^ IDClient, System::String^ IDPaiement)
+{
+	System::String^ sql;
+
+	this->oMappCommande->setDateExpedition(DateExpedition);
+	this->oMappCommande->setDateLivraison(DateLivraison);
+	this->oMappCommande->setIDClient(int::Parse(IDClient));
+
+	sql = this->oMappCommande->Insert();
+
+	this->oCad->actionRows(sql);
+
+}
+void NS_Comp_Svc::Service::ajouterUnArticle(System::String^ Nom, System::String^ Prix, System::String^ Stock, System::String^ Taxe)
+{
+	System::String^ sql;
+
+	this->oMappProduit->setNomProduit(Nom);
+	this->oMappProduit->setPrix(Prix);
+	this->oMappProduit->setStock(int::Parse(Stock));
+	sql = this->oMappProduit->Insert(Taxe);
+
+	this->oCad->actionRows(sql);
+}
+
 void NS_Comp_Svc::Service::supprimerUnPersonnel(System::String^ ID)
 {
 	System::String^ sql;
@@ -132,6 +158,16 @@ void NS_Comp_Svc::Service::supprimerUnClient(System::String^ ID)
 
 	this->oMappClient->setID(int::Parse(ID));
 	sql = this->oMappClient->Delete();
+
+	this->oCad->actionRows(sql);
+}
+
+void NS_Comp_Svc::Service::supprimerUnProduit(System::String^ ID)
+{
+	System::String^ sql;
+
+	this->oMappProduit->setIDProduit(int::Parse(ID));
+	sql = this->oMappProduit->Delete();
 
 	this->oCad->actionRows(sql);
 }
@@ -227,5 +263,12 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUneCommande(System::Str
 {
 	System::String^ sql;
 	sql = this->oMappCommande->SelectConditionUneCommande(ID);
+	return this->oCad->getRows(sql, dataTableName);
+}
+
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnProduit(System::String^ Nom, System::String^ Prix, System::String^ stock, System::String^ dataTableName)
+{
+	System::String^ sql;
+	sql = this->oMappProduit->SelectConditionPersonnel(Nom, Prix, stock);
 	return this->oCad->getRows(sql, dataTableName);
 }

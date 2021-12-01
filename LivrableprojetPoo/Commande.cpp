@@ -15,7 +15,7 @@ System::String^ NS_Comp_Mappage::Commande::SelectConditionUneCommande(System::St
 }
 System::String^ NS_Comp_Mappage::Commande::Insert(void)
 {
-	return "";
+	return "Insert into Commande (DateLivraison,DateExpedition,IDClient) values ('"+DateLivraison+"','" + DateExpedition + "','" + IDClient + "');";
 }
 System::String^ NS_Comp_Mappage::Commande::Delete(void)
 {

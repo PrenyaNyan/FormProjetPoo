@@ -4,6 +4,8 @@
 #include "Client.h"
 #include "Habiter.h"
 #include "Commande.h"
+#include "Composer.h"
+#include "Produit.h"
 #include "CAD.h"
 
 namespace NS_Comp_Svc
@@ -17,24 +19,30 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::Client^ oMappClient;
 		NS_Comp_Mappage::Habiter^ oMappHabiter;
 		NS_Comp_Mappage::Commande^ oMappCommande;
+		NS_Comp_Mappage::Composer^ oMappComposer;
+		NS_Comp_Mappage::Produit^ oMappProduit;
 	public:
 		Service(void);
 		System::Data::DataSet^ selectionnerToutLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutLesClients(System::String^);
 		System::Data::DataSet^ selectionnerArticle(System::String^);
 		System::Data::DataSet^ selectionnerUneCommande(System::String^, System::String^);
+		System::Data::DataSet^ selectionnerUnProduit(System::String^, System::String^, System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnPersonnel(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnClient(System::String^, System::String^); 
-			System::Data::DataSet^ selectionnerUnArticle(System::String^, System::String^);
+		System::Data::DataSet^ selectionnerUnArticle(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerConditionPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^);
 		System::Data::DataSet^ selectionnerConditionClient(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void ajouterUnPersonnel(System::String^, System::String^, System::String^, System::String^);
 		void ajouterUnClient(System::String^, System::String^, System::String^);
 		void ajouterUneAdresse(System::String^, System::String^, System::String^);
 		void ajouterHabiter(System::String^);
+		void ajouterUneCommande(System::String^, System::String^, System::String^, System::String^);
+		void ajouterUnArticle(System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnPersonnel(System::String^);
 		void supprimerUneAdressePersonnel(System::String^);
 		void supprimerUnClient(System::String^);
+		void supprimerUnProduit(System::String^);
 		void updateUnPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void updateUneAdressePersonnel(System::String^, System::String^, System::String^, System::String^);
 		void updateUneAdresseClient(System::String^, System::String^, System::String^, System::String^);

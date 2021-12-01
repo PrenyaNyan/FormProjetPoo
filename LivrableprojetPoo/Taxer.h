@@ -1,13 +1,12 @@
 #pragma once
 namespace NS_Comp_Mappage
 {
-	ref class Composer
+	ref class Taxer
 	{
 	private:
 		System::String^ sSql;
-		int IDCommande;
+		int IDTaxe;
 		int^ IDProduit;
-		int^ quantité;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert(void);
@@ -16,9 +15,7 @@ namespace NS_Comp_Mappage
 		System::String^ UpdateDelete(void);
 
 
-		void setIDCommande(int);
-		void setIDProduit(int);
-		void setQuantité(int);
+		void setIDTaxe(int);
+		void setIDproduit(int);
 	};
 }
-

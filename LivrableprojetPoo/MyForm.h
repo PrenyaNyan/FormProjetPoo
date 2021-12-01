@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "Service.h"
 
 namespace LivrableprojetPoo {
@@ -272,6 +273,54 @@ private: System::Windows::Forms::Button^ button13;
 private: System::Windows::Forms::TextBox^ InputCommandeAff;
 
 private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Label^ labelosef;
+private: System::Windows::Forms::TextBox^ QuantiterProduitCommande;
+private: System::Windows::Forms::Label^ label21;
+private: System::Windows::Forms::TabControl^ tabControl1;
+private: System::Windows::Forms::TabPage^ tabPage1;
+private: System::Windows::Forms::Button^ button14;
+private: System::Windows::Forms::TabPage^ tabPage2;
+private: System::Windows::Forms::TabPage^ tabPage3;
+
+
+
+private: System::Windows::Forms::TabPage^ tabPage4;
+private: System::Windows::Forms::DataGridView^ GridViewCréerArticle;
+private: System::Windows::Forms::TextBox^ InputTaxeproduit;
+
+
+
+
+private: System::Windows::Forms::TextBox^ InputStockproduit;
+
+private: System::Windows::Forms::TextBox^ InputPrixproduit;
+
+private: System::Windows::Forms::TextBox^ InputNomproduit;
+
+
+
+
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Button^ button15;
+private: System::Windows::Forms::Button^ button16;
+private: System::Windows::Forms::TextBox^ InputDeleteProduit;
+
+private: System::Windows::Forms::Label^ label26;
+
+
+
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::Button^ button17;
+private: System::Windows::Forms::TextBox^ InputChercheStockProduit;
+private: System::Windows::Forms::TextBox^ InputCherchePrixProduit;
+private: System::Windows::Forms::TextBox^ InputChercheNomProduit;
+private: System::Windows::Forms::Label^ label38;
+
+
 
 
 
@@ -430,6 +479,9 @@ private: System::Windows::Forms::Label^ label28;
 			this->GridViewCréerCommande = (gcnew System::Windows::Forms::DataGridView());
 			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
 			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->labelosef = (gcnew System::Windows::Forms::Label());
+			this->QuantiterProduitCommande = (gcnew System::Windows::Forms::TextBox());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->PanierClient = (gcnew System::Windows::Forms::ListBox());
 			this->button9 = (gcnew System::Windows::Forms::Button());
@@ -454,6 +506,32 @@ private: System::Windows::Forms::Label^ label28;
 			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->CommandeSupprimer = (gcnew System::Windows::Forms::TabPage());
 			this->MainArticle = (gcnew System::Windows::Forms::TabPage());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->InputTaxeproduit = (gcnew System::Windows::Forms::TextBox());
+			this->InputStockproduit = (gcnew System::Windows::Forms::TextBox());
+			this->InputPrixproduit = (gcnew System::Windows::Forms::TextBox());
+			this->InputNomproduit = (gcnew System::Windows::Forms::TextBox());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->button14 = (gcnew System::Windows::Forms::Button());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->InputDeleteProduit = (gcnew System::Windows::Forms::TextBox());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->button17 = (gcnew System::Windows::Forms::Button());
+			this->InputChercheStockProduit = (gcnew System::Windows::Forms::TextBox());
+			this->InputCherchePrixProduit = (gcnew System::Windows::Forms::TextBox());
+			this->InputChercheNomProduit = (gcnew System::Windows::Forms::TextBox());
+			this->label38 = (gcnew System::Windows::Forms::Label());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -474,6 +552,12 @@ private: System::Windows::Forms::Label^ label28;
 			this->TabCommande->SuspendLayout();
 			this->CommandeCréer->SuspendLayout();
 			this->CommandeAfficher->SuspendLayout();
+			this->MainArticle->SuspendLayout();
+			this->tabControl1->SuspendLayout();
+			this->tabPage1->SuspendLayout();
+			this->tabPage3->SuspendLayout();
+			this->tabPage4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerArticle))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// MainTab
@@ -1560,6 +1644,9 @@ private: System::Windows::Forms::Label^ label28;
 			// 
 			// CommandeCréer
 			// 
+			this->CommandeCréer->Controls->Add(this->label21);
+			this->CommandeCréer->Controls->Add(this->labelosef);
+			this->CommandeCréer->Controls->Add(this->QuantiterProduitCommande);
 			this->CommandeCréer->Controls->Add(this->button12);
 			this->CommandeCréer->Controls->Add(this->PanierClient);
 			this->CommandeCréer->Controls->Add(this->button9);
@@ -1585,6 +1672,32 @@ private: System::Windows::Forms::Label^ label28;
 			this->CommandeCréer->Text = L"Créer";
 			this->CommandeCréer->UseVisualStyleBackColor = true;
 			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(598, 23);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(49, 17);
+			this->label21->TabIndex = 40;
+			this->label21->Text = L"Panier";
+			// 
+			// labelosef
+			// 
+			this->labelosef->AutoSize = true;
+			this->labelosef->Location = System::Drawing::Point(350, 183);
+			this->labelosef->Name = L"labelosef";
+			this->labelosef->Size = System::Drawing::Size(62, 17);
+			this->labelosef->TabIndex = 39;
+			this->labelosef->Text = L"Quantité";
+			// 
+			// QuantiterProduitCommande
+			// 
+			this->QuantiterProduitCommande->Location = System::Drawing::Point(350, 203);
+			this->QuantiterProduitCommande->Name = L"QuantiterProduitCommande";
+			this->QuantiterProduitCommande->Size = System::Drawing::Size(178, 22);
+			this->QuantiterProduitCommande->TabIndex = 38;
+			this->QuantiterProduitCommande->Text = L"1";
+			// 
 			// button12
 			// 
 			this->button12->Location = System::Drawing::Point(1052, 6);
@@ -1607,7 +1720,7 @@ private: System::Windows::Forms::Label^ label28;
 			// 
 			// button9
 			// 
-			this->button9->Location = System::Drawing::Point(548, 169);
+			this->button9->Location = System::Drawing::Point(548, 193);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(30, 30);
 			this->button9->TabIndex = 35;
@@ -1617,7 +1730,7 @@ private: System::Windows::Forms::Label^ label28;
 			// 
 			// button8
 			// 
-			this->button8->Location = System::Drawing::Point(548, 133);
+			this->button8->Location = System::Drawing::Point(548, 157);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(30, 30);
 			this->button8->TabIndex = 34;
@@ -1729,6 +1842,7 @@ private: System::Windows::Forms::Label^ label28;
 			this->button7->TabIndex = 19;
 			this->button7->Text = L"Valider";
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// CommandeModifier
 			// 
@@ -1791,6 +1905,8 @@ private: System::Windows::Forms::Label^ label28;
 			// 
 			// MainArticle
 			// 
+			this->MainArticle->Controls->Add(this->tabControl1);
+			this->MainArticle->Controls->Add(this->GridViewCréerArticle);
 			this->MainArticle->Location = System::Drawing::Point(4, 25);
 			this->MainArticle->Name = L"MainArticle";
 			this->MainArticle->Padding = System::Windows::Forms::Padding(3);
@@ -1798,6 +1914,256 @@ private: System::Windows::Forms::Label^ label28;
 			this->MainArticle->TabIndex = 3;
 			this->MainArticle->Text = L"Article";
 			this->MainArticle->UseVisualStyleBackColor = true;
+			// 
+			// tabControl1
+			// 
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->Controls->Add(this->tabPage3);
+			this->tabControl1->Controls->Add(this->tabPage4);
+			this->tabControl1->Location = System::Drawing::Point(3, 285);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
+			this->tabControl1->Size = System::Drawing::Size(1148, 328);
+			this->tabControl1->TabIndex = 3;
+			// 
+			// tabPage1
+			// 
+			this->tabPage1->Controls->Add(this->InputTaxeproduit);
+			this->tabPage1->Controls->Add(this->InputStockproduit);
+			this->tabPage1->Controls->Add(this->InputPrixproduit);
+			this->tabPage1->Controls->Add(this->InputNomproduit);
+			this->tabPage1->Controls->Add(this->label30);
+			this->tabPage1->Controls->Add(this->label31);
+			this->tabPage1->Controls->Add(this->label32);
+			this->tabPage1->Controls->Add(this->label33);
+			this->tabPage1->Controls->Add(this->button15);
+			this->tabPage1->Controls->Add(this->button14);
+			this->tabPage1->Location = System::Drawing::Point(4, 25);
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(1140, 299);
+			this->tabPage1->TabIndex = 0;
+			this->tabPage1->Text = L"Créer";
+			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// InputTaxeproduit
+			// 
+			this->InputTaxeproduit->Location = System::Drawing::Point(50, 203);
+			this->InputTaxeproduit->Name = L"InputTaxeproduit";
+			this->InputTaxeproduit->Size = System::Drawing::Size(178, 22);
+			this->InputTaxeproduit->TabIndex = 49;
+			// 
+			// InputStockproduit
+			// 
+			this->InputStockproduit->Location = System::Drawing::Point(50, 153);
+			this->InputStockproduit->Name = L"InputStockproduit";
+			this->InputStockproduit->Size = System::Drawing::Size(178, 22);
+			this->InputStockproduit->TabIndex = 48;
+			// 
+			// InputPrixproduit
+			// 
+			this->InputPrixproduit->Location = System::Drawing::Point(50, 103);
+			this->InputPrixproduit->Name = L"InputPrixproduit";
+			this->InputPrixproduit->Size = System::Drawing::Size(178, 22);
+			this->InputPrixproduit->TabIndex = 47;
+			// 
+			// InputNomproduit
+			// 
+			this->InputNomproduit->Location = System::Drawing::Point(50, 53);
+			this->InputNomproduit->Name = L"InputNomproduit";
+			this->InputNomproduit->Size = System::Drawing::Size(178, 22);
+			this->InputNomproduit->TabIndex = 46;
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Location = System::Drawing::Point(50, 133);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(43, 17);
+			this->label30->TabIndex = 42;
+			this->label30->Text = L"Stock";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Location = System::Drawing::Point(50, 183);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(39, 17);
+			this->label31->TabIndex = 41;
+			this->label31->Text = L"Taxe";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Location = System::Drawing::Point(50, 83);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(31, 17);
+			this->label32->TabIndex = 40;
+			this->label32->Text = L"Prix";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Location = System::Drawing::Point(50, 33);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(37, 17);
+			this->label33->TabIndex = 39;
+			this->label33->Text = L"Nom";
+			// 
+			// button15
+			// 
+			this->button15->Location = System::Drawing::Point(1039, 253);
+			this->button15->Name = L"button15";
+			this->button15->Size = System::Drawing::Size(95, 40);
+			this->button15->TabIndex = 38;
+			this->button15->Text = L"Valider";
+			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &MyForm::button15_Click);
+			// 
+			// button14
+			// 
+			this->button14->Location = System::Drawing::Point(1052, 6);
+			this->button14->Name = L"button14";
+			this->button14->Size = System::Drawing::Size(82, 23);
+			this->button14->TabIndex = 37;
+			this->button14->Text = L"Rafraichir";
+			this->button14->UseVisualStyleBackColor = true;
+			this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
+			// 
+			// tabPage2
+			// 
+			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(1140, 299);
+			this->tabPage2->TabIndex = 1;
+			this->tabPage2->Text = L"Modifier";
+			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// tabPage3
+			// 
+			this->tabPage3->Controls->Add(this->button17);
+			this->tabPage3->Controls->Add(this->InputChercheStockProduit);
+			this->tabPage3->Controls->Add(this->InputCherchePrixProduit);
+			this->tabPage3->Controls->Add(this->InputChercheNomProduit);
+			this->tabPage3->Controls->Add(this->label38);
+			this->tabPage3->Controls->Add(this->label27);
+			this->tabPage3->Controls->Add(this->label29);
+			this->tabPage3->Location = System::Drawing::Point(4, 25);
+			this->tabPage3->Name = L"tabPage3";
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage3->Size = System::Drawing::Size(1140, 299);
+			this->tabPage3->TabIndex = 2;
+			this->tabPage3->Text = L"Afficher";
+			this->tabPage3->UseVisualStyleBackColor = true;
+			// 
+			// tabPage4
+			// 
+			this->tabPage4->Controls->Add(this->button16);
+			this->tabPage4->Controls->Add(this->InputDeleteProduit);
+			this->tabPage4->Controls->Add(this->label26);
+			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Name = L"tabPage4";
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage4->Size = System::Drawing::Size(1140, 299);
+			this->tabPage4->TabIndex = 3;
+			this->tabPage4->Text = L"Supprimer";
+			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// button16
+			// 
+			this->button16->Location = System::Drawing::Point(1039, 253);
+			this->button16->Name = L"button16";
+			this->button16->Size = System::Drawing::Size(95, 40);
+			this->button16->TabIndex = 5;
+			this->button16->Text = L"Valider";
+			this->button16->UseVisualStyleBackColor = true;
+			this->button16->Click += gcnew System::EventHandler(this, &MyForm::button16_Click);
+			// 
+			// InputDeleteProduit
+			// 
+			this->InputDeleteProduit->Location = System::Drawing::Point(453, 109);
+			this->InputDeleteProduit->Name = L"InputDeleteProduit";
+			this->InputDeleteProduit->Size = System::Drawing::Size(100, 22);
+			this->InputDeleteProduit->TabIndex = 4;
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(450, 89);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(89, 17);
+			this->label26->TabIndex = 3;
+			this->label26->Text = L"ID du produit";
+			// 
+			// GridViewCréerArticle
+			// 
+			this->GridViewCréerArticle->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->GridViewCréerArticle->Location = System::Drawing::Point(9, 6);
+			this->GridViewCréerArticle->Name = L"GridViewCréerArticle";
+			this->GridViewCréerArticle->RowHeadersWidth = 51;
+			this->GridViewCréerArticle->RowTemplate->Height = 24;
+			this->GridViewCréerArticle->Size = System::Drawing::Size(1139, 273);
+			this->GridViewCréerArticle->TabIndex = 2;
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(50, 133);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(43, 17);
+			this->label27->TabIndex = 51;
+			this->label27->Text = L"Stock";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Location = System::Drawing::Point(50, 83);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(31, 17);
+			this->label29->TabIndex = 50;
+			this->label29->Text = L"Prix";
+			// 
+			// button17
+			// 
+			this->button17->Location = System::Drawing::Point(323, 121);
+			this->button17->Name = L"button17";
+			this->button17->Size = System::Drawing::Size(95, 40);
+			this->button17->TabIndex = 63;
+			this->button17->Text = L"Chercher";
+			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
+			// 
+			// InputChercheStockProduit
+			// 
+			this->InputChercheStockProduit->Location = System::Drawing::Point(50, 153);
+			this->InputChercheStockProduit->Name = L"InputChercheStockProduit";
+			this->InputChercheStockProduit->Size = System::Drawing::Size(178, 22);
+			this->InputChercheStockProduit->TabIndex = 61;
+			// 
+			// InputCherchePrixProduit
+			// 
+			this->InputCherchePrixProduit->Location = System::Drawing::Point(50, 103);
+			this->InputCherchePrixProduit->Name = L"InputCherchePrixProduit";
+			this->InputCherchePrixProduit->Size = System::Drawing::Size(178, 22);
+			this->InputCherchePrixProduit->TabIndex = 60;
+			// 
+			// InputChercheNomProduit
+			// 
+			this->InputChercheNomProduit->Location = System::Drawing::Point(50, 53);
+			this->InputChercheNomProduit->Name = L"InputChercheNomProduit";
+			this->InputChercheNomProduit->Size = System::Drawing::Size(178, 22);
+			this->InputChercheNomProduit->TabIndex = 59;
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Location = System::Drawing::Point(50, 33);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(37, 17);
+			this->label38->TabIndex = 55;
+			this->label38->Text = L"Nom";
 			// 
 			// MyForm
 			// 
@@ -1838,6 +2204,15 @@ private: System::Windows::Forms::Label^ label28;
 			this->CommandeCréer->PerformLayout();
 			this->CommandeAfficher->ResumeLayout(false);
 			this->CommandeAfficher->PerformLayout();
+			this->MainArticle->ResumeLayout(false);
+			this->tabControl1->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
+			this->tabPage1->PerformLayout();
+			this->tabPage3->ResumeLayout(false);
+			this->tabPage3->PerformLayout();
+			this->tabPage4->ResumeLayout(false);
+			this->tabPage4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerArticle))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1991,12 +2366,11 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	RafraichirUnArticle(sender, e);
-	this->PanierClient->Items->Add(this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString());
+	this->PanierClient->Items->Add(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString() + " " + this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString() + " : " + this->QuantiterProduitCommande->Text);
 	this->GridViewCréerCommande->Refresh();
 	this->oDs = this->oSvc->selectionnerArticle("Rsl");
 	this->GridViewCréerCommande->DataSource = this->oDs;
 	this->GridViewCréerCommande->DataMember = "Rsl";
-
 }
 
 private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2019,7 +2393,7 @@ private: System::Void PanierClient_SelectedIndexChanged(System::Object^ sender, 
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 	RafraichirUnArticle(sender, e);
-	this->PanierClient->Items->Remove(this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString());
+	this->PanierClient->Items->Remove(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString() + " " + this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString() + " : " + this->QuantiterProduitCommande->Text);
 	this->GridViewCréerCommande->Refresh();
 	this->oDs = this->oSvc->selectionnerArticle("Rsl");
 	this->GridViewCréerCommande->DataSource = this->oDs;
@@ -2043,6 +2417,32 @@ private: System::Void RafraichirUneCommande(System::Object^ sender, System::Even
 	this->oDs = this->oSvc->selectionnerUneCommande(this->InputCommandeAff->Text, "Rsl");
 	this->GridViewCréerCommande->DataSource = this->oDs;
 	this->GridViewCréerCommande->DataMember = "Rsl";
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	//this->oSvc->ajouterUneCommande();
+
+}
+private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->GridViewCréerArticle->Refresh();
+	this->oDs = this->oSvc->selectionnerArticle("Rsl");
+	this->GridViewCréerArticle->DataSource = this->oDs;
+	this->GridViewCréerArticle->DataMember = "Rsl";
+}
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->ajouterUnArticle(this->InputNomproduit->Text, this->InputPrixproduit->Text, this->InputStockproduit->Text, this->InputTaxeproduit->Text);
+	button14_Click(sender, e);
+
+}
+private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->supprimerUnProduit(this->InputDeleteProduit->Text);
+	button14_Click(sender, e);
+}
+private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->GridViewCréerArticle->Refresh();
+	this->oDs = this->oSvc->selectionnerUnProduit(this->InputChercheNomProduit->Text, this->InputCherchePrixProduit->Text, this->InputChercheStockProduit->Text, "Rsl");
+	this->GridViewCréerArticle->DataSource = this->oDs;
+	this->GridViewCréerArticle->DataMember = "Rsl";
 }
 };
 }
