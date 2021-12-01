@@ -28,6 +28,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerArticle(System::String^);
 		System::Data::DataSet^ selectionnerUneCommande(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnProduit(System::String^, System::String^, System::String^, System::String^);
+		System::Data::DataSet^ selectionnerUnSeulProduit(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnPersonnel(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnClient(System::String^, System::String^); 
 		System::Data::DataSet^ selectionnerUnArticle(System::String^, System::String^);
@@ -38,9 +39,8 @@ namespace NS_Comp_Svc
 		void ajouterUneAdresse(System::String^, System::String^, System::String^);
 		void ajouterHabiter(System::String^);
 		void ajouterUneCommande(System::String^, System::String^, System::String^, System::String^);
-		void ajouterUnArticle(System::String^, System::String^, System::String^, System::String^);
+		void ajouterUnArticle(System::String^, System::String^, System::String^, System::String^, System::String^);
 		void supprimerUnPersonnel(System::String^);
-		void supprimerUneAdressePersonnel(System::String^);
 		void supprimerUnClient(System::String^);
 		void supprimerUnProduit(System::String^);
 		void updateUnPersonnel(System::String^, System::String^, System::String^, System::String^, System::String^);
@@ -48,6 +48,7 @@ namespace NS_Comp_Svc
 		void updateUneAdresseClient(System::String^, System::String^, System::String^, System::String^);
 		void updateUnClient(System::String^, System::String^, System::String^, System::String^);
 		void updateHabiter(System::String^, System::String^);
-		void updateDeletePersonnel(System::String^);
+		void updateUnproduit(System::String^, System::String^, System::String^, System::String^, System::String^);
+		
 	};
 }

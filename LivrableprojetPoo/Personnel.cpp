@@ -19,7 +19,7 @@ System::String^ NS_Comp_Mappage::Personnel::Insert(void)
 }
 System::String^ NS_Comp_Mappage::Personnel::Delete(void)
 {
-	return "Delete Personnel where IDPersonnel = '" + this->ID + "';";
+	return "EXEC DelPersonnel '" + this->ID + "';";
 }
 System::String^ NS_Comp_Mappage::Personnel::UpdateDelete(void)
 {
