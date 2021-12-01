@@ -2556,7 +2556,7 @@ private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button12_Click_1(System::Object^ sender, System::EventArgs^ e) {
-
+	this->GridViewCréerCommande->DataSource;
 	this->GridViewCréerCommande->Refresh();
 	this->oDs = this->oSvc->selectionnerArticle("Rsl");
 	this->GridViewCréerCommande->DataSource = this->oDs;
@@ -2588,9 +2588,9 @@ private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void RafraichirUneCommande(System::Object^ sender, System::EventArgs^ e) {
 
 	this->GridViewCréerCommande->Refresh();
-	this->oDs = this->oSvc->selectionnerUneCommande(this->InputCommandeAff->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerUneCommande(this->InputCommandeAff->Text, "CZ");
 	this->GridViewCréerCommande->DataSource = this->oDs;
-	this->GridViewCréerCommande->DataMember = "Rsl";
+	this->GridViewCréerCommande->DataMember = "CZ";
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 	//this->oSvc->ajouterUneCommande();
