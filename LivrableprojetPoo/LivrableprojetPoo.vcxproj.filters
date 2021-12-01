@@ -13,6 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="FichiersSQL">
+      <UniqueIdentifier>{e59e09a2-eac8-44ba-9f96-fcb6ff720be9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FichiersSQL\Personnel">
+      <UniqueIdentifier>{b838fd82-2ae9-4ec8-a70e-47d70a943a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FichiersSQL\Commande">
+      <UniqueIdentifier>{84e4dc6a-5fc2-47a6-abb3-6c3101a0832f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FichiersSQL\Client">
+      <UniqueIdentifier>{7ca9e722-a392-4784-8071-72f4bb73e68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FichiersSQL\Produit">
+      <UniqueIdentifier>{4fda4906-7f87-41e7-80d2-62ff370c12bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FichiersSQL\Stats">
+      <UniqueIdentifier>{0690bc99-8a00-427c-9a9a-5ddb8298bd9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FichiersSQL\Autres">
+      <UniqueIdentifier>{3b614c78-cac8-4ea1-a24e-c5577936a9ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -114,5 +135,88 @@
     <Image Include="app.ico">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AfficherClient.sql">
+      <Filter>FichiersSQL\Client</Filter>
+    </None>
+    <None Include="SupprimerClient.sql">
+      <Filter>FichiersSQL\Client</Filter>
+    </None>
+    <None Include="AjouterClient.sql">
+      <Filter>FichiersSQL\Client</Filter>
+    </None>
+    <None Include="ModifierClient.sql">
+      <Filter>FichiersSQL\Client</Filter>
+    </None>
+    <None Include="AfficherCommande.sql">
+      <Filter>FichiersSQL\Commande</Filter>
+    </None>
+    <None Include="AjouterCommande.sql">
+      <Filter>FichiersSQL\Commande</Filter>
+    </None>
+    <None Include="ModifierCommande.sql">
+      <Filter>FichiersSQL\Commande</Filter>
+    </None>
+    <None Include="SupprimerCommande.sql">
+      <Filter>FichiersSQL\Commande</Filter>
+    </None>
+    <None Include="InsertionDonnees.sql">
+      <Filter>FichiersSQL\Autres</Filter>
+    </None>
+    <None Include="CreationBDD.sql">
+      <Filter>FichiersSQL\Autres</Filter>
+    </None>
+    <None Include="AfficherInfoPersonnel.sql">
+      <Filter>FichiersSQL\Autres</Filter>
+    </None>
+    <None Include="AfficherProduit.sql">
+      <Filter>FichiersSQL\Produit</Filter>
+    </None>
+    <None Include="AjouterProduit.sql">
+      <Filter>FichiersSQL\Produit</Filter>
+    </None>
+    <None Include="SupprimerProduit.sql">
+      <Filter>FichiersSQL\Produit</Filter>
+    </None>
+    <None Include="ModifierProduit.sql">
+      <Filter>FichiersSQL\Produit</Filter>
+    </None>
+    <None Include="AjouterPersonnel.sql">
+      <Filter>FichiersSQL\Personnel</Filter>
+    </None>
+    <None Include="AfficherPersonnel.sql">
+      <Filter>FichiersSQL\Personnel</Filter>
+    </None>
+    <None Include="ModifierPersonnel.sql">
+      <Filter>FichiersSQL\Personnel</Filter>
+    </None>
+    <None Include="SupprimerPersonnel.sql">
+      <Filter>FichiersSQL\Personnel</Filter>
+    </None>
+    <None Include="ChiffreAffaire.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="MontantAchatClient.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="PrixCommande.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="ProduitMoinsVendu.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="ProduitPlusVendu.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="SimulationVariation.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="ValeurAchatStock.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="ValeurCommercialeStock.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
   </ItemGroup>
 </Project>
