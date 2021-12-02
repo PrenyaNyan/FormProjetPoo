@@ -2680,6 +2680,8 @@ private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ 
 	button18_Click(sender, e);
 }
 private: System::Void ButtonDelCommande_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->supprimerUneCommande(this->TextDelCommande->Text);
+	RafraichirUneCommande(sender, e);
 }
 };
 }
