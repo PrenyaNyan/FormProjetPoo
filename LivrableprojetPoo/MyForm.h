@@ -400,6 +400,8 @@ private: System::Windows::Forms::Label^ label37;
 			this->MainPersonnel = (gcnew System::Windows::Forms::TabPage());
 			this->TabPersonnel = (gcnew System::Windows::Forms::TabControl());
 			this->PersonnelCréer = (gcnew System::Windows::Forms::TabPage());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->InputIDVillePersonnel = (gcnew System::Windows::Forms::TextBox());
 			this->InputNumeroRuePersonnel = (gcnew System::Windows::Forms::TextBox());
@@ -511,6 +513,7 @@ private: System::Windows::Forms::Label^ label37;
 			this->labelosef = (gcnew System::Windows::Forms::Label());
 			this->QuantiterProduitCommande = (gcnew System::Windows::Forms::TextBox());
 			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->PanierClient = (gcnew System::Windows::Forms::ListBox());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->InputIDProduitCommande = (gcnew System::Windows::Forms::TextBox());
@@ -576,9 +579,6 @@ private: System::Windows::Forms::Label^ label37;
 			this->InputDeleteProduit = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
-			this->PanierClient = (gcnew System::Windows::Forms::ListBox());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
-			this->label37 = (gcnew System::Windows::Forms::Label());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -674,6 +674,29 @@ private: System::Windows::Forms::Label^ label37;
 			this->PersonnelCréer->Text = L"Créer";
 			this->PersonnelCréer->UseVisualStyleBackColor = true;
 			this->PersonnelCréer->Click += gcnew System::EventHandler(this, &MyForm::PersonnelCréer_Click);
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Location = System::Drawing::Point(598, 31);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(34, 17);
+			this->label37->TabIndex = 38;
+			this->label37->Text = L"Ville";
+			// 
+			// listBox1
+			// 
+			this->listBox1->FormattingEnabled = true;
+			this->listBox1->ItemHeight = 16;
+			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(14) {
+				L"1 Saint-Nazaire", L"2 Nantes", L"3 Paris", L"4 Guerande",
+					L"5 Lyon", L"6 Marseille\t", L"7 Lille", L"8 Bordeaux\t", L"9 Toulouse\t", L"10 Nice", L"11 Madrid", L"12 Berlin", L"13 Londres",
+					L"14 Bruxelles"
+			});
+			this->listBox1->Location = System::Drawing::Point(601, 51);
+			this->listBox1->Name = L"listBox1";
+			this->listBox1->Size = System::Drawing::Size(533, 196);
+			this->listBox1->TabIndex = 37;
 			// 
 			// button10
 			// 
@@ -1760,6 +1783,16 @@ private: System::Windows::Forms::Label^ label37;
 			this->button12->UseVisualStyleBackColor = true;
 			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click_1);
 			// 
+			// PanierClient
+			// 
+			this->PanierClient->FormattingEnabled = true;
+			this->PanierClient->ItemHeight = 16;
+			this->PanierClient->Location = System::Drawing::Point(601, 43);
+			this->PanierClient->Name = L"PanierClient";
+			this->PanierClient->Size = System::Drawing::Size(533, 196);
+			this->PanierClient->TabIndex = 36;
+			this->PanierClient->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::PanierClient_SelectedIndexChanged);
+			// 
 			// button9
 			// 
 			this->button9->Location = System::Drawing::Point(548, 193);
@@ -1950,29 +1983,29 @@ private: System::Windows::Forms::Label^ label37;
 			// 
 			// ButtonDelCommande
 			// 
-			this->ButtonDelCommande->Location = System::Drawing::Point(323, 46);
+			this->ButtonDelCommande->Location = System::Drawing::Point(1039, 253);
 			this->ButtonDelCommande->Name = L"ButtonDelCommande";
 			this->ButtonDelCommande->Size = System::Drawing::Size(95, 40);
 			this->ButtonDelCommande->TabIndex = 44;
-			this->ButtonDelCommande->Text = L"Chercher";
+			this->ButtonDelCommande->Text = L"Valider";
 			this->ButtonDelCommande->UseVisualStyleBackColor = true;
 			this->ButtonDelCommande->Click += gcnew System::EventHandler(this, &MyForm::ButtonDelCommande_Click);
 			// 
 			// TextDelCommande
 			// 
-			this->TextDelCommande->Location = System::Drawing::Point(50, 53);
+			this->TextDelCommande->Location = System::Drawing::Point(453, 109);
 			this->TextDelCommande->Name = L"TextDelCommande";
-			this->TextDelCommande->Size = System::Drawing::Size(178, 22);
+			this->TextDelCommande->Size = System::Drawing::Size(100, 22);
 			this->TextDelCommande->TabIndex = 43;
 			// 
 			// label36
 			// 
 			this->label36->AutoSize = true;
-			this->label36->Location = System::Drawing::Point(50, 33);
+			this->label36->Location = System::Drawing::Point(450, 89);
 			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(56, 17);
+			this->label36->Size = System::Drawing::Size(129, 17);
 			this->label36->TabIndex = 42;
-			this->label36->Text = L"IDClient";
+			this->label36->Text = L"ID de la commande";
 			// 
 			// MainArticle
 			// 
@@ -2374,39 +2407,6 @@ private: System::Windows::Forms::Label^ label37;
 			this->GridViewCréerArticle->Size = System::Drawing::Size(1139, 273);
 			this->GridViewCréerArticle->TabIndex = 2;
 			// 
-			// PanierClient
-			// 
-			this->PanierClient->FormattingEnabled = true;
-			this->PanierClient->ItemHeight = 16;
-			this->PanierClient->Location = System::Drawing::Point(601, 43);
-			this->PanierClient->Name = L"PanierClient";
-			this->PanierClient->Size = System::Drawing::Size(533, 196);
-			this->PanierClient->TabIndex = 36;
-			this->PanierClient->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::PanierClient_SelectedIndexChanged);
-			// 
-			// listBox1
-			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->ItemHeight = 16;
-			this->listBox1->Items->AddRange(gcnew cli::array< System::Object^  >(14) {
-				L"1 Saint-Nazaire", L"2 Nantes", L"3 Paris", L"4 Guerande",
-					L"5 Lyon", L"6 Marseille\t", L"7 Lille", L"8 Bordeaux\t", L"9 Toulouse\t", L"10 Nice", L"11 Madrid", L"12 Berlin", L"13 Londres",
-					L"14 Bruxelles"
-			});
-			this->listBox1->Location = System::Drawing::Point(601, 51);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(533, 196);
-			this->listBox1->TabIndex = 37;
-			// 
-			// label37
-			// 
-			this->label37->AutoSize = true;
-			this->label37->Location = System::Drawing::Point(598, 31);
-			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(34, 17);
-			this->label37->TabIndex = 38;
-			this->label37->Text = L"Ville";
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -2712,8 +2712,8 @@ private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void ButtonDelCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->supprimerUneCommande(this->TextDelCommande->Text);
-	RafraichirUneCommande(sender, e);
 }
+
 private: System::Void PersonnelCréer_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
