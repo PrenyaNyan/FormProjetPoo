@@ -350,6 +350,47 @@ private: System::Windows::Forms::DataGridView^ PanierClient;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ IDProduit;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ NomProduit;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
+private: System::Windows::Forms::TabPage^ tabPage5;
+private: System::Windows::Forms::Label^ label54;
+private: System::Windows::Forms::TextBox^ StatsDemarqueInco;
+private: System::Windows::Forms::Label^ label55;
+private: System::Windows::Forms::TextBox^ StatsRemiseCom;
+private: System::Windows::Forms::Label^ label56;
+private: System::Windows::Forms::TextBox^ StatsMargeCom;
+private: System::Windows::Forms::Label^ label57;
+private: System::Windows::Forms::TextBox^ StatsImport;
+private: System::Windows::Forms::Label^ label53;
+private: System::Windows::Forms::TextBox^ StatsTVAp;
+private: System::Windows::Forms::Label^ label52;
+private: System::Windows::Forms::TextBox^ StatsTVAr;
+private: System::Windows::Forms::Label^ label51;
+private: System::Windows::Forms::TextBox^ StatsTVAi;
+private: System::Windows::Forms::Label^ label50;
+private: System::Windows::Forms::TextBox^ StatsTVAn;
+private: System::Windows::Forms::Label^ label49;
+private: System::Windows::Forms::TextBox^ StatsIDClient;
+private: System::Windows::Forms::Label^ label48;
+private: System::Windows::Forms::TextBox^ StatsDateEntree;
+private: System::Windows::Forms::Label^ label47;
+private: System::Windows::Forms::Label^ label46;
+private: System::Windows::Forms::Label^ label45;
+private: System::Windows::Forms::Label^ label44;
+private: System::Windows::Forms::Label^ label43;
+private: System::Windows::Forms::Label^ label42;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::Button^ button27;
+private: System::Windows::Forms::Button^ button26;
+private: System::Windows::Forms::Button^ button25;
+private: System::Windows::Forms::Button^ button24;
+private: System::Windows::Forms::Button^ button23;
+private: System::Windows::Forms::Button^ button22;
+private: System::Windows::Forms::Button^ button21;
+private: System::Windows::Forms::Button^ button20;
+private: System::Windows::Forms::Button^ button9;
+private: System::Windows::Forms::DataGridView^ DataGridStats;
+
 
 
 
@@ -535,6 +576,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
 			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
 			this->PanierClient = (gcnew System::Windows::Forms::DataGridView());
+			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Quantité = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->labelosef = (gcnew System::Windows::Forms::Label());
 			this->QuantiterProduitCommande = (gcnew System::Windows::Forms::TextBox());
@@ -603,9 +647,46 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->InputDeleteProduit = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
-			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Quantité = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->label54 = (gcnew System::Windows::Forms::Label());
+			this->StatsDemarqueInco = (gcnew System::Windows::Forms::TextBox());
+			this->label55 = (gcnew System::Windows::Forms::Label());
+			this->StatsRemiseCom = (gcnew System::Windows::Forms::TextBox());
+			this->label56 = (gcnew System::Windows::Forms::Label());
+			this->StatsMargeCom = (gcnew System::Windows::Forms::TextBox());
+			this->label57 = (gcnew System::Windows::Forms::Label());
+			this->StatsImport = (gcnew System::Windows::Forms::TextBox());
+			this->label53 = (gcnew System::Windows::Forms::Label());
+			this->StatsTVAp = (gcnew System::Windows::Forms::TextBox());
+			this->label52 = (gcnew System::Windows::Forms::Label());
+			this->StatsTVAr = (gcnew System::Windows::Forms::TextBox());
+			this->label51 = (gcnew System::Windows::Forms::Label());
+			this->StatsTVAi = (gcnew System::Windows::Forms::TextBox());
+			this->label50 = (gcnew System::Windows::Forms::Label());
+			this->StatsTVAn = (gcnew System::Windows::Forms::TextBox());
+			this->label49 = (gcnew System::Windows::Forms::Label());
+			this->StatsIDClient = (gcnew System::Windows::Forms::TextBox());
+			this->label48 = (gcnew System::Windows::Forms::Label());
+			this->StatsDateEntree = (gcnew System::Windows::Forms::TextBox());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->label46 = (gcnew System::Windows::Forms::Label());
+			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->button27 = (gcnew System::Windows::Forms::Button());
+			this->button26 = (gcnew System::Windows::Forms::Button());
+			this->button25 = (gcnew System::Windows::Forms::Button());
+			this->button24 = (gcnew System::Windows::Forms::Button());
+			this->button23 = (gcnew System::Windows::Forms::Button());
+			this->button22 = (gcnew System::Windows::Forms::Button());
+			this->button21 = (gcnew System::Windows::Forms::Button());
+			this->button20 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->DataGridStats = (gcnew System::Windows::Forms::DataGridView());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -635,6 +716,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->tabPage3->SuspendLayout();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerArticle))->BeginInit();
+			this->tabPage5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridStats))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// MainTab
@@ -643,6 +726,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->MainTab->Controls->Add(this->MainClient);
 			this->MainTab->Controls->Add(this->MainCommande);
 			this->MainTab->Controls->Add(this->MainArticle);
+			this->MainTab->Controls->Add(this->tabPage5);
 			this->MainTab->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->MainTab->Location = System::Drawing::Point(0, 0);
 			this->MainTab->Name = L"MainTab";
@@ -1789,6 +1873,27 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->PanierClient->TabIndex = 41;
 			this->PanierClient->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::PanierClient_CellContentClick);
 			// 
+			// IDProduit
+			// 
+			this->IDProduit->HeaderText = L"IDProduit";
+			this->IDProduit->MinimumWidth = 6;
+			this->IDProduit->Name = L"IDProduit";
+			this->IDProduit->Width = 70;
+			// 
+			// NomProduit
+			// 
+			this->NomProduit->HeaderText = L"NomProduit";
+			this->NomProduit->MinimumWidth = 6;
+			this->NomProduit->Name = L"NomProduit";
+			this->NomProduit->Width = 195;
+			// 
+			// Quantité
+			// 
+			this->Quantité->HeaderText = L"Quantité";
+			this->Quantité->MinimumWidth = 6;
+			this->Quantité->Name = L"Quantité";
+			this->Quantité->Width = 70;
+			// 
 			// label21
 			// 
 			this->label21->AutoSize = true;
@@ -2429,26 +2534,397 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->GridViewCréerArticle->Size = System::Drawing::Size(1139, 273);
 			this->GridViewCréerArticle->TabIndex = 2;
 			// 
-			// IDProduit
+			// tabPage5
 			// 
-			this->IDProduit->HeaderText = L"IDProduit";
-			this->IDProduit->MinimumWidth = 6;
-			this->IDProduit->Name = L"IDProduit";
-			this->IDProduit->Width = 70;
+			this->tabPage5->Controls->Add(this->label54);
+			this->tabPage5->Controls->Add(this->StatsDemarqueInco);
+			this->tabPage5->Controls->Add(this->label55);
+			this->tabPage5->Controls->Add(this->StatsRemiseCom);
+			this->tabPage5->Controls->Add(this->label56);
+			this->tabPage5->Controls->Add(this->StatsMargeCom);
+			this->tabPage5->Controls->Add(this->label57);
+			this->tabPage5->Controls->Add(this->StatsImport);
+			this->tabPage5->Controls->Add(this->label53);
+			this->tabPage5->Controls->Add(this->StatsTVAp);
+			this->tabPage5->Controls->Add(this->label52);
+			this->tabPage5->Controls->Add(this->StatsTVAr);
+			this->tabPage5->Controls->Add(this->label51);
+			this->tabPage5->Controls->Add(this->StatsTVAi);
+			this->tabPage5->Controls->Add(this->label50);
+			this->tabPage5->Controls->Add(this->StatsTVAn);
+			this->tabPage5->Controls->Add(this->label49);
+			this->tabPage5->Controls->Add(this->StatsIDClient);
+			this->tabPage5->Controls->Add(this->label48);
+			this->tabPage5->Controls->Add(this->StatsDateEntree);
+			this->tabPage5->Controls->Add(this->label47);
+			this->tabPage5->Controls->Add(this->label46);
+			this->tabPage5->Controls->Add(this->label45);
+			this->tabPage5->Controls->Add(this->label44);
+			this->tabPage5->Controls->Add(this->label43);
+			this->tabPage5->Controls->Add(this->label42);
+			this->tabPage5->Controls->Add(this->label41);
+			this->tabPage5->Controls->Add(this->label40);
+			this->tabPage5->Controls->Add(this->label39);
+			this->tabPage5->Controls->Add(this->button27);
+			this->tabPage5->Controls->Add(this->button26);
+			this->tabPage5->Controls->Add(this->button25);
+			this->tabPage5->Controls->Add(this->button24);
+			this->tabPage5->Controls->Add(this->button23);
+			this->tabPage5->Controls->Add(this->button22);
+			this->tabPage5->Controls->Add(this->button21);
+			this->tabPage5->Controls->Add(this->button20);
+			this->tabPage5->Controls->Add(this->button9);
+			this->tabPage5->Controls->Add(this->DataGridStats);
+			this->tabPage5->Location = System::Drawing::Point(4, 25);
+			this->tabPage5->Name = L"tabPage5";
+			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage5->Size = System::Drawing::Size(1154, 616);
+			this->tabPage5->TabIndex = 4;
+			this->tabPage5->Text = L"Stats";
+			this->tabPage5->UseVisualStyleBackColor = true;
 			// 
-			// NomProduit
+			// label54
 			// 
-			this->NomProduit->HeaderText = L"NomProduit";
-			this->NomProduit->MinimumWidth = 6;
-			this->NomProduit->Name = L"NomProduit";
-			this->NomProduit->Width = 195;
+			this->label54->AutoSize = true;
+			this->label54->Location = System::Drawing::Point(1052, 552);
+			this->label54->Name = L"label54";
+			this->label54->Size = System::Drawing::Size(100, 17);
+			this->label54->TabIndex = 40;
+			this->label54->Text = L"DemarqueInco";
 			// 
-			// Quantité
+			// StatsDemarqueInco
 			// 
-			this->Quantité->HeaderText = L"Quantité";
-			this->Quantité->MinimumWidth = 6;
-			this->Quantité->Name = L"Quantité";
-			this->Quantité->Width = 70;
+			this->StatsDemarqueInco->Location = System::Drawing::Point(1053, 572);
+			this->StatsDemarqueInco->Name = L"StatsDemarqueInco";
+			this->StatsDemarqueInco->Size = System::Drawing::Size(72, 22);
+			this->StatsDemarqueInco->TabIndex = 39;
+			this->StatsDemarqueInco->Text = L"0.0";
+			// 
+			// label55
+			// 
+			this->label55->AutoSize = true;
+			this->label55->Location = System::Drawing::Point(1052, 507);
+			this->label55->Name = L"label55";
+			this->label55->Size = System::Drawing::Size(83, 17);
+			this->label55->TabIndex = 38;
+			this->label55->Text = L"RemiseCom";
+			// 
+			// StatsRemiseCom
+			// 
+			this->StatsRemiseCom->Location = System::Drawing::Point(1053, 527);
+			this->StatsRemiseCom->Name = L"StatsRemiseCom";
+			this->StatsRemiseCom->Size = System::Drawing::Size(72, 22);
+			this->StatsRemiseCom->TabIndex = 37;
+			this->StatsRemiseCom->Text = L"0.0";
+			// 
+			// label56
+			// 
+			this->label56->AutoSize = true;
+			this->label56->Location = System::Drawing::Point(1052, 462);
+			this->label56->Name = L"label56";
+			this->label56->Size = System::Drawing::Size(76, 17);
+			this->label56->TabIndex = 36;
+			this->label56->Text = L"MargeCom";
+			// 
+			// StatsMargeCom
+			// 
+			this->StatsMargeCom->Location = System::Drawing::Point(1053, 482);
+			this->StatsMargeCom->Name = L"StatsMargeCom";
+			this->StatsMargeCom->Size = System::Drawing::Size(72, 22);
+			this->StatsMargeCom->TabIndex = 35;
+			this->StatsMargeCom->Text = L"0.0";
+			// 
+			// label57
+			// 
+			this->label57->AutoSize = true;
+			this->label57->Location = System::Drawing::Point(1052, 417);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(47, 17);
+			this->label57->TabIndex = 34;
+			this->label57->Text = L"Import";
+			// 
+			// StatsImport
+			// 
+			this->StatsImport->Location = System::Drawing::Point(1053, 437);
+			this->StatsImport->Name = L"StatsImport";
+			this->StatsImport->Size = System::Drawing::Size(72, 22);
+			this->StatsImport->TabIndex = 33;
+			this->StatsImport->Text = L"0.2";
+			// 
+			// label53
+			// 
+			this->label53->AutoSize = true;
+			this->label53->Location = System::Drawing::Point(974, 552);
+			this->label53->Name = L"label53";
+			this->label53->Size = System::Drawing::Size(43, 17);
+			this->label53->TabIndex = 32;
+			this->label53->Text = L"TVAp";
+			// 
+			// StatsTVAp
+			// 
+			this->StatsTVAp->Location = System::Drawing::Point(975, 572);
+			this->StatsTVAp->Name = L"StatsTVAp";
+			this->StatsTVAp->Size = System::Drawing::Size(72, 22);
+			this->StatsTVAp->TabIndex = 31;
+			this->StatsTVAp->Text = L"0.021";
+			// 
+			// label52
+			// 
+			this->label52->AutoSize = true;
+			this->label52->Location = System::Drawing::Point(974, 507);
+			this->label52->Name = L"label52";
+			this->label52->Size = System::Drawing::Size(40, 17);
+			this->label52->TabIndex = 30;
+			this->label52->Text = L"TVAr";
+			// 
+			// StatsTVAr
+			// 
+			this->StatsTVAr->Location = System::Drawing::Point(975, 527);
+			this->StatsTVAr->Name = L"StatsTVAr";
+			this->StatsTVAr->Size = System::Drawing::Size(72, 22);
+			this->StatsTVAr->TabIndex = 29;
+			this->StatsTVAr->Text = L"0.055";
+			// 
+			// label51
+			// 
+			this->label51->AutoSize = true;
+			this->label51->Location = System::Drawing::Point(974, 462);
+			this->label51->Name = L"label51";
+			this->label51->Size = System::Drawing::Size(38, 17);
+			this->label51->TabIndex = 28;
+			this->label51->Text = L"TVAi";
+			// 
+			// StatsTVAi
+			// 
+			this->StatsTVAi->Location = System::Drawing::Point(975, 482);
+			this->StatsTVAi->Name = L"StatsTVAi";
+			this->StatsTVAi->Size = System::Drawing::Size(72, 22);
+			this->StatsTVAi->TabIndex = 27;
+			this->StatsTVAi->Text = L"0.1";
+			// 
+			// label50
+			// 
+			this->label50->AutoSize = true;
+			this->label50->Location = System::Drawing::Point(974, 417);
+			this->label50->Name = L"label50";
+			this->label50->Size = System::Drawing::Size(43, 17);
+			this->label50->TabIndex = 26;
+			this->label50->Text = L"TVAn";
+			// 
+			// StatsTVAn
+			// 
+			this->StatsTVAn->Location = System::Drawing::Point(975, 437);
+			this->StatsTVAn->Name = L"StatsTVAn";
+			this->StatsTVAn->Size = System::Drawing::Size(72, 22);
+			this->StatsTVAn->TabIndex = 25;
+			this->StatsTVAn->Text = L"0.2";
+			// 
+			// label49
+			// 
+			this->label49->AutoSize = true;
+			this->label49->Location = System::Drawing::Point(401, 359);
+			this->label49->Name = L"label49";
+			this->label49->Size = System::Drawing::Size(88, 17);
+			this->label49->TabIndex = 24;
+			this->label49->Text = L"StatsIDClient";
+			// 
+			// StatsIDClient
+			// 
+			this->StatsIDClient->Location = System::Drawing::Point(404, 379);
+			this->StatsIDClient->Name = L"StatsIDClient";
+			this->StatsIDClient->Size = System::Drawing::Size(153, 22);
+			this->StatsIDClient->TabIndex = 23;
+			this->StatsIDClient->Text = L"3";
+			// 
+			// label48
+			// 
+			this->label48->AutoSize = true;
+			this->label48->Location = System::Drawing::Point(140, 359);
+			this->label48->Name = L"label48";
+			this->label48->Size = System::Drawing::Size(112, 17);
+			this->label48->TabIndex = 22;
+			this->label48->Text = L"StatsDateEntree";
+			// 
+			// StatsDateEntree
+			// 
+			this->StatsDateEntree->Location = System::Drawing::Point(143, 379);
+			this->StatsDateEntree->Name = L"StatsDateEntree";
+			this->StatsDateEntree->Size = System::Drawing::Size(153, 22);
+			this->StatsDateEntree->TabIndex = 21;
+			this->StatsDateEntree->Text = L"MM-JJ-AAAA";
+			// 
+			// label47
+			// 
+			this->label47->AutoSize = true;
+			this->label47->Location = System::Drawing::Point(1061, 292);
+			this->label47->Name = L"label47";
+			this->label47->Size = System::Drawing::Size(64, 17);
+			this->label47->TabIndex = 20;
+			this->label47->Text = L"SimulVar";
+			// 
+			// label46
+			// 
+			this->label46->AutoSize = true;
+			this->label46->Location = System::Drawing::Point(929, 292);
+			this->label46->Name = L"label46";
+			this->label46->Size = System::Drawing::Size(99, 17);
+			this->label46->TabIndex = 19;
+			this->label46->Text = L"ValAchatStock";
+			// 
+			// label45
+			// 
+			this->label45->AutoSize = true;
+			this->label45->Location = System::Drawing::Point(797, 292);
+			this->label45->Name = L"label45";
+			this->label45->Size = System::Drawing::Size(91, 17);
+			this->label45->TabIndex = 18;
+			this->label45->Text = L"ValComStock";
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->Location = System::Drawing::Point(665, 292);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(77, 17);
+			this->label44->TabIndex = 17;
+			this->label44->Text = L"10-Vendus";
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Location = System::Drawing::Point(533, 292);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(80, 17);
+			this->label43->TabIndex = 16;
+			this->label43->Text = L"10+Vendus";
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->Location = System::Drawing::Point(401, 292);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(126, 17);
+			this->label42->TabIndex = 15;
+			this->label42->Text = L"MontantTotalClient";
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Location = System::Drawing::Point(269, 292);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(77, 17);
+			this->label41->TabIndex = 14;
+			this->label41->Text = L"Seuil Reap";
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Location = System::Drawing::Point(137, 292);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(103, 17);
+			this->label40->TabIndex = 13;
+			this->label40->Text = L"CA sur un Mois";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(8, 292);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(91, 17);
+			this->label39->TabIndex = 12;
+			this->label39->Text = L"PanierMoyen";
+			// 
+			// button27
+			// 
+			this->button27->Location = System::Drawing::Point(1064, 312);
+			this->button27->Name = L"button27";
+			this->button27->Size = System::Drawing::Size(82, 32);
+			this->button27->TabIndex = 11;
+			this->button27->Text = L"PRESS";
+			this->button27->UseVisualStyleBackColor = true;
+			// 
+			// button26
+			// 
+			this->button26->Location = System::Drawing::Point(932, 312);
+			this->button26->Name = L"button26";
+			this->button26->Size = System::Drawing::Size(82, 32);
+			this->button26->TabIndex = 10;
+			this->button26->Text = L"PRESS";
+			this->button26->UseVisualStyleBackColor = true;
+			// 
+			// button25
+			// 
+			this->button25->Location = System::Drawing::Point(800, 312);
+			this->button25->Name = L"button25";
+			this->button25->Size = System::Drawing::Size(82, 32);
+			this->button25->TabIndex = 9;
+			this->button25->Text = L"PRESS";
+			this->button25->UseVisualStyleBackColor = true;
+			// 
+			// button24
+			// 
+			this->button24->Location = System::Drawing::Point(668, 312);
+			this->button24->Name = L"button24";
+			this->button24->Size = System::Drawing::Size(82, 32);
+			this->button24->TabIndex = 8;
+			this->button24->Text = L"PRESS";
+			this->button24->UseVisualStyleBackColor = true;
+			// 
+			// button23
+			// 
+			this->button23->Location = System::Drawing::Point(536, 312);
+			this->button23->Name = L"button23";
+			this->button23->Size = System::Drawing::Size(82, 32);
+			this->button23->TabIndex = 7;
+			this->button23->Text = L"PRESS";
+			this->button23->UseVisualStyleBackColor = true;
+			// 
+			// button22
+			// 
+			this->button22->Location = System::Drawing::Point(404, 312);
+			this->button22->Name = L"button22";
+			this->button22->Size = System::Drawing::Size(82, 32);
+			this->button22->TabIndex = 6;
+			this->button22->Text = L"PRESS";
+			this->button22->UseVisualStyleBackColor = true;
+			// 
+			// button21
+			// 
+			this->button21->Location = System::Drawing::Point(272, 312);
+			this->button21->Name = L"button21";
+			this->button21->Size = System::Drawing::Size(82, 32);
+			this->button21->TabIndex = 5;
+			this->button21->Text = L"PRESS";
+			this->button21->UseVisualStyleBackColor = true;
+			// 
+			// button20
+			// 
+			this->button20->Location = System::Drawing::Point(140, 312);
+			this->button20->Name = L"button20";
+			this->button20->Size = System::Drawing::Size(82, 32);
+			this->button20->TabIndex = 4;
+			this->button20->Text = L"PRESS";
+			this->button20->UseVisualStyleBackColor = true;
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(8, 312);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(82, 32);
+			this->button9->TabIndex = 3;
+			this->button9->Text = L"PRESS";
+			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click_1);
+			// 
+			// DataGridStats
+			// 
+			this->DataGridStats->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DataGridStats->Location = System::Drawing::Point(8, 6);
+			this->DataGridStats->Name = L"DataGridStats";
+			this->DataGridStats->RowHeadersWidth = 51;
+			this->DataGridStats->RowTemplate->Height = 24;
+			this->DataGridStats->Size = System::Drawing::Size(1139, 273);
+			this->DataGridStats->TabIndex = 2;
 			// 
 			// MyForm
 			// 
@@ -2503,6 +2979,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->tabPage4->ResumeLayout(false);
 			this->tabPage4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerArticle))->EndInit();
+			this->tabPage5->ResumeLayout(false);
+			this->tabPage5->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DataGridStats))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2751,18 +3230,22 @@ private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->updateUnproduit(this->ModifIDProduit->Text, this->ModifNomProduit->Text, this->ModifPrixProduit->Text, this->ModifStockProduit->Text, this->ModifPrixAchatProduit->Text);
-
 	button18_Click(sender, e);
 }
 private: System::Void ButtonDelCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->supprimerUneCommande(this->TextDelCommande->Text);
 }
-
 private: System::Void PersonnelCréer_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void PanierClient_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button9_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->PanierMoyen("Pain");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Pain";
 }
 };
 }

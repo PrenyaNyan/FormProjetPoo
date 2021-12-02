@@ -86,6 +86,9 @@
     <ClInclude Include="Taxer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Stats.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LivrableprojetPoo.cpp">
@@ -134,6 +137,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Taxer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Stats.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -222,6 +228,12 @@
       <Filter>FichiersSQL\Stats</Filter>
     </None>
     <None Include="ValeurCommercialeStock.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="SeuilReap.sql">
+      <Filter>FichiersSQL\Stats</Filter>
+    </None>
+    <None Include="PanierMoyen.sql">
       <Filter>FichiersSQL\Stats</Filter>
     </None>
   </ItemGroup>
