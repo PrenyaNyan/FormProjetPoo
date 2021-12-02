@@ -346,11 +346,16 @@ private: System::Windows::Forms::Label^ label36;
 
 private: System::Windows::Forms::ListBox^ listBox1;
 private: System::Windows::Forms::Label^ label37;
-private: System::Windows::Forms::ListView^ PanierClient;
+private: System::Windows::Forms::DataGridView^ PanierClient;
 
-private: System::Windows::Forms::ColumnHeader^ columnHeader1;
-private: System::Windows::Forms::ColumnHeader^ columnHeader2;
-private: System::Windows::Forms::ColumnHeader^ columnHeader3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ IDProduit;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ NomProduit;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
+
+
+
+
+
 
 
 
@@ -401,14 +406,6 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::ListViewItem^ listViewItem1 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
-				L"AAAA",
-					L"BBBBB"
-			}, -1));
-			System::Windows::Forms::ListViewItem^ listViewItem2 = (gcnew System::Windows::Forms::ListViewItem(gcnew cli::array< System::String^  >(2) {
-				L"aaaa",
-					L"BBBBB"
-			}, -1));
 			this->MainTab = (gcnew System::Windows::Forms::TabControl());
 			this->MainPersonnel = (gcnew System::Windows::Forms::TabPage());
 			this->TabPersonnel = (gcnew System::Windows::Forms::TabControl());
@@ -522,6 +519,10 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 			this->GridViewCréerCommande = (gcnew System::Windows::Forms::DataGridView());
 			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
 			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
+			this->PanierClient = (gcnew System::Windows::Forms::DataGridView());
+			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Quantité = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->labelosef = (gcnew System::Windows::Forms::Label());
 			this->QuantiterProduitCommande = (gcnew System::Windows::Forms::TextBox());
@@ -591,10 +592,6 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 			this->InputDeleteProduit = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
-			this->PanierClient = (gcnew System::Windows::Forms::ListView());
-			this->columnHeader1 = (gcnew System::Windows::Forms::ColumnHeader());
-			this->columnHeader2 = (gcnew System::Windows::Forms::ColumnHeader());
-			this->columnHeader3 = (gcnew System::Windows::Forms::ColumnHeader());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -614,6 +611,7 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GridViewCréerCommande))->BeginInit();
 			this->TabCommande->SuspendLayout();
 			this->CommandeCréer->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PanierClient))->BeginInit();
 			this->CommandeAfficher->SuspendLayout();
 			this->CommandeSupprimer->SuspendLayout();
 			this->MainArticle->SuspendLayout();
@@ -1763,6 +1761,41 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 			this->CommandeCréer->Text = L"Créer";
 			this->CommandeCréer->UseVisualStyleBackColor = true;
 			// 
+			// PanierClient
+			// 
+			this->PanierClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->PanierClient->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->IDProduit,
+					this->NomProduit, this->Quantité
+			});
+			this->PanierClient->Location = System::Drawing::Point(601, 53);
+			this->PanierClient->Name = L"PanierClient";
+			this->PanierClient->RowHeadersWidth = 51;
+			this->PanierClient->RowTemplate->Height = 24;
+			this->PanierClient->Size = System::Drawing::Size(427, 131);
+			this->PanierClient->TabIndex = 41;
+			// 
+			// IDProduit
+			// 
+			this->IDProduit->HeaderText = L"IDProduit";
+			this->IDProduit->MinimumWidth = 6;
+			this->IDProduit->Name = L"IDProduit";
+			this->IDProduit->Width = 125;
+			// 
+			// NomProduit
+			// 
+			this->NomProduit->HeaderText = L"NomProduit";
+			this->NomProduit->MinimumWidth = 6;
+			this->NomProduit->Name = L"NomProduit";
+			this->NomProduit->Width = 125;
+			// 
+			// Quantité
+			// 
+			this->Quantité->HeaderText = L"Quantité";
+			this->Quantité->MinimumWidth = 6;
+			this->Quantité->Name = L"Quantité";
+			this->Quantité->Width = 125;
+			// 
 			// label21
 			// 
 			this->label21->AutoSize = true;
@@ -2413,40 +2446,6 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 			this->GridViewCréerArticle->Size = System::Drawing::Size(1139, 273);
 			this->GridViewCréerArticle->TabIndex = 2;
 			// 
-			// PanierClient
-			// 
-			this->PanierClient->Alignment = System::Windows::Forms::ListViewAlignment::Left;
-			this->PanierClient->AutoArrange = false;
-			this->PanierClient->Columns->AddRange(gcnew cli::array< System::Windows::Forms::ColumnHeader^  >(3) {
-				this->columnHeader1,
-					this->columnHeader2, this->columnHeader3
-			});
-			this->PanierClient->GridLines = true;
-			this->PanierClient->HideSelection = false;
-			this->PanierClient->Items->AddRange(gcnew cli::array< System::Windows::Forms::ListViewItem^  >(2) { listViewItem1, listViewItem2 });
-			this->PanierClient->Location = System::Drawing::Point(601, 53);
-			this->PanierClient->Name = L"PanierClient";
-			this->PanierClient->Size = System::Drawing::Size(533, 194);
-			this->PanierClient->TabIndex = 41;
-			this->PanierClient->UseCompatibleStateImageBehavior = false;
-			this->PanierClient->View = System::Windows::Forms::View::Details;
-			this->PanierClient->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listView1_SelectedIndexChanged);
-			// 
-			// columnHeader1
-			// 
-			this->columnHeader1->Text = L"IDProduit";
-			this->columnHeader1->Width = 173;
-			// 
-			// columnHeader2
-			// 
-			this->columnHeader2->Text = L"NomProduit";
-			this->columnHeader2->Width = 194;
-			// 
-			// columnHeader3
-			// 
-			this->columnHeader3->Text = L"Quantité";
-			this->columnHeader3->Width = 162;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -2484,6 +2483,7 @@ private: System::Windows::Forms::ColumnHeader^ columnHeader3;
 			this->TabCommande->ResumeLayout(false);
 			this->CommandeCréer->ResumeLayout(false);
 			this->CommandeCréer->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PanierClient))->EndInit();
 			this->CommandeAfficher->ResumeLayout(false);
 			this->CommandeAfficher->PerformLayout();
 			this->CommandeSupprimer->ResumeLayout(false);
@@ -2649,8 +2649,7 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	RafraichirUnArticle(sender, e);
-	this->PanierClient->Items->Add(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString() + " " + this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString() + " : " + this->QuantiterProduitCommande->Text);
-	this->PanierClient->Items->Add(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString());
+	this->PanierClient->Rows->Add(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString(), this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString(), this->QuantiterProduitCommande->Text);
 	this->GridViewCréerCommande->Refresh();
 	this->oDs = this->oSvc->selectionnerArticle("Rsl");
 	this->GridViewCréerCommande->DataSource = this->oDs;
@@ -2671,12 +2670,13 @@ private: System::Void button12_Click_1(System::Object^ sender, System::EventArgs
 	this->oDs = this->oSvc->selectionnerArticle("ZZ");
 	this->GridViewCréerCommande->DataSource = this->oDs;
 	this->GridViewCréerCommande->DataMember = "ZZ";
-	this->PanierClient->Items->Clear();
+	//this->PanierClient->Items->Clear();
 }
 private: System::Void PanierClient_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 	RafraichirUnArticle(sender, e);
+	//this->PanierClient->Items->Add(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString())->SubItems->Add(this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString());
 	//this->PanierClient->Items->Remove(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString() + " " + this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString() + " : " + this->QuantiterProduitCommande->Text);
 	this->GridViewCréerCommande->Refresh();
 	this->oDs = this->oSvc->selectionnerArticle("Rsl");
