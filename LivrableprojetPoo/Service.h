@@ -38,8 +38,9 @@ namespace NS_Comp_Svc
 		void ajouterUnClient(System::String^, System::String^, System::String^);
 		void ajouterUneAdresse(System::String^, System::String^, System::String^);
 		void ajouterHabiter(System::String^);
-		void ajouterUneCommande(System::String^, System::String^, System::String^, System::String^);
+		void ajouterUneCommande(System::String^, System::String^, System::String^);
 		void ajouterUnArticle(System::String^, System::String^, System::String^, System::String^, System::String^);
+		void ajouterComposer(System::String^, System::String^);
 		void supprimerUnPersonnel(System::String^);
 		void supprimerUnClient(System::String^);
 		void supprimerUnProduit(System::String^);

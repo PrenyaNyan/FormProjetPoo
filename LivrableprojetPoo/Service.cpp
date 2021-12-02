@@ -9,6 +9,8 @@ NS_Comp_Svc::Service::Service(void)
 	this->oMappClient = gcnew NS_Comp_Mappage::Client();
 	this->oMappHabiter = gcnew NS_Comp_Mappage::Habiter();
 	this->oMappProduit = gcnew NS_Comp_Mappage::Produit();
+	this->oMappCommande = gcnew NS_Comp_Mappage::Commande();
+	this->oMappComposer = gcnew NS_Comp_Mappage::Composer();
 
 
 }
@@ -107,7 +109,7 @@ void NS_Comp_Svc::Service::ajouterHabiter(System::String^ Type)
 
 }
 
-void NS_Comp_Svc::Service::ajouterUneCommande(System::String^ DateExpedition, System::String^ DateLivraison, System::String^ IDClient, System::String^ IDPaiement)
+void NS_Comp_Svc::Service::ajouterUneCommande(System::String^ DateExpedition, System::String^ DateLivraison, System::String^ IDClient)
 {
 	System::String^ sql;
 
@@ -116,6 +118,19 @@ void NS_Comp_Svc::Service::ajouterUneCommande(System::String^ DateExpedition, Sy
 	this->oMappCommande->setIDClient(int::Parse(IDClient));
 
 	sql = this->oMappCommande->Insert();
+
+	this->oCad->actionRows(sql);
+
+}
+
+void NS_Comp_Svc::Service::ajouterComposer(System::String^ IDProduit, System::String^ Quantite)
+{
+	System::String^ sql;
+
+	this->oMappComposer->setIDProduit(int::Parse(IDProduit));
+	this->oMappComposer->setQuantité(int::Parse(Quantite));
+
+	sql = this->oMappComposer->Insert();
 
 	this->oCad->actionRows(sql);
 

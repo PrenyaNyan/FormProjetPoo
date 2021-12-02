@@ -249,12 +249,17 @@ private: System::Windows::Forms::TextBox^ InputDeleteClient;
 private: System::Windows::Forms::Label^ label18;
 private: System::Windows::Forms::Button^ button8;
 private: System::Windows::Forms::TextBox^ InputIDProduitCommande;
+private: System::Windows::Forms::TextBox^ InputDatePaiementCommande;
 
-private: System::Windows::Forms::TextBox^ textBox3;
-private: System::Windows::Forms::TextBox^ textBox4;
-private: System::Windows::Forms::TextBox^ textBox5;
-private: System::Windows::Forms::TextBox^ textBox6;
-private: System::Windows::Forms::TextBox^ textBox7;
+
+private: System::Windows::Forms::TextBox^ InputModePaiementCommande;
+
+private: System::Windows::Forms::TextBox^ InputDateExpeditionCommande;
+
+private: System::Windows::Forms::TextBox^ InputDateLivraisonCommande;
+
+private: System::Windows::Forms::TextBox^ InputIDCommande;
+
 private: System::Windows::Forms::Label^ label19;
 private: System::Windows::Forms::Label^ label20;
 private: System::Windows::Forms::Label^ label22;
@@ -350,6 +355,8 @@ private: System::Windows::Forms::DataGridView^ PanierClient;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ IDProduit;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ NomProduit;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
+private: System::Windows::Forms::Label^ label39;
+
 
 
 
@@ -535,17 +542,20 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
 			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
 			this->PanierClient = (gcnew System::Windows::Forms::DataGridView());
+			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Quantité = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->labelosef = (gcnew System::Windows::Forms::Label());
 			this->QuantiterProduitCommande = (gcnew System::Windows::Forms::TextBox());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->InputIDProduitCommande = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+			this->InputDatePaiementCommande = (gcnew System::Windows::Forms::TextBox());
+			this->InputModePaiementCommande = (gcnew System::Windows::Forms::TextBox());
+			this->InputDateExpeditionCommande = (gcnew System::Windows::Forms::TextBox());
+			this->InputDateLivraisonCommande = (gcnew System::Windows::Forms::TextBox());
+			this->InputIDCommande = (gcnew System::Windows::Forms::TextBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label22 = (gcnew System::Windows::Forms::Label());
@@ -603,9 +613,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->InputDeleteProduit = (gcnew System::Windows::Forms::TextBox());
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
-			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Quantité = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -1747,6 +1755,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			// 
 			// CommandeCréer
 			// 
+			this->CommandeCréer->Controls->Add(this->label39);
 			this->CommandeCréer->Controls->Add(this->PanierClient);
 			this->CommandeCréer->Controls->Add(this->label21);
 			this->CommandeCréer->Controls->Add(this->labelosef);
@@ -1754,11 +1763,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->CommandeCréer->Controls->Add(this->button12);
 			this->CommandeCréer->Controls->Add(this->button8);
 			this->CommandeCréer->Controls->Add(this->InputIDProduitCommande);
-			this->CommandeCréer->Controls->Add(this->textBox3);
-			this->CommandeCréer->Controls->Add(this->textBox4);
-			this->CommandeCréer->Controls->Add(this->textBox5);
-			this->CommandeCréer->Controls->Add(this->textBox6);
-			this->CommandeCréer->Controls->Add(this->textBox7);
+			this->CommandeCréer->Controls->Add(this->InputDatePaiementCommande);
+			this->CommandeCréer->Controls->Add(this->InputModePaiementCommande);
+			this->CommandeCréer->Controls->Add(this->InputDateExpeditionCommande);
+			this->CommandeCréer->Controls->Add(this->InputDateLivraisonCommande);
+			this->CommandeCréer->Controls->Add(this->InputIDCommande);
 			this->CommandeCréer->Controls->Add(this->label19);
 			this->CommandeCréer->Controls->Add(this->label20);
 			this->CommandeCréer->Controls->Add(this->label22);
@@ -1788,6 +1797,27 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->PanierClient->Size = System::Drawing::Size(518, 194);
 			this->PanierClient->TabIndex = 41;
 			this->PanierClient->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::PanierClient_CellContentClick);
+			// 
+			// IDProduit
+			// 
+			this->IDProduit->HeaderText = L"IDProduit";
+			this->IDProduit->MinimumWidth = 6;
+			this->IDProduit->Name = L"IDProduit";
+			this->IDProduit->Width = 70;
+			// 
+			// NomProduit
+			// 
+			this->NomProduit->HeaderText = L"NomProduit";
+			this->NomProduit->MinimumWidth = 6;
+			this->NomProduit->Name = L"NomProduit";
+			this->NomProduit->Width = 195;
+			// 
+			// Quantité
+			// 
+			this->Quantité->HeaderText = L"Quantité";
+			this->Quantité->MinimumWidth = 6;
+			this->Quantité->Name = L"Quantité";
+			this->Quantité->Width = 70;
 			// 
 			// label21
 			// 
@@ -1842,40 +1872,40 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->InputIDProduitCommande->Size = System::Drawing::Size(178, 22);
 			this->InputIDProduitCommande->TabIndex = 33;
 			// 
-			// textBox3
+			// InputDatePaiementCommande
 			// 
-			this->textBox3->Location = System::Drawing::Point(350, 53);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(178, 22);
-			this->textBox3->TabIndex = 31;
+			this->InputDatePaiementCommande->Location = System::Drawing::Point(350, 53);
+			this->InputDatePaiementCommande->Name = L"InputDatePaiementCommande";
+			this->InputDatePaiementCommande->Size = System::Drawing::Size(178, 22);
+			this->InputDatePaiementCommande->TabIndex = 31;
 			// 
-			// textBox4
+			// InputModePaiementCommande
 			// 
-			this->textBox4->Location = System::Drawing::Point(50, 203);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(178, 22);
-			this->textBox4->TabIndex = 30;
+			this->InputModePaiementCommande->Location = System::Drawing::Point(50, 203);
+			this->InputModePaiementCommande->Name = L"InputModePaiementCommande";
+			this->InputModePaiementCommande->Size = System::Drawing::Size(178, 22);
+			this->InputModePaiementCommande->TabIndex = 30;
 			// 
-			// textBox5
+			// InputDateExpeditionCommande
 			// 
-			this->textBox5->Location = System::Drawing::Point(50, 153);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(178, 22);
-			this->textBox5->TabIndex = 29;
+			this->InputDateExpeditionCommande->Location = System::Drawing::Point(50, 153);
+			this->InputDateExpeditionCommande->Name = L"InputDateExpeditionCommande";
+			this->InputDateExpeditionCommande->Size = System::Drawing::Size(178, 22);
+			this->InputDateExpeditionCommande->TabIndex = 29;
 			// 
-			// textBox6
+			// InputDateLivraisonCommande
 			// 
-			this->textBox6->Location = System::Drawing::Point(50, 103);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(178, 22);
-			this->textBox6->TabIndex = 28;
+			this->InputDateLivraisonCommande->Location = System::Drawing::Point(50, 103);
+			this->InputDateLivraisonCommande->Name = L"InputDateLivraisonCommande";
+			this->InputDateLivraisonCommande->Size = System::Drawing::Size(178, 22);
+			this->InputDateLivraisonCommande->TabIndex = 28;
 			// 
-			// textBox7
+			// InputIDCommande
 			// 
-			this->textBox7->Location = System::Drawing::Point(50, 53);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(178, 22);
-			this->textBox7->TabIndex = 27;
+			this->InputIDCommande->Location = System::Drawing::Point(50, 53);
+			this->InputIDCommande->Name = L"InputIDCommande";
+			this->InputIDCommande->Size = System::Drawing::Size(178, 22);
+			this->InputIDCommande->TabIndex = 27;
 			// 
 			// label19
 			// 
@@ -2429,26 +2459,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ Quantité;
 			this->GridViewCréerArticle->Size = System::Drawing::Size(1139, 273);
 			this->GridViewCréerArticle->TabIndex = 2;
 			// 
-			// IDProduit
+			// label39
 			// 
-			this->IDProduit->HeaderText = L"IDProduit";
-			this->IDProduit->MinimumWidth = 6;
-			this->IDProduit->Name = L"IDProduit";
-			this->IDProduit->Width = 70;
-			// 
-			// NomProduit
-			// 
-			this->NomProduit->HeaderText = L"NomProduit";
-			this->NomProduit->MinimumWidth = 6;
-			this->NomProduit->Name = L"NomProduit";
-			this->NomProduit->Width = 195;
-			// 
-			// Quantité
-			// 
-			this->Quantité->HeaderText = L"Quantité";
-			this->Quantité->MinimumWidth = 6;
-			this->Quantité->Name = L"Quantité";
-			this->Quantité->Width = 70;
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(547, 24);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(54, 17);
+			this->label39->TabIndex = 42;
+			this->label39->Text = L"label39";
 			// 
 			// MyForm
 			// 
@@ -2655,9 +2673,9 @@ private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e
 	RafraichirUnArticle(sender, e);
 	this->PanierClient->Rows->Add(this->GridViewCréerCommande->Rows[0]->Cells["IDProduit"]->Value->ToString(), this->GridViewCréerCommande->Rows[0]->Cells["NomProduit"]->Value->ToString(), this->QuantiterProduitCommande->Text);
 	this->GridViewCréerCommande->Refresh();
-	this->oDs = this->oSvc->selectionnerArticle("Rsl");
+	this->oDs = this->oSvc->selectionnerArticle("NN");
 	this->GridViewCréerCommande->DataSource = this->oDs;
-	this->GridViewCréerCommande->DataMember = "Rsl";
+	this->GridViewCréerCommande->DataMember = "NN";
 }
 
 private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2680,11 +2698,10 @@ private: System::Void PanierClient_SelectedIndexChanged(System::Object^ sender, 
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 	RafraichirUnArticle(sender, e);
-	//this->PanierClient->Rows->Clear();
 	this->GridViewCréerCommande->Refresh();
-	this->oDs = this->oSvc->selectionnerArticle("Rsl");
+	this->oDs = this->oSvc->selectionnerArticle("VV");
 	this->GridViewCréerCommande->DataSource = this->oDs;
-	this->GridViewCréerCommande->DataMember = "Rsl";
+	this->GridViewCréerCommande->DataMember = "VV";
 }
 private: System::Void RafraichirUnArticle(System::Object^ sender, System::EventArgs^ e) {
 
@@ -2706,7 +2723,19 @@ private: System::Void RafraichirUneCommande(System::Object^ sender, System::Even
 	this->GridViewCréerCommande->DataMember = "CZ";
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-	//this->oSvc->ajouterUneCommande();
+	this->oSvc->ajouterUneCommande(this->InputDateExpeditionCommande->Text, this->InputDateLivraisonCommande->Text, this->InputIDCommande->Text);
+
+	int count = int::Parse(this->PanierClient->DisplayedRowCount(false).ToString());
+	for (int i = 0; i < count-1; i++) {
+		this->oSvc->ajouterComposer(this->PanierClient->Rows[i]->Cells["IDProduit"]->Value->ToString(), this->PanierClient->Rows[i]->Cells["Quantité"]->Value->ToString());
+	}
+	this->PanierClient->Rows->Clear();
+
+	this->GridViewCréerCommande->Refresh();
+	this->oDs = this->oSvc->selectionnerUneCommande(this->InputIDCommande->Text, "CZ");
+	this->GridViewCréerCommande->DataSource = this->oDs;
+	this->GridViewCréerCommande->DataMember = "CZ";
+
 
 }
 private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {

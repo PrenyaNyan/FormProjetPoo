@@ -7,7 +7,7 @@ System::String^ NS_Comp_Mappage::Composer::Select(void)
 }
 System::String^ NS_Comp_Mappage::Composer::Insert(void)
 {
-	return "";
+	return "Insert into Composer (IDCommande,IDProduit,Quantite) values ((Select top 1 IDCommande from Commande order by IDcommande desc),'"+IDProduit+"','"+quantité+"');";
 }
 System::String^ NS_Comp_Mappage::Composer::Delete(void)
 {
@@ -33,5 +33,5 @@ void NS_Comp_Mappage::Composer::setIDProduit(int IDProduit)
 }
 void NS_Comp_Mappage::Composer::setQuantité(int Quantité)
 {
-	this->IDProduit = Quantité;
+	this->quantité = Quantité;
 }
