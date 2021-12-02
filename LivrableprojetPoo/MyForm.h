@@ -397,6 +397,8 @@ private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::DataGridView^ DataGridStats;
 private: System::Windows::Forms::Label^ label58;
 private: System::Windows::Forms::ListBox^ listBox2;
+private: System::Windows::Forms::Label^ label58;
+private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 
 
 
@@ -656,6 +658,8 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->label58 = (gcnew System::Windows::Forms::Label());
+			this->StatsSeuilReap = (gcnew System::Windows::Forms::TextBox());
 			this->label54 = (gcnew System::Windows::Forms::Label());
 			this->StatsDemarqueInco = (gcnew System::Windows::Forms::TextBox());
 			this->label55 = (gcnew System::Windows::Forms::Label());
@@ -2554,6 +2558,8 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->label58);
+			this->tabPage5->Controls->Add(this->StatsSeuilReap);
 			this->tabPage5->Controls->Add(this->label54);
 			this->tabPage5->Controls->Add(this->StatsDemarqueInco);
 			this->tabPage5->Controls->Add(this->label55);
@@ -2600,6 +2606,23 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Stats";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			// 
+			// label58
+			// 
+			this->label58->AutoSize = true;
+			this->label58->Location = System::Drawing::Point(269, 359);
+			this->label58->Name = L"label58";
+			this->label58->Size = System::Drawing::Size(105, 17);
+			this->label58->TabIndex = 42;
+			this->label58->Text = L"StatsSeuilReap";
+			// 
+			// StatsSeuilReap
+			// 
+			this->StatsSeuilReap->Location = System::Drawing::Point(272, 379);
+			this->StatsSeuilReap->Name = L"StatsSeuilReap";
+			this->StatsSeuilReap->Size = System::Drawing::Size(104, 22);
+			this->StatsSeuilReap->TabIndex = 41;
+			this->StatsSeuilReap->Text = L"3";
 			// 
 			// label54
 			// 
@@ -2750,7 +2773,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			// 
 			this->StatsIDClient->Location = System::Drawing::Point(404, 379);
 			this->StatsIDClient->Name = L"StatsIDClient";
-			this->StatsIDClient->Size = System::Drawing::Size(153, 22);
+			this->StatsIDClient->Size = System::Drawing::Size(104, 22);
 			this->StatsIDClient->TabIndex = 23;
 			this->StatsIDClient->Text = L"3";
 			// 
@@ -2767,7 +2790,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			// 
 			this->StatsDateEntree->Location = System::Drawing::Point(143, 379);
 			this->StatsDateEntree->Name = L"StatsDateEntree";
-			this->StatsDateEntree->Size = System::Drawing::Size(153, 22);
+			this->StatsDateEntree->Size = System::Drawing::Size(109, 22);
 			this->StatsDateEntree->TabIndex = 21;
 			this->StatsDateEntree->Text = L"MM-JJ-AAAA";
 			// 
@@ -2851,6 +2874,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button27->TabIndex = 11;
 			this->button27->Text = L"PRESS";
 			this->button27->UseVisualStyleBackColor = true;
+			this->button27->Click += gcnew System::EventHandler(this, &MyForm::button27_Click);
 			// 
 			// button26
 			// 
@@ -2860,6 +2884,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button26->TabIndex = 10;
 			this->button26->Text = L"PRESS";
 			this->button26->UseVisualStyleBackColor = true;
+			this->button26->Click += gcnew System::EventHandler(this, &MyForm::button26_Click);
 			// 
 			// button25
 			// 
@@ -2869,6 +2894,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button25->TabIndex = 9;
 			this->button25->Text = L"PRESS";
 			this->button25->UseVisualStyleBackColor = true;
+			this->button25->Click += gcnew System::EventHandler(this, &MyForm::button25_Click);
 			// 
 			// button24
 			// 
@@ -2878,6 +2904,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button24->TabIndex = 8;
 			this->button24->Text = L"PRESS";
 			this->button24->UseVisualStyleBackColor = true;
+			this->button24->Click += gcnew System::EventHandler(this, &MyForm::button24_Click);
 			// 
 			// button23
 			// 
@@ -2887,6 +2914,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button23->TabIndex = 7;
 			this->button23->Text = L"PRESS";
 			this->button23->UseVisualStyleBackColor = true;
+			this->button23->Click += gcnew System::EventHandler(this, &MyForm::button23_Click);
 			// 
 			// button22
 			// 
@@ -2896,6 +2924,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button22->TabIndex = 6;
 			this->button22->Text = L"PRESS";
 			this->button22->UseVisualStyleBackColor = true;
+			this->button22->Click += gcnew System::EventHandler(this, &MyForm::button22_Click);
 			// 
 			// button21
 			// 
@@ -2905,6 +2934,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button21->TabIndex = 5;
 			this->button21->Text = L"PRESS";
 			this->button21->UseVisualStyleBackColor = true;
+			this->button21->Click += gcnew System::EventHandler(this, &MyForm::button21_Click);
 			// 
 			// button20
 			// 
@@ -2914,6 +2944,7 @@ private: System::Windows::Forms::ListBox^ listBox2;
 			this->button20->TabIndex = 4;
 			this->button20->Text = L"PRESS";
 			this->button20->UseVisualStyleBackColor = true;
+			this->button20->Click += gcnew System::EventHandler(this, &MyForm::button20_Click);
 			// 
 			// button9
 			// 
@@ -3283,6 +3314,54 @@ private: System::Void button9_Click_1(System::Object^ sender, System::EventArgs^
 	this->oDs = this->oSvc->PanierMoyen("Pain");
 	this->DataGridStats->DataSource = this->oDs;
 	this->DataGridStats->DataMember = "Pain";
+}
+private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->ChiffreAffaire(this->StatsDateEntree->Text,"Tomate");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Tomate";
+}
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->SeuilReap(this->StatsSeuilReap->Text,"Jambon");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Jambon";
+}
+private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->MontantAchat1Client(this->StatsIDClient->Text, "Fromage");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Fromage";
+}
+private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->PlusVendus("Salade");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Salade";
+}
+private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->MoinsVendus("Beurre");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Beurre";
+}
+private: System::Void button25_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->ValCom("Champignon");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Champignon";
+}
+private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->ValAchat("Poivron");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Poivron";
+}
+private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->DataGridStats->Refresh();
+	this->oDs = this->oSvc->SimulVar(this->StatsTVAn->Text,this->StatsTVAi->Text,this->StatsTVAr->Text,this->StatsTVAp->Text,this->StatsImport->Text,this->StatsMargeCom->Text,this->StatsRemiseCom->Text,this->StatsDemarqueInco->Text,"Poulet");
+	this->DataGridStats->DataSource = this->oDs;
+	this->DataGridStats->DataMember = "Poulet";
 }
 };
 }
