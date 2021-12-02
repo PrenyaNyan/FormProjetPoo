@@ -7,7 +7,7 @@
 #include "Composer.h"
 #include "Produit.h"
 #include "CAD.h"
-
+#include "Stats.h"
 namespace NS_Comp_Svc
 {
 	ref class Service
@@ -21,6 +21,7 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::Commande^ oMappCommande;
 		NS_Comp_Mappage::Composer^ oMappComposer;
 		NS_Comp_Mappage::Produit^ oMappProduit;
+		NS_Comp_Mappage::Stats^ oMappStats;
 	public:
 		Service(void);
 		System::Data::DataSet^ selectionnerToutLePersonnel(System::String^);
@@ -51,6 +52,14 @@ namespace NS_Comp_Svc
 		void updateUnClient(System::String^, System::String^, System::String^, System::String^);
 		void updateHabiter(System::String^, System::String^);
 		void updateUnproduit(System::String^, System::String^, System::String^, System::String^, System::String^);
-		
+		System::Data::DataSet^ PanierMoyen(System::String^);
+		System::Data::DataSet^ ChiffreAffaire(System::String^, System::String^);
+		System::Data::DataSet^ SeuilReap(System::String^,System::String^);
+		System::Data::DataSet^ MontantAchat1Client(System::String^, System::String^);
+		System::Data::DataSet^ PlusVendus(System::String^);
+		System::Data::DataSet^ MoinsVendus(System::String^);
+		System::Data::DataSet^ ValCom(System::String^);
+		System::Data::DataSet^ ValAchat(System::String^);
+		System::Data::DataSet^ SimulVar(System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^, System::String^);
 	};
 }

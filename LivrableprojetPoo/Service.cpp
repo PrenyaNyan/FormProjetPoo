@@ -11,7 +11,7 @@ NS_Comp_Svc::Service::Service(void)
 	this->oMappProduit = gcnew NS_Comp_Mappage::Produit();
 	this->oMappCommande = gcnew NS_Comp_Mappage::Commande();
 	this->oMappComposer = gcnew NS_Comp_Mappage::Composer();
-
+	this->oMappStats = gcnew NS_Comp_Mappage::Stats();
 
 }
 System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerToutLePersonnel(System::String^ dataTableName)
@@ -296,3 +296,48 @@ void NS_Comp_Svc::Service::supprimerUneCommande(System::String^ ID)
 
 	this->oCad->actionRows(sql);
 }
+System::Data::DataSet^ NS_Comp_Svc::Service::PanierMoyen(System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->PanierMoyen();
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::ChiffreAffaire(System::String^ Date, System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->ChiffreAffaire(Date);
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::SeuilReap(System::String^ Valeur,System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->SeuilReap(Valeur);
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::MontantAchat1Client(System::String^ IDClient, System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->MontantAchat1Client(IDClient);
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::PlusVendus(System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->PlusVendus();
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::MoinsVendus(System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->MoinsVendus();
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::ValCom(System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->ValCom();
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::ValAchat(System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->ValAchat();
+	return this->oCad->getRows(sql, dataTableName);
+};
+System::Data::DataSet^ NS_Comp_Svc::Service::SimulVar(System::String^ TVAn, System::String^ TVAi, System::String^ TVAr, System::String^ TVAp, System::String^ Import, System::String^ Marge, System::String^ Remise, System::String^ Demarque, System::String^ dataTableName) {
+	System::String^ sql;
+	sql = this->oMappStats->SimulVar(TVAn,TVAi,TVAr,TVAp,Import,Marge,Remise,Demarque);
+	return this->oCad->getRows(sql, dataTableName);
+};

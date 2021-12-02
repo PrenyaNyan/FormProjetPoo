@@ -144,6 +144,7 @@
     <ClInclude Include="Produit.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Service.h" />
+    <ClInclude Include="Stats.h" />
     <ClInclude Include="Taxer.h" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +168,7 @@
     <ClCompile Include="Personnel.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="Service.cpp" />
+    <ClCompile Include="Stats.cpp" />
     <ClCompile Include="Taxer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -202,9 +204,11 @@
     <None Include="ModifierPersonnel.sql" />
     <None Include="ModifierProduit.sql" />
     <None Include="MontantAchatClient.sql" />
+    <None Include="PanierMoyen.sql" />
     <None Include="PrixCommande.sql" />
     <None Include="ProduitMoinsVendu.sql" />
     <None Include="ProduitPlusVendu.sql" />
+    <None Include="SeuilReap.sql" />
     <None Include="SimulationVariation.sql" />
     <None Include="SupprimerClient.sql" />
     <None Include="SupprimerCommande.sql" />
