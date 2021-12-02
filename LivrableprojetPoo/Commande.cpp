@@ -11,7 +11,7 @@ System::String^ NS_Comp_Mappage::Commande::SelectConditionCommande(System::Strin
 }
 System::String^ NS_Comp_Mappage::Commande::SelectConditionUneCommande(System::String^ IDClient)
 {
-	return "Select  IDClient,IDCommande,NomProduit,Quantite,DateLivraison from Produit inner join (Select IDClient, Commande.IDCommande, DateLivraison, IDProduit, Quantite from Commande inner join Composer on Commande.IDCommande = Composer.IDCommande where Commande.IDClient = "+IDClient+")Tab1 on Tab1.IDProduit = Produit.IDProduit;";
+	return "Select  IDClient,IDCommande,NomProduit,Quantite,DateLivraison from Produit inner join (Select IDClient, Commande.IDCommande, DateLivraison, IDProduit, Quantite from Commande inner join Composer on Commande.IDCommande = Composer.IDCommande where Commande.IDClient = "+IDClient+")Tab1 on Tab1.IDProduit = Produit.IDProduit order by IDCommande;";
 }
 System::String^ NS_Comp_Mappage::Commande::Insert(void)
 {

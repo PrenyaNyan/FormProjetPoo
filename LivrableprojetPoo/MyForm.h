@@ -395,6 +395,8 @@ private: System::Windows::Forms::Button^ button21;
 private: System::Windows::Forms::Button^ button20;
 private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::DataGridView^ DataGridStats;
+private: System::Windows::Forms::Label^ label58;
+private: System::Windows::Forms::ListBox^ listBox2;
 
 
 
@@ -580,6 +582,7 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->GridViewCréerCommande = (gcnew System::Windows::Forms::DataGridView());
 			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
 			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
+			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->PanierClient = (gcnew System::Windows::Forms::DataGridView());
 			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -681,7 +684,6 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->label42 = (gcnew System::Windows::Forms::Label());
 			this->label41 = (gcnew System::Windows::Forms::Label());
 			this->label40 = (gcnew System::Windows::Forms::Label());
-			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->button27 = (gcnew System::Windows::Forms::Button());
 			this->button26 = (gcnew System::Windows::Forms::Button());
 			this->button25 = (gcnew System::Windows::Forms::Button());
@@ -692,6 +694,8 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->DataGridStats = (gcnew System::Windows::Forms::DataGridView());
+			this->label58 = (gcnew System::Windows::Forms::Label());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -790,7 +794,6 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->PersonnelCréer->TabIndex = 0;
 			this->PersonnelCréer->Text = L"Créer";
 			this->PersonnelCréer->UseVisualStyleBackColor = true;
-			this->PersonnelCréer->Click += gcnew System::EventHandler(this, &MyForm::PersonnelCréer_Click);
 			// 
 			// label37
 			// 
@@ -1317,6 +1320,8 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			// 
 			// ClientCréer
 			// 
+			this->ClientCréer->Controls->Add(this->label58);
+			this->ClientCréer->Controls->Add(this->listBox2);
 			this->ClientCréer->Controls->Add(this->button11);
 			this->ClientCréer->Controls->Add(this->label10);
 			this->ClientCréer->Controls->Add(this->ChoixTypeClient);
@@ -1836,7 +1841,6 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			// 
 			// CommandeCréer
 			// 
-			this->CommandeCréer->Controls->Add(this->label39);
 			this->CommandeCréer->Controls->Add(this->PanierClient);
 			this->CommandeCréer->Controls->Add(this->label21);
 			this->CommandeCréer->Controls->Add(this->labelosef);
@@ -1864,6 +1868,15 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->CommandeCréer->Text = L"Créer";
 			this->CommandeCréer->UseVisualStyleBackColor = true;
 			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(8, 292);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(91, 17);
+			this->label39->TabIndex = 12;
+			this->label39->Text = L"PanierMoyen";
+			// 
 			// PanierClient
 			// 
 			this->PanierClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -1877,7 +1890,6 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->PanierClient->RowTemplate->Height = 24;
 			this->PanierClient->Size = System::Drawing::Size(518, 194);
 			this->PanierClient->TabIndex = 41;
-			this->PanierClient->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::PanierClient_CellContentClick);
 			// 
 			// IDProduit
 			// 
@@ -2831,15 +2843,6 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->label40->TabIndex = 13;
 			this->label40->Text = L"CA sur un Mois";
 			// 
-			// label39
-			// 
-			this->label39->AutoSize = true;
-			this->label39->Location = System::Drawing::Point(8, 292);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(91, 17);
-			this->label39->TabIndex = 12;
-			this->label39->Text = L"PanierMoyen";
-			// 
 			// button27
 			// 
 			this->button27->Location = System::Drawing::Point(1064, 312);
@@ -2931,6 +2934,29 @@ private: System::Windows::Forms::DataGridView^ DataGridStats;
 			this->DataGridStats->RowTemplate->Height = 24;
 			this->DataGridStats->Size = System::Drawing::Size(1139, 273);
 			this->DataGridStats->TabIndex = 2;
+			// 
+			// label58
+			// 
+			this->label58->AutoSize = true;
+			this->label58->Location = System::Drawing::Point(598, 31);
+			this->label58->Name = L"label58";
+			this->label58->Size = System::Drawing::Size(34, 17);
+			this->label58->TabIndex = 40;
+			this->label58->Text = L"Ville";
+			// 
+			// listBox2
+			// 
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 16;
+			this->listBox2->Items->AddRange(gcnew cli::array< System::Object^  >(14) {
+				L"1 Saint-Nazaire", L"2 Nantes", L"3 Paris", L"4 Guerande",
+					L"5 Lyon", L"6 Marseille\t", L"7 Lille", L"8 Bordeaux\t", L"9 Toulouse\t", L"10 Nice", L"11 Madrid", L"12 Berlin", L"13 Londres",
+					L"14 Bruxelles"
+			});
+			this->listBox2->Location = System::Drawing::Point(601, 51);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(533, 196);
+			this->listBox2->TabIndex = 39;
 			// 
 			// MyForm
 			// 
@@ -3125,9 +3151,9 @@ private: System::Void ModifNomClient_TextChanged(System::Object^ sender, System:
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->GridViewCréerClient->Refresh();
-	this->oDs = this->oSvc->selectionnerConditionClient(this->InputChercheNomClient->Text, this->InputCherchePrenomClient->Text, this->InputChercheNomRueClient->Text, this->InputChercheNomVilleClient->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerConditionClient(this->InputChercheNomClient->Text, this->InputCherchePrenomClient->Text, this->InputChercheNomRueClient->Text, this->InputChercheNomVilleClient->Text, "NN");
 	this->GridViewCréerClient->DataSource = this->oDs;
-	this->GridViewCréerClient->DataMember = "Rsl";
+	this->GridViewCréerClient->DataMember = "NN";
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -3192,7 +3218,7 @@ private: System::Void RafraichirUneCommande(System::Object^ sender, System::Even
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->ajouterUneCommande(this->InputDateExpeditionCommande->Text, this->InputDateLivraisonCommande->Text, this->InputIDCommande->Text);
 
-	int count = int::Parse(this->PanierClient->DisplayedRowCount(false).ToString());
+	int count = int::Parse(this->PanierClient->Rows->Count.ToString());
 	for (int i = 0; i < count-1; i++) {
 		this->oSvc->ajouterComposer(this->PanierClient->Rows[i]->Cells["IDProduit"]->Value->ToString(), this->PanierClient->Rows[i]->Cells["Quantité"]->Value->ToString());
 	}
@@ -3251,12 +3277,6 @@ private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void ButtonDelCommande_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->supprimerUneCommande(this->TextDelCommande->Text);
-}
-private: System::Void PersonnelCréer_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void PanierClient_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 private: System::Void button9_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	this->DataGridStats->Refresh();
