@@ -395,9 +395,13 @@ private: System::Windows::Forms::Button^ button21;
 private: System::Windows::Forms::Button^ button20;
 private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::DataGridView^ DataGridStats;
-private: System::Windows::Forms::Label^ label58;
+
 private: System::Windows::Forms::ListBox^ listBox2;
 private: System::Windows::Forms::TextBox^ StatsSeuilReap;
+private: System::Windows::Forms::Button^ button28;
+private: System::Windows::Forms::TextBox^ InputCommandeAff2;
+
+private: System::Windows::Forms::Label^ label59;
 
 
 
@@ -530,6 +534,7 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->GridViewCréerClient = (gcnew System::Windows::Forms::DataGridView());
 			this->TabClient = (gcnew System::Windows::Forms::TabControl());
 			this->ClientCréer = (gcnew System::Windows::Forms::TabPage());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->ChoixTypeClient = (gcnew System::Windows::Forms::ComboBox());
@@ -583,7 +588,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->GridViewCréerCommande = (gcnew System::Windows::Forms::DataGridView());
 			this->TabCommande = (gcnew System::Windows::Forms::TabControl());
 			this->CommandeCréer = (gcnew System::Windows::Forms::TabPage());
-			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->PanierClient = (gcnew System::Windows::Forms::DataGridView());
 			this->IDProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->NomProduit = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -608,6 +612,9 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->CommandeModifier = (gcnew System::Windows::Forms::TabPage());
 			this->CommandeAfficher = (gcnew System::Windows::Forms::TabPage());
+			this->button28 = (gcnew System::Windows::Forms::Button());
+			this->InputCommandeAff2 = (gcnew System::Windows::Forms::TextBox());
+			this->label59 = (gcnew System::Windows::Forms::Label());
 			this->button13 = (gcnew System::Windows::Forms::Button());
 			this->InputCommandeAff = (gcnew System::Windows::Forms::TextBox());
 			this->label28 = (gcnew System::Windows::Forms::Label());
@@ -657,7 +664,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->GridViewCréerArticle = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
-			this->label58 = (gcnew System::Windows::Forms::Label());
 			this->StatsSeuilReap = (gcnew System::Windows::Forms::TextBox());
 			this->label54 = (gcnew System::Windows::Forms::Label());
 			this->StatsDemarqueInco = (gcnew System::Windows::Forms::TextBox());
@@ -687,6 +693,7 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->label42 = (gcnew System::Windows::Forms::Label());
 			this->label41 = (gcnew System::Windows::Forms::Label());
 			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
 			this->button27 = (gcnew System::Windows::Forms::Button());
 			this->button26 = (gcnew System::Windows::Forms::Button());
 			this->button25 = (gcnew System::Windows::Forms::Button());
@@ -697,8 +704,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->DataGridStats = (gcnew System::Windows::Forms::DataGridView());
-			this->label58 = (gcnew System::Windows::Forms::Label());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->MainTab->SuspendLayout();
 			this->MainPersonnel->SuspendLayout();
 			this->TabPersonnel->SuspendLayout();
@@ -1323,7 +1328,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			// 
 			// ClientCréer
 			// 
-			this->ClientCréer->Controls->Add(this->label58);
 			this->ClientCréer->Controls->Add(this->listBox2);
 			this->ClientCréer->Controls->Add(this->button11);
 			this->ClientCréer->Controls->Add(this->label10);
@@ -1348,6 +1352,20 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->ClientCréer->TabIndex = 0;
 			this->ClientCréer->Text = L"Créer";
 			this->ClientCréer->UseVisualStyleBackColor = true;
+			// 
+			// listBox2
+			// 
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->ItemHeight = 16;
+			this->listBox2->Items->AddRange(gcnew cli::array< System::Object^  >(14) {
+				L"1 Saint-Nazaire", L"2 Nantes", L"3 Paris", L"4 Guerande",
+					L"5 Lyon", L"6 Marseille\t", L"7 Lille", L"8 Bordeaux\t", L"9 Toulouse\t", L"10 Nice", L"11 Madrid", L"12 Berlin", L"13 Londres",
+					L"14 Bruxelles"
+			});
+			this->listBox2->Location = System::Drawing::Point(601, 51);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(533, 196);
+			this->listBox2->TabIndex = 39;
 			// 
 			// button11
 			// 
@@ -1871,15 +1889,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->CommandeCréer->Text = L"Créer";
 			this->CommandeCréer->UseVisualStyleBackColor = true;
 			// 
-			// label39
-			// 
-			this->label39->AutoSize = true;
-			this->label39->Location = System::Drawing::Point(8, 292);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(91, 17);
-			this->label39->TabIndex = 12;
-			this->label39->Text = L"PanierMoyen";
-			// 
 			// PanierClient
 			// 
 			this->PanierClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
@@ -2079,6 +2088,9 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			// 
 			// CommandeAfficher
 			// 
+			this->CommandeAfficher->Controls->Add(this->button28);
+			this->CommandeAfficher->Controls->Add(this->InputCommandeAff2);
+			this->CommandeAfficher->Controls->Add(this->label59);
 			this->CommandeAfficher->Controls->Add(this->button13);
 			this->CommandeAfficher->Controls->Add(this->InputCommandeAff);
 			this->CommandeAfficher->Controls->Add(this->label28);
@@ -2089,6 +2101,32 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->CommandeAfficher->TabIndex = 2;
 			this->CommandeAfficher->Text = L"Afficher";
 			this->CommandeAfficher->UseVisualStyleBackColor = true;
+			// 
+			// button28
+			// 
+			this->button28->Location = System::Drawing::Point(323, 96);
+			this->button28->Name = L"button28";
+			this->button28->Size = System::Drawing::Size(95, 40);
+			this->button28->TabIndex = 44;
+			this->button28->Text = L"Chercher";
+			this->button28->UseVisualStyleBackColor = true;
+			this->button28->Click += gcnew System::EventHandler(this, &MyForm::button28_Click);
+			// 
+			// InputCommandeAff2
+			// 
+			this->InputCommandeAff2->Location = System::Drawing::Point(50, 103);
+			this->InputCommandeAff2->Name = L"InputCommandeAff2";
+			this->InputCommandeAff2->Size = System::Drawing::Size(178, 22);
+			this->InputCommandeAff2->TabIndex = 43;
+			// 
+			// label59
+			// 
+			this->label59->AutoSize = true;
+			this->label59->Location = System::Drawing::Point(50, 83);
+			this->label59->Name = L"label59";
+			this->label59->Size = System::Drawing::Size(129, 17);
+			this->label59->TabIndex = 42;
+			this->label59->Text = L"ID de la commande";
 			// 
 			// button13
 			// 
@@ -2112,9 +2150,9 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->label28->AutoSize = true;
 			this->label28->Location = System::Drawing::Point(50, 33);
 			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(56, 17);
+			this->label28->Size = System::Drawing::Size(78, 17);
 			this->label28->TabIndex = 33;
-			this->label28->Text = L"IDClient";
+			this->label28->Text = L"ID du client";
 			// 
 			// CommandeSupprimer
 			// 
@@ -2557,7 +2595,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			// 
 			// tabPage5
 			// 
-			this->tabPage5->Controls->Add(this->label58);
 			this->tabPage5->Controls->Add(this->StatsSeuilReap);
 			this->tabPage5->Controls->Add(this->label54);
 			this->tabPage5->Controls->Add(this->StatsDemarqueInco);
@@ -2605,15 +2642,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"Stats";
 			this->tabPage5->UseVisualStyleBackColor = true;
-			// 
-			// label58
-			// 
-			this->label58->AutoSize = true;
-			this->label58->Location = System::Drawing::Point(269, 359);
-			this->label58->Name = L"label58";
-			this->label58->Size = System::Drawing::Size(105, 17);
-			this->label58->TabIndex = 42;
-			this->label58->Text = L"StatsSeuilReap";
 			// 
 			// StatsSeuilReap
 			// 
@@ -2865,6 +2893,15 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->label40->TabIndex = 13;
 			this->label40->Text = L"CA sur un Mois";
 			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(8, 292);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(91, 17);
+			this->label39->TabIndex = 12;
+			this->label39->Text = L"PanierMoyen";
+			// 
 			// button27
 			// 
 			this->button27->Location = System::Drawing::Point(1064, 312);
@@ -2964,29 +3001,6 @@ private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 			this->DataGridStats->RowTemplate->Height = 24;
 			this->DataGridStats->Size = System::Drawing::Size(1139, 273);
 			this->DataGridStats->TabIndex = 2;
-			// 
-			// label58
-			// 
-			this->label58->AutoSize = true;
-			this->label58->Location = System::Drawing::Point(598, 31);
-			this->label58->Name = L"label58";
-			this->label58->Size = System::Drawing::Size(34, 17);
-			this->label58->TabIndex = 40;
-			this->label58->Text = L"Ville";
-			// 
-			// listBox2
-			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->ItemHeight = 16;
-			this->listBox2->Items->AddRange(gcnew cli::array< System::Object^  >(14) {
-				L"1 Saint-Nazaire", L"2 Nantes", L"3 Paris", L"4 Guerande",
-					L"5 Lyon", L"6 Marseille\t", L"7 Lille", L"8 Bordeaux\t", L"9 Toulouse\t", L"10 Nice", L"11 Madrid", L"12 Berlin", L"13 Londres",
-					L"14 Bruxelles"
-			});
-			this->listBox2->Location = System::Drawing::Point(601, 51);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(533, 196);
-			this->listBox2->TabIndex = 39;
 			// 
 			// MyForm
 			// 
@@ -3241,7 +3255,7 @@ private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void RafraichirUneCommande(System::Object^ sender, System::EventArgs^ e) {
 
 	this->GridViewCréerCommande->Refresh();
-	this->oDs = this->oSvc->selectionnerUneCommande(this->InputCommandeAff->Text, "CZ");
+	this->oDs = this->oSvc->selectionnerUneCommande(this->InputCommandeAff->Text, "CZ","IDClient");
 	this->GridViewCréerCommande->DataSource = this->oDs;
 	this->GridViewCréerCommande->DataMember = "CZ";
 }
@@ -3255,7 +3269,7 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 	this->PanierClient->Rows->Clear();
 
 	this->GridViewCréerCommande->Refresh();
-	this->oDs = this->oSvc->selectionnerUneCommande(this->InputIDCommande->Text, "CZ");
+	this->oDs = this->oSvc->selectionnerUneCommande(this->InputIDCommande->Text, "CZ", "IDClient");
 	this->GridViewCréerCommande->DataSource = this->oDs;
 	this->GridViewCréerCommande->DataMember = "CZ";
 
@@ -3361,6 +3375,12 @@ private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ 
 	this->oDs = this->oSvc->SimulVar(this->StatsTVAn->Text,this->StatsTVAi->Text,this->StatsTVAr->Text,this->StatsTVAp->Text,this->StatsImport->Text,this->StatsMargeCom->Text,this->StatsRemiseCom->Text,this->StatsDemarqueInco->Text,"Poulet");
 	this->DataGridStats->DataSource = this->oDs;
 	this->DataGridStats->DataMember = "Poulet";
+}
+private: System::Void button28_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->GridViewCréerCommande->Refresh();
+	this->oDs = this->oSvc->selectionnerUneCommande(this->InputCommandeAff2->Text, "CZ", "IDCommande");
+	this->GridViewCréerCommande->DataSource = this->oDs;
+	this->GridViewCréerCommande->DataMember = "CZ";
 }
 };
 }

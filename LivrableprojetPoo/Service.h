@@ -27,7 +27,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerToutLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutLesClients(System::String^);
 		System::Data::DataSet^ selectionnerArticle(System::String^);
-		System::Data::DataSet^ selectionnerUneCommande(System::String^, System::String^);
+		System::Data::DataSet^ selectionnerUneCommande(System::String^, System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnProduit(System::String^, System::String^, System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnSeulProduit(System::String^, System::String^);
 		System::Data::DataSet^ selectionnerUnPersonnel(System::String^, System::String^);

@@ -12,7 +12,7 @@ namespace NS_Comp_Mappage
 	public:
 		System::String^ Select(void);
 		System::String^ SelectConditionCommande(System::String^);
-		System::String^ SelectConditionUneCommande(System::String^);
+		System::String^ SelectConditionUneCommande(System::String^, System::String^);
 		System::String^ Insert(void);
 		System::String^ Delete(System::String^);
 		System::String^ Update(void);

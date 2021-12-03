@@ -268,10 +268,10 @@ System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUnArticle(System::Strin
 	return this->oCad->getRows(sql, dataTableName);
 }
 
-System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUneCommande(System::String^ ID, System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::Service::selectionnerUneCommande(System::String^ ID, System::String^ dataTableName, System::String^ Table )
 {
 	System::String^ sql;
-	sql = this->oMappCommande->SelectConditionUneCommande(ID);
+	sql = this->oMappCommande->SelectConditionUneCommande(ID,Table);
 	return this->oCad->getRows(sql, dataTableName);
 }
 
