@@ -3144,24 +3144,24 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void RafraichirUnPersonnel(System::Object^ sender, System::EventArgs^ e) {
 
 	this->GridViewCréerPersonnel->Refresh();
-	this->oDs = this->oSvc->selectionnerUnPersonnel(this->ModifIDPersonnel->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerUnPersonnel(this->ModifIDPersonnel->Text, "IENCLI");
 	this->GridViewCréerPersonnel->DataSource = this->oDs;
-	this->GridViewCréerPersonnel->DataMember = "Rsl";
+	this->GridViewCréerPersonnel->DataMember = "IENCLI";
 }
 private: System::Void RafraichirUnClient(System::Object^ sender, System::EventArgs^ e) {
 
 	this->GridViewCréerClient->Refresh();
-	this->oDs = this->oSvc->selectionnerUnClient(this->InputModifIDClient->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerUnClient(this->InputModifIDClient->Text, "OuiOuiFromage");
 	this->GridViewCréerClient->DataSource = this->oDs;
-	this->GridViewCréerClient->DataMember = "Rsl";
+	this->GridViewCréerClient->DataMember = "OuiOuiFromage";
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void ChercherNom_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->GridViewCréerPersonnel->Refresh();
-	this->oDs = this->oSvc->selectionnerConditionPersonnel(this->InputChercheNom->Text,this->InputCherchePrenom->Text,this->InputChercheNomRue->Text,this->InputChercheNomVille->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerConditionPersonnel(this->InputChercheNom->Text,this->InputCherchePrenom->Text,this->InputChercheNomRue->Text,this->InputChercheNomVille->Text, "OuiOuiBaguette");
 	this->GridViewCréerPersonnel->DataSource = this->oDs;
-	this->GridViewCréerPersonnel->DataMember = "Rsl";
+	this->GridViewCréerPersonnel->DataMember = "OuiOuiBaguette";
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->ajouterUnClient(this->InputNomClient->Text, this->InputPrenomClient->Text, this->InputNaissanceClient->Text);
@@ -3254,9 +3254,9 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void RafraichirUnArticle(System::Object^ sender, System::EventArgs^ e) {
 
 	this->GridViewCréerCommande->Refresh();
-	this->oDs = this->oSvc->selectionnerUnArticle(this->InputIDProduitCommande->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerUnArticle(this->InputIDProduitCommande->Text, "BONJOUR");
 	this->GridViewCréerCommande->DataSource = this->oDs;
-	this->GridViewCréerCommande->DataMember = "Rsl";
+	this->GridViewCréerCommande->DataMember = "BONJOUR";
 }
 
 private: System::Void button13_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3303,9 +3303,9 @@ private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->GridViewCréerArticle->Refresh();
-	this->oDs = this->oSvc->selectionnerUnProduit(this->InputChercheNomProduit->Text, this->InputCherchePrixProduit->Text, this->InputChercheStockProduit->Text, "Rsl");
+	this->oDs = this->oSvc->selectionnerUnProduit(this->InputChercheNomProduit->Text, this->InputCherchePrixProduit->Text, this->InputChercheStockProduit->Text, "SOS");
 	this->GridViewCréerArticle->DataSource = this->oDs;
-	this->GridViewCréerArticle->DataMember = "Rsl";
+	this->GridViewCréerArticle->DataMember = "SOS";
 }
 private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->GridViewCréerArticle->Refresh();
