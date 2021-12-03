@@ -397,7 +397,6 @@ private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::DataGridView^ DataGridStats;
 private: System::Windows::Forms::Label^ label58;
 private: System::Windows::Forms::ListBox^ listBox2;
-private: System::Windows::Forms::Label^ label58;
 private: System::Windows::Forms::TextBox^ StatsSeuilReap;
 
 

@@ -4,8 +4,8 @@
 
 NS_Comp_Data::CAD::CAD(void)
 {
-	this->sCnx = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\LUCIE\\DOCUMENTS\\CNX_P6.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"; //LULU
-	//this->sCnx = "Data Source = (localdb)\\ProjectsV13; Initial Catalog = BDDLivrablePOO; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"; //Alex
+	//this->sCnx = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=C:\\USERS\\LUCIE\\DOCUMENTS\\CNX_P6.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"; //LULU
+	this->sCnx = "Data Source = (localdb)\\ProjectsV13; Initial Catalog = BDDLivrablePOO; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"; //Alex
 	//Malo ??
 
 	this->sSql = "Rien";
