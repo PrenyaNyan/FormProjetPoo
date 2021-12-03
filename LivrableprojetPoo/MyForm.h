@@ -402,7 +402,7 @@ private: System::Windows::Forms::Button^ button28;
 private: System::Windows::Forms::TextBox^ InputCommandeAff2;
 
 private: System::Windows::Forms::Label^ label59;
-
+private: delegate void Ptfct(System::Object^, System::EventArgs^);
 
 
 
@@ -3086,9 +3086,20 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	
 	this->oSvc->ajouterUneAdresse(this->InputNomRuePersonnel->Text, this->InputNumeroRuePersonnel->Text, this->InputIDVillePersonnel->Text);
 	this->oSvc->ajouterUnPersonnel(this->InputNomPersonnel->Text, this->InputPreomPersonnel->Text, this->InputDateDeNaissancePersonnel->Text, this->InputDateEmbauchePersonnel->Text);
-
-
-	RafraichirPersonnel(sender, e);
+	//
+	//
+	// 
+	//
+	//
+	//
+	Ptfct^ Fonction = gcnew Ptfct(this, &MyForm::button10_Click);
+	Fonction->Invoke(sender, e);
+	//
+	//
+	// 
+	//
+	//
+	//
 }
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
